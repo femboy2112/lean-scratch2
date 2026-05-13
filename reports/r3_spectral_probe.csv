@@ -1,0 +1,7 @@
+generated_at_utc,status,r,model,s,dimension,perron_row_sum_S,max_abs_eigen_S,second_abs_eigen_S,spectral_gap_S,claim_boundary
+2026-05-13T06:40:34+00:00,Computational Observation,3,unit,0.5,18,2.142857110926084,2.142857110926082,1.9518001604665178,0.19105695045956406,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.
+2026-05-13T06:40:34+00:00,Computational Observation,3,unit,0.55,18,1.7379936861665295,1.7379936861665266,1.6112044954364295,0.1267891907300971,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.
+2026-05-13T06:40:34+00:00,Computational Observation,3,unit,0.6,18,1.4341457594031275,1.4341457594031306,1.3477099655368308,0.08643579386629985,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.
+2026-05-13T06:40:34+00:00,Computational Observation,3,full,0.5,27,2.9999999552965178,2.999999955296513,2.708019852870408,0.29198010242610506,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.
+2026-05-13T06:40:34+00:00,Computational Observation,3,full,0.55,27,2.4038754698384865,2.4038754698384865,2.2086967259142427,0.19517874392424384,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.
+2026-05-13T06:40:34+00:00,Computational Observation,3,full,0.6,27,1.9589602134574218,1.9589602134574193,1.8246982820438171,0.1342619314136022,Numerical S-level probe only; no exact closure and no Collatz-level conclusion.

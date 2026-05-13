@@ -1,0 +1,27 @@
+{
+  "status": "Computational Observation",
+  "target": "factor-python",
+  "scope": "finite-level lifted-operator Collatz harness",
+  "method": "Python/SymPy factor reconnaissance",
+  "claim_boundary": "This does not prove or imply the Collatz conjecture.",
+  "reproduction_command": "python experiments/r3_factor_search.py unit && python experiments/r3_factor_search.py full",
+  "input_hashes": {
+    "CODEX.md": "f49b46a41c7a1ed3fc3866ccd987de44ba4661fb6144e77600b12636886790c4",
+    "CLAIM_GUARDRAILS.md": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+    "data/canonical_bundle/PROMPT.md": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+  },
+  "outputs": [
+    "reports/20260513T064252Z_factor-python.log"
+  ],
+  "warnings": [],
+  "created_utc": "20260513T064252Z",
+  "result": {
+    "returncode": 0,
+    "returncodes": [
+      0,
+      0
+    ],
+    "stdout_tail": "$ python experiments/r3_factor_search.py unit\nwrote /home/leah/Collatz/lean-scratch2/reports/r3_unit_factor_search_plan.md\n\n\n$ python experiments/r3_factor_search.py full\nwrote /home/leah/Collatz/lean-scratch2/reports/r3_full_factor_search_plan.md\n",
+    "stderr_tail": "$ python experiments/r3_factor_search.py unit\n\n\n$ python experiments/r3_factor_search.py full\n"
+  }
+}

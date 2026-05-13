@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/witness_manifest.json",
+  "audited_sha256": "487d77afffa422cbbf678bfd7334bc5900dca0276266ceae4f90cc1f4f4197ee",
+  "created_utc": "20260513T064719Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 0,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 1
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

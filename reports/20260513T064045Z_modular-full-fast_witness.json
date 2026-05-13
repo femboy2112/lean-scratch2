@@ -1,0 +1,23 @@
+{
+  "status": "Computational Observation",
+  "target": "modular-full-fast",
+  "scope": "finite-level lifted-operator Collatz harness",
+  "method": "Python modular determinant probe",
+  "claim_boundary": "This does not prove or imply the Collatz conjecture.",
+  "reproduction_command": "python experiments/r3_modular_determinant_probe.py --model full --samples 4",
+  "input_hashes": {
+    "CODEX.md": "f49b46a41c7a1ed3fc3866ccd987de44ba4661fb6144e77600b12636886790c4",
+    "CLAIM_GUARDRAILS.md": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+    "data/canonical_bundle/PROMPT.md": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+  },
+  "outputs": [
+    "reports/20260513T064045Z_modular-full-fast.log"
+  ],
+  "warnings": [],
+  "created_utc": "20260513T064045Z",
+  "result": {
+    "returncode": 0,
+    "stdout_tail": "{\n  \"wrote\": \"/home/leah/Collatz/lean-scratch2/reports/r3_full_modular_det_probe.json\"\n}\n",
+    "stderr_tail": ""
+  }
+}

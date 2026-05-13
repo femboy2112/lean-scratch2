@@ -1,0 +1,9 @@
+$ python experiments/r3_modular_determinant_probe.py --model unit --samples 4
+
+[stdout]
+{
+  "wrote": "/home/leah/Collatz/lean-scratch2/reports/r3_unit_modular_det_probe.json"
+}
+
+
+[stderr]
