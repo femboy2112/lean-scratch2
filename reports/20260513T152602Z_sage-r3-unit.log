@@ -1,0 +1,10 @@
+[stdout]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r3_factorization_search.sage unit
+r=3 model=unit dim=18 period=54
+computing characteristic polynomial...
+factoring...
+/home/leah/Collatz/lean-scratch2/reports/sage_r3_unit_factorization.sageout
+
+
+[stderr]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r3_factorization_search.sage unit

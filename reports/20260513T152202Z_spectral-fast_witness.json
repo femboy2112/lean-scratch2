@@ -1,0 +1,26 @@
+{
+  "status": "Computational Observation",
+  "target": "spectral-fast",
+  "scope": "finite-level lifted-operator Collatz harness",
+  "method": "Python numerical/symbolic reconnaissance",
+  "claim_boundary": "This does not prove or imply the Collatz conjecture.",
+  "reproduction_command": "python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full",
+  "input_hashes": {
+    "CODEX.md": "6f058673a8d16c316348f370e8d52bd532677603370c26bbabd8eb8a92ba83b6",
+    "CLAIM_GUARDRAILS.md": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+    "data/canonical_bundle/PROMPT.md": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+  },
+  "outputs": [
+    "reports/20260513T152202Z_spectral-fast.log"
+  ],
+  "warnings": [],
+  "created_utc": "20260513T152202Z",
+  "result": {
+    "returncode": 0,
+    "returncodes": [
+      0
+    ],
+    "stdout_tail": "$ python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full\nwrote /home/leah/Collatz/lean-scratch2/reports/r3_spectral_probe.csv\n",
+    "stderr_tail": "$ python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full\n"
+  }
+}

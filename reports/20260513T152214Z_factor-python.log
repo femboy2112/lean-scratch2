@@ -1,0 +1,14 @@
+[stdout]
+$ python3 experiments/r3_factor_search.py unit
+wrote /home/leah/Collatz/lean-scratch2/reports/r3_unit_factor_search_plan.md
+
+
+$ python3 experiments/r3_factor_search.py full
+wrote /home/leah/Collatz/lean-scratch2/reports/r3_full_factor_search_plan.md
+
+
+[stderr]
+$ python3 experiments/r3_factor_search.py unit
+
+
+$ python3 experiments/r3_factor_search.py full

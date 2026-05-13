@@ -1,0 +1,7 @@
+[stdout]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage
+/home/leah/Collatz/lean-scratch2/reports/sage_r2_factorization.sageout
+
+
+[stderr]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage

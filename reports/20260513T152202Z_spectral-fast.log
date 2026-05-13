@@ -1,0 +1,7 @@
+[stdout]
+$ python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full
+wrote /home/leah/Collatz/lean-scratch2/reports/r3_spectral_probe.csv
+
+
+[stderr]
+$ python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full

@@ -1,0 +1,71 @@
+{
+  "repo_root": "/home/leah/Collatz/lean-scratch2",
+  "canonical_file_count": 10,
+  "canonical_files": [
+    {
+      "name": "00_HISTORICAL_convolution_to_operator_framework.txt",
+      "bytes": 22441,
+      "sha256": "31a963b7738ecf362a928f53cd5e31d3aaf79836ccfb503a3ff8f120f65d4e9d"
+    },
+    {
+      "name": "01_FRAMEWORK_AND_CONVENTIONS.txt",
+      "bytes": 2732,
+      "sha256": "5acd3284cfb2e942e9a472dcf659c9c54762869c5d97153c8891d19b9e48c2af"
+    },
+    {
+      "name": "02_LOCKED_BASELINE_THEOREMS.txt",
+      "bytes": 7929,
+      "sha256": "03e055fc5c6a709b493adcaf61ef878fa6d41be36ba10d7ff9c41159751911f5"
+    },
+    {
+      "name": "03_CONSTRUCTION_DATA.txt",
+      "bytes": 16107,
+      "sha256": "6a03f328b9c3c4a16422329d6887682d69317ae7d918fca7a0866066b4ad4b01"
+    },
+    {
+      "name": "04_R2_CLOSURES.txt",
+      "bytes": 18516,
+      "sha256": "80ebdfd6eef0a0176cd120197d1de827f60248f867114393b015153b044b0ba4"
+    },
+    {
+      "name": "05_R3_CLOSURES.txt",
+      "bytes": 28247,
+      "sha256": "1cbfa9f08c4161283d93f7da0556262838a2b6b3cb687bf9b18575ab2e17e81d"
+    },
+    {
+      "name": "06_MATHEMATICAL_CONSTRAINTS.txt",
+      "bytes": 15045,
+      "sha256": "2030df7a16d21e9f3f34abd37e343662c42eacdbb198f2d60205f7a8c03bfdc2"
+    },
+    {
+      "name": "07_INTERPRETATION_AND_BOUNDARIES.txt",
+      "bytes": 8541,
+      "sha256": "f0844db697592a426ad72129f4a58124e872e85335e4c3808b3fd3cefdce6ed8"
+    },
+    {
+      "name": "08_RECONNAISSANCE_OBSERVATIONS.txt",
+      "bytes": 19234,
+      "sha256": "6030ec5faed7e7b022c6c4ef40ec349235bd8a57e4a5eb1b81dafbdc58036edf"
+    },
+    {
+      "name": "PROMPT.md",
+      "bytes": 10990,
+      "sha256": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+    }
+  ],
+  "open_targets": [
+    "r=3 compact factorization",
+    "r=3 structural mechanism",
+    "r=3 subdominant spectral structure",
+    "r=3 determinant nonvanishing for all real s > 0",
+    "r=3 exact determinant polynomials",
+    "cross-level r=2/r=3 spectral invariance",
+    "proof-boundary clarification for finite-level implications"
+  ],
+  "skills": [
+    ".agents/skills/collatz-exact-algebra-lab/SKILL.md",
+    ".agents/skills/collatz-proof-boundary-auditor/SKILL.md",
+    ".agents/skills/collatz-research-orchestrator/SKILL.md"
+  ],
+  "guardrail": "No finite-level matrix fact may be upgraded to a Collatz-level proof."
+}

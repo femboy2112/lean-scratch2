@@ -1,0 +1,129 @@
+{
+  "status": "Advisory Only",
+  "scope": "finite-level lifted-operator r=3 reconnaissance over Phase C outputs",
+  "method": "manual triage of Python wrapper outputs and proof-boundary validator output",
+  "claim_boundary": "This is finite-level reconnaissance only. It is not a theorem, not a canonical closure, not Lean-ready, and not evidence for any Collatz-level conclusion.",
+  "reproduction_command": "python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py spectral-fast && python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py modular-unit-fast && python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py modular-full-fast && python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py factor-python && python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py cross-level && python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
+  "files_touched": [
+    "reports/20260513T152358Z_r3_recon_triage.md",
+    "reports/20260513T152358Z_r3_recon_triage.json"
+  ],
+  "phase_c_artifacts": [
+    "reports/20260513T152202Z_spectral-fast_analysis.md",
+    "reports/20260513T152202Z_spectral-fast_witness.json",
+    "reports/20260513T152202Z_spectral-fast.log",
+    "reports/20260513T152206Z_modular-unit-fast_analysis.md",
+    "reports/20260513T152206Z_modular-unit-fast_witness.json",
+    "reports/20260513T152206Z_modular-unit-fast.log",
+    "reports/20260513T152209Z_modular-full-fast_analysis.md",
+    "reports/20260513T152209Z_modular-full-fast_witness.json",
+    "reports/20260513T152209Z_modular-full-fast.log",
+    "reports/20260513T152214Z_factor-python_analysis.md",
+    "reports/20260513T152214Z_factor-python_witness.json",
+    "reports/20260513T152214Z_factor-python.log",
+    "reports/20260513T152220Z_cross-level_analysis.md",
+    "reports/20260513T152220Z_cross-level_witness.json",
+    "reports/20260513T152220Z_cross-level.log",
+    "reports/witness_manifest.json"
+  ],
+  "questions": [
+    {
+      "question": "Did spectral-fast reveal repeated unit/full structure across s = 0.50, 0.55, 0.60?",
+      "answer": "It showed positive numerical S-level gaps for unit and full models at the three slices, with gap sizes decreasing as s increases. No exact repeated symbolic structure was established.",
+      "label": "Computational Observation"
+    },
+    {
+      "question": "Did modular-unit-fast or modular-full-fast produce a stable nonzero determinant witness pattern?",
+      "answer": "Both probes produced 4/4 nonzero finite-field determinant samples using the same sampled primes and t values.",
+      "label": "Computational Observation"
+    },
+    {
+      "question": "Did factor-python reveal any candidate compact factors, repeated factor templates, quotient decompositions, or residual decompositions?",
+      "answer": "No. It produced unit/full plan reports stating that Python exact charpoly is blocked by dimension and recommending Sage exact charpoly/factorization.",
+      "label": "Not Established"
+    },
+    {
+      "question": "Did cross-level reveal any invariant pattern worth exact testing?",
+      "answer": "No concrete invariant was claimed. The output requires defining a candidate invariant and normalization before exact testing.",
+      "label": "Not Established"
+    },
+    {
+      "question": "Which exact Sage target, if any, is justified next?",
+      "answer": "Run sage-r2 as required sanity, then sage-r3-unit as the smallest exact target aligned with compact-factorization triage. Do not run sage-r3-full unless unit exact output identifies a concrete full-model target.",
+      "label": "Advisory Only"
+    },
+    {
+      "question": "Which claims remain Not Established?",
+      "answer": "r=3 compact factorization, structural mechanism, subdominant spectral structure, determinant nonvanishing for all real s > 0, cross-level invariance, and Lean-ready theorem candidates.",
+      "label": "Not Established"
+    },
+    {
+      "question": "Which claims should be explicitly rejected or downgraded?",
+      "answer": "Any upgrade from Phase C outputs to theorem, canonical closure, all-real-s determinant claim, cross-level invariance theorem, or Collatz-level conclusion.",
+      "label": "Over-Upgraded"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate": "r=3 unit compact factorization search",
+      "evidence": "factor-python wrote reports/r3_unit_factor_search_plan.md and recommended Sage because dimension 18 blocks default Python exact charpoly",
+      "label": "Advisory Only",
+      "exact_next_test": "timeout 1800 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r3-unit after sage-r2 sanity",
+      "risk": "May find no factorization; exact output is finite-level only"
+    },
+    {
+      "candidate": "r=3 full compact factorization search",
+      "evidence": "factor-python wrote reports/r3_full_factor_search_plan.md, but no unit exact target has stabilized yet",
+      "label": "Not Established",
+      "exact_next_test": "Do not run full Sage unless unit exact output identifies a concrete full-model target or user authorizes runtime",
+      "risk": "27-dimensional full target may be expensive and currently lacks a narrowed candidate"
+    },
+    {
+      "candidate": "modular determinant nonzero pattern",
+      "evidence": "unit/full modular probes both returned 4/4 nonzero determinant samples over finite fields",
+      "label": "Computational Observation",
+      "exact_next_test": "No Sage all-real-s test justified from samples alone; possible later determinant-polynomial target requires explicit statement and ring",
+      "risk": "Modular samples do not prove positivity or all-real-s nonvanishing"
+    },
+    {
+      "candidate": "numerical subdominant spectral pattern",
+      "evidence": "r3_spectral_probe.csv shows numerical second absolute eigenvalue and positive gap at three slices for both models",
+      "label": "Computational Observation",
+      "exact_next_test": "No exact test until a symbolic eigenvalue/factor candidate is specified",
+      "risk": "Floating-point eigenvalues do not prove algebraic spectral structure"
+    },
+    {
+      "candidate": "cross-level invariance candidate",
+      "evidence": "reports/cross_level_invariance_plan.md says no invariant is claimed and requires defining a candidate invariant",
+      "label": "Not Established",
+      "exact_next_test": "None until candidate invariant and normalization are specified",
+      "risk": "Similarity language would over-upgrade without independent witnesses at both levels"
+    }
+  ],
+  "promotion_decision": {
+    "status": "Advisory Only",
+    "run_sage": true,
+    "commands": [
+      "bash scripts/bootstrap_codex.sh --with-sage",
+      "timeout 900 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r2",
+      "timeout 1800 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r3-unit"
+    ],
+    "do_not_run": [
+      "timeout 3600 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r3-full"
+    ],
+    "reason": "unit is the smallest exact target aligned with compact-factorization triage; full is not justified until unit exact output identifies a concrete full-model follow-up"
+  },
+  "fixed_path_artifact_risk": {
+    "status": "Advisory Only",
+    "paths": [
+      "reports/r3_spectral_probe.csv",
+      "reports/r3_unit_modular_det_probe.json",
+      "reports/r3_full_modular_det_probe.json",
+      "reports/r3_unit_factor_search_plan.md",
+      "reports/r3_full_factor_search_plan.md",
+      "reports/cross_level_invariance_plan.md",
+      "reports/witness_manifest.json"
+    ],
+    "note": "The wrappers are timestamped, but the underlying experiment scripts rewrite these fixed-path artifacts."
+  }
+}

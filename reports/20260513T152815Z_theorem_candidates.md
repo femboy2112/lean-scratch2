@@ -1,0 +1,49 @@
+# Theorem Candidate Notes
+
+status: Advisory Only
+scope: finite-level r=3 S-level factorization candidates produced by Phase F Sage exact algebra
+method: Sage exact algebra output review plus proof-boundary triage
+claim_boundary: These are finite-level theorem-candidate notes only. They do not prove or imply the Collatz conjecture, global orbit behavior, cross-level invariance, or determinant nonvanishing for all real `s > 0`.
+reproduction_command: `timeout 900 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r2 && timeout 1800 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r3-unit && timeout 3600 python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py sage-r3-full`
+files_touched: `reports/20260513T152815Z_theorem_candidates.md`, `reports/20260513T152815Z_theorem_candidates.json`
+artifacts_produced: theorem-candidate notes only; no Lean stubs generated
+
+## Candidate 1
+
+name: `r3_unit_S_level_QQt_factorization_shape`
+status_label: `Computational Observation`
+quantified_variables: polynomial variable `y`; parameter `t` over `QQ[t]`
+r: `3`
+model: `unit`
+slice_or_parameter: generic symbolic `t`
+level: S-level, dimension `18`
+matrix_family: `S_unit,r3(t)`
+domain_or_ring: `QQ[t][y]`
+statement: The Sage run factors the generic unit r=3 S-level characteristic polynomial over `QQ[t]` into degree pattern `1 + 1 + 2*2 + 2*6 = 18`: two linear factors, one squared quadratic factor, and one squared sextic factor.
+evidence_artifacts: `reports/20260513T152602Z_sage-r3-unit.log`, `reports/20260513T152602Z_sage-r3-unit_witness.json`, `reports/sage_r3_unit_factorization.sageout`
+artifact_hashes: `reports/sage_r3_unit_factorization.sageout` sha256 `f341ce713b73a759e7a970f23178ea71047eb0821cf1b373ca3401ad38abf07c`
+missing_proof_steps: independent audit of Sage output, hash packaging for individual factors, reconstruction check against canonical construction, row-sum factor identification, and factor irreducibility/separability checks if a stronger label is desired
+why_this_does_not_imply_Collatz: This is a finite-dimensional S-level characteristic-polynomial factorization inside the lifted-operator framework; it has no global orbit conclusion.
+
+## Candidate 2
+
+name: `r3_full_S_level_QQt_factorization_shape`
+status_label: `Computational Observation`
+quantified_variables: polynomial variable `y`; parameter `t` over `QQ[t]`
+r: `3`
+model: `full`
+slice_or_parameter: generic symbolic `t`
+level: S-level, dimension `27`
+matrix_family: `S_full,r3(t)`
+domain_or_ring: `QQ[t][y]`
+statement: The Sage run factors the generic full r=3 S-level characteristic polynomial over `QQ[t]` into degree pattern `1 + 2*1 + 2*3 + 2*9 = 27`: one linear factor, one squared linear factor, one squared cubic factor, and one squared degree-9 factor.
+evidence_artifacts: `reports/20260513T152643Z_sage-r3-full.log`, `reports/20260513T152643Z_sage-r3-full_witness.json`, `reports/sage_r3_full_factorization.sageout`
+artifact_hashes: `reports/sage_r3_full_factorization.sageout` sha256 `fe1477297a2a807520390978a2dc3ea259e403698c420e1ecff74df16b68e71a`
+missing_proof_steps: independent audit of Sage output, hash packaging for individual factors, reconstruction check against canonical construction, row-sum factor identification, and factor irreducibility/separability checks if a stronger label is desired
+why_this_does_not_imply_Collatz: This is a finite-dimensional S-level characteristic-polynomial factorization inside the lifted-operator framework; it has no global orbit conclusion.
+
+## Lean Stub Decision
+
+status: Advisory Only
+
+No Lean stubs were generated. Both candidates remain `Computational Observation` pending independent audit and factor-level witness packaging.

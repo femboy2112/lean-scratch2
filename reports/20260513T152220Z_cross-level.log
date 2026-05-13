@@ -1,0 +1,7 @@
+[stdout]
+$ python3 experiments/cross_level_invariance.py
+wrote /home/leah/Collatz/lean-scratch2/reports/cross_level_invariance_plan.md
+
+
+[stderr]
+$ python3 experiments/cross_level_invariance.py

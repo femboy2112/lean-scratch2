@@ -1,0 +1,22 @@
+[stdout]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage
+
+
+[stderr]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage
+mkdir: cannot create directory ‘/home/leah/.sage/’: Read-only file system
+Traceback (most recent call last):
+  File "/home/leah/Collatz/lean-scratch2/sage/r2_verify_factorization.sage.py", line 4, in <module>
+    from sage.all_cmdline import *   # import sage library
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/all_cmdline.py", line 17, in <module>
+    from sage.all import *
+  File "/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/all.py", line 78, in <module>
+    from sage.misc.all import *         # takes a while
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/misc/all.py", line 8, in <module>
+    from sage.misc.misc import (BackslashOperator,
+  File "/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/misc/misc.py", line 71, in <module>
+    os.makedirs(DOT_SAGE, mode=0o700, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 30] Read-only file system: '/home/leah/.sage/'

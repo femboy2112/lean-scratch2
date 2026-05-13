@@ -1,0 +1,26 @@
+{
+  "status": "Verified Fact",
+  "target": "sage-r2",
+  "scope": "finite-level lifted-operator Collatz harness",
+  "method": "Sage exact algebra",
+  "claim_boundary": "This does not prove or imply the Collatz conjecture.",
+  "reproduction_command": "/home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage",
+  "input_hashes": {
+    "CODEX.md": "6f058673a8d16c316348f370e8d52bd532677603370c26bbabd8eb8a92ba83b6",
+    "CLAIM_GUARDRAILS.md": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+    "data/canonical_bundle/PROMPT.md": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+  },
+  "outputs": [
+    "reports/20260513T152551Z_sage-r2.log"
+  ],
+  "warnings": [],
+  "created_utc": "20260513T152551Z",
+  "result": {
+    "returncode": 0,
+    "returncodes": [
+      0
+    ],
+    "stdout_tail": "$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage\n/home/leah/Collatz/lean-scratch2/reports/sage_r2_factorization.sageout\n",
+    "stderr_tail": "$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage\n"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "Not Established",
+  "target": "sage-r2",
+  "scope": "finite-level lifted-operator Collatz harness",
+  "method": "Sage exact algebra",
+  "claim_boundary": "This does not prove or imply the Collatz conjecture.",
+  "reproduction_command": "/home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage",
+  "input_hashes": {
+    "CODEX.md": "6f058673a8d16c316348f370e8d52bd532677603370c26bbabd8eb8a92ba83b6",
+    "CLAIM_GUARDRAILS.md": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+    "data/canonical_bundle/PROMPT.md": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+  },
+  "outputs": [
+    "reports/20260513T152525Z_sage-r2.log"
+  ],
+  "warnings": [
+    "command did not complete successfully or was not run"
+  ],
+  "created_utc": "20260513T152525Z",
+  "result": {
+    "returncode": 1,
+    "returncodes": [
+      1
+    ],
+    "stdout_tail": "$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage\n",
+    "stderr_tail": "$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r2_verify_factorization.sage\nmkdir: cannot create directory \u2018/home/leah/.sage/\u2019: Read-only file system\nTraceback (most recent call last):\n  File \"/home/leah/Collatz/lean-scratch2/sage/r2_verify_factorization.sage.py\", line 4, in <module>\n    from sage.all_cmdline import *   # import sage library\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/all_cmdline.py\", line 17, in <module>\n    from sage.all import *\n  File \"/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/all.py\", line 78, in <module>\n    from sage.misc.all import *         # takes a while\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/misc/all.py\", line 8, in <module>\n    from sage.misc.misc import (BackslashOperator,\n  File \"/home/leah/Collatz/lean-scratch2/.sage-conda/lib/python3.11/site-packages/sage/misc/misc.py\", line 71, in <module>\n    os.makedirs(DOT_SAGE, mode=0o700, exist_ok=True)\n  File \"<frozen os>\", line 225, in makedirs\nOSError: [Errno 30] Read-only file system: '/home/leah/.sage/'\n"
+  }
+}

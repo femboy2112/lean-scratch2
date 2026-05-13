@@ -106,6 +106,7 @@ def main() -> int:
 
     env = os.environ.copy()
     env["PYTHONPATH"] = str(root / "src") + os.pathsep + env.get("PYTHONPATH", "")
+    env.setdefault("DOT_SAGE", str(root / ".codex" / "sage"))
 
     result = None
     if not args.no_run:

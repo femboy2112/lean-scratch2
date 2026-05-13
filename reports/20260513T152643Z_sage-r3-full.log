@@ -1,0 +1,10 @@
+[stdout]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r3_factorization_search.sage full
+r=3 model=full dim=27 period=54
+computing characteristic polynomial...
+factoring...
+/home/leah/Collatz/lean-scratch2/reports/sage_r3_full_factorization.sageout
+
+
+[stderr]
+$ /home/leah/Collatz/lean-scratch2/.sage-conda/bin/sage sage/r3_factorization_search.sage full
