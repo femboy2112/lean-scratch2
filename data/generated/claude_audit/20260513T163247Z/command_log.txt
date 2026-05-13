@@ -1,0 +1,33 @@
+audit_timestamp: 20260513T163247Z
+auditor: Claude (claude-opus-4-7[1m])
+target_bundle: data/generated/r3_factorization_audit/20260513T160231Z
+
+== commands run ==
+
+1. git status --short
+   exit: 0
+   note: clean tree on branch claude-audit/r3-factorization-8PvP2
+
+2. ls -la data/generated/r3_factorization_audit/20260513T160231Z/
+   exit: 0
+   note: confirmed unit/, full/, manifest.json present
+
+3. find data/generated/r3_factorization_audit/20260513T160231Z/ -type f
+   exit: 0
+   note: per-model factorization.{txt,json}, row_sum_witness.json, factors/factor_{00..03}.{txt,json}
+
+4. python3 scripts/run_py_checks.py
+   exit: 0
+   note: payload_sha256 923614c3cce18c352706f3e881e70b2155df37d29e7223fe2136e28502d3dca6
+
+5. python3 scripts/check_codex_skills.py
+   exit: 0
+   note: skills_found = collatz-exact-algebra-lab, collatz-proof-boundary-auditor, collatz-research-orchestrator
+
+6. which sage
+   exit: 127 (not found)
+   note: Sage unavailable in sandbox; static audit only.
+
+7. python3 -c '<<inline hash audit>>'
+   exit: 0
+   note: all hashes match; see hash_audit.json

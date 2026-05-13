@@ -1,0 +1,109 @@
+{
+  "audit_timestamp": "20260513T163247Z",
+  "audited_bundle": "data/generated/r3_factorization_audit/20260513T160231Z",
+  "audited_canonical_patch_proposal": "reports/20260513T160231Z_r3_factorization_canonical_patch_proposal.md",
+  "audited_codex_report_json": "reports/20260513T160231Z_r3_factorization_audit.json",
+  "audited_codex_report_md": "reports/20260513T160231Z_r3_factorization_audit.md",
+  "auditor": "Claude (claude-opus-4-7[1m])",
+  "blocked_items": [
+    "End-to-end Sage re-execution of sage/r3_factorization_audit.sage (sage not present in sandbox)."
+  ],
+  "canonical_patch_proposal_readiness": "READY_WITH_PATCHES",
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, or cross-level invariance.",
+  "command_log_path": "data/generated/claude_audit/20260513T163247Z/command_log.txt",
+  "factor_degree_patterns_arithmetic_check": {
+    "full": {
+      "degree_pattern": [
+        1,
+        1,
+        3,
+        9
+      ],
+      "dimension": 27,
+      "match": true,
+      "multiplicity_pattern": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "total_y_degree": 27
+    },
+    "unit": {
+      "degree_pattern": [
+        1,
+        1,
+        2,
+        6
+      ],
+      "dimension": 18,
+      "match": true,
+      "multiplicity_pattern": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "total_y_degree": 18
+    }
+  },
+  "findings_summary": {
+    "BLOCKER": 0,
+    "NOTE": 5,
+    "PATCH": 2,
+    "WARNING": 0
+  },
+  "hash_audit_mismatches_count": 0,
+  "hash_audit_path": "data/generated/claude_audit/20260513T163247Z/hash_audit.json",
+  "hash_audit_sha256": "87a087772cbf292a7fa346fdb39680311da87ed0a12439351c09d3a5b1827692",
+  "method": "static script inspection + Python stdlib SHA-256 recomputation of every artifact, manifest, factor record, and report file; comparison against Codex-recorded hashes and the canonical patch proposal.",
+  "not_established_items": [
+    "determinant positivity for all real s > 0",
+    "r=3 structural mechanism",
+    "r=3 exact subdominant spectral structure",
+    "cross-level r=2/r=3 spectral invariance",
+    "Collatz-level implications"
+  ],
+  "report_markdown_sha256": "18c7b6e75b42db31878fe412691426d622d0b8968e3ff3b01b5fd15c5eaf3787",
+  "reproduction_command": "python3 - per data/generated/claude_audit/20260513T163247Z/hash_audit.json",
+  "required_patches_to_canonical_patch_proposal": [
+    "Include per-model factor_degree_pattern, multiplicity_pattern, dimension, and manifest_payload_sha256.",
+    "Add a recorded_ring line naming QQ[t][y]; name y-separability ring as Frac(QQ[t])[y].",
+    "Reword 'irreducible_over_recorded_ring' as 'Sage-displayed irreducibility over the recorded ring' so it is not read as an independent algebraic irreducibility theorem.",
+    "Add an explicit reproduction caveat naming the human-side Sage re-run as the required verification step before any canonical-file insertion."
+  ],
+  "row_sum_factor_audit": {
+    "full": {
+      "factor_text_matches_row_sum_factor": true,
+      "matched_factor_index": 0
+    },
+    "unit": {
+      "factor_text_matches_row_sum_factor": true,
+      "matched_factor_index": 0
+    }
+  },
+  "safe_claim_statement": "Verified Fact, finite-level only: for r=3, the S-level unit (18x18) and full (27x27) matrices reconstructed from src/collatz_codex_harness.construct.s_counter_matrix have characteristic polynomials in y over QQ[t] that, in the Sage factorization recorded at data/generated/r3_factorization_audit/20260513T160231Z/, decompose into four displayed factors with degree pattern [1, 1, 2, 6] (unit) and [1, 1, 3, 9] (full) and multiplicity pattern [1, 1, 2, 2] (unit) and [1, 2, 2, 2] (full). The displayed product reconstructs the characteristic polynomial exactly, the total y-degree equals the matrix dimension, every artifact SHA-256 hash recorded in the bundle and reports is reproducible from the on-disk bytes (mismatches_count = 0), and the linear factor (y - row_sum(t)) corresponding to the all-equal row sum of S coincides with displayed factor 00 in both models.",
+  "sage_available": false,
+  "sandbox_blockers": [
+    {
+      "command": "env DOT_SAGE=$PWD/.codex/sage sage sage/r3_factorization_audit.sage",
+      "reason": "sage binary not present in sandbox; reconstruction not re-executed",
+      "status": "BLOCKED"
+    }
+  ],
+  "sandbox_failures_path": "data/generated/claude_audit/20260513T163247Z/sandbox_failures.txt",
+  "scope": "static audit of finite-level r=3 lifted-operator S-level characteristic-polynomial factorization bundle; no Collatz-level conclusion",
+  "status": "PASS_WITH_PATCHES",
+  "unsafe_claims_to_avoid": [
+    "This proves Collatz.",
+    "This essentially proves Collatz.",
+    "This rules out divergent Collatz orbits.",
+    "The factorization implies determinant nonvanishing for all real s > 0.",
+    "The factorization implies cross-level invariance between r=2 and r=3.",
+    "The factorization exposes a structural mechanism / Collatz dynamic.",
+    "The row-sum factor controls the spectral radius for all s > 0.",
+    "Irreducible entries constitute an independent algebraic irreducibility proof.",
+    "Exact string match against prior .sageout files is the authoritative correctness check.",
+    "r=2 mechanisms transfer to r=3 because the factorization patterns rhyme."
+  ]
+}

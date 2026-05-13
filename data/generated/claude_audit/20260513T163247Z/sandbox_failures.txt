@@ -1,0 +1,16 @@
+audit_timestamp: 20260513T163247Z
+target_bundle: data/generated/r3_factorization_audit/20260513T160231Z
+
+# Sandbox-blocked commands
+
+command: env DOT_SAGE=$PWD/.codex/sage sage sage/r3_factorization_audit.sage
+status: BLOCKED
+error: `sage` binary not present in PATH (`which sage` -> exit 127, "not found").
+consequence: Could not independently re-run the canonical audit Sage script in this sandbox.
+            Reconstruction check, Sage factor() output, and prior-sageout exact string comparison
+            could not be regenerated in this audit pass.
+mitigation: Static script audit (sage/r3_factorization_audit.sage) + recomputation of every
+            sha256 in data/generated/r3_factorization_audit/20260513T160231Z/ and
+            reports/20260513T160231Z_r3_factorization_*.md/.json via Python stdlib.
+            All recomputed hashes agree with the recorded values (see hash_audit.json,
+            mismatches_count = 0).
