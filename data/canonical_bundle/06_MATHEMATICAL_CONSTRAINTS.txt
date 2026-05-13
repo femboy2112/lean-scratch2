@@ -1,0 +1,339 @@
+============================================================
+FILE  : 06_MATHEMATICAL_CONSTRAINTS.txt
+ROLE  : Withdrawn / patched / quarantined items with their
+        mathematical witnesses; active contradiction guards;
+        failed structural candidates with explicit witnesses;
+        historical over-upgrade patterns to recognize and avoid.
+        Pure mathematical constraints. No workflow tracking.
+============================================================
+
+==SECTION:: 06.withdrawn.ledger ==
+
+Full ledger of withdrawn, patched, and quarantined items. Every entry
+is permanent. Re-introduction of any pattern below is Contradiction
+Detected.
+
+--SUBSECTION:: r=2 quarantines and contradictions --
+
+  q.r2.unit_055_failed_round :
+    The original B_2^unit(0.55) round is Withdrawn and quarantined.
+    Artifacts must not be reused. Quarantine covers the bad row-sum
+    formula, the Row 5 transcription error, and the unpatched
+    determinant vector below.
+
+  q.r2.bad_rowsum_formula :
+    rho = c * t * (1 - t^{18}) / (1 - t)
+    is Contradiction Detected. K-level geometric-sum identity
+    misapplied at B-level. Correct B-level row sum is the double
+    convolution rho_i = c * sum_k t^{a(i,k)} * (sum_j t^{a(j,k)}).
+
+  q.r2.unit_055_row5_transcription :
+    Originally printed Row 5 of B_2^unit(0.55) S(t) Withdrawn.
+    Canonical form derived from polynomial labels A..E.
+
+  q.r2.unit_055_unpatched_det_vector :
+    Withdrawn as determinant-vector transcription / computation error.
+    Corrected vector integrated.
+
+  q.r2.unit_060_unpatched_det_vector :
+    Withdrawn as scalar-inconsistent artifact. Corrected vector
+    integrated.
+
+  q.r2.full_060_unpatched_det_witness :
+    Patched at the determinant-vector artifact layer. Explicit
+    corrected vector lives in [ref: 04.s060.full.compact].
+
+  q.r2.unit_050_scalar_quotient :
+    The form
+      p_unit_050 / (x - 5/7) = (1/261121) * (7x - 1) * (73*x^2 - 42*x + 5)^2
+    is Withdrawn (scalar-incorrect for monic division). Correct form:
+      p_unit_050 / (x - 5/7) = (7/261121) * (7x - 1) * (73*x^2 - 42*x + 5)^2
+    See [ref: 04.s050.unit.exact_charpoly] for both.
+
+  q.r2.h_k_overbroad_claim :
+    The claim "h^k not in Q(t) for any k >= 1" was flagged
+    Over-Upgraded because h^{10} = 1/3 in Q at s=0.55 and h^5 = 1/3
+    in Q at s=0.60. Correct bounded statements:
+      s=0.55 : h^k not in Q(t) for k = 1, 2, 3, 4, 5, 6
+      s=0.60 : h^k not in Q(t) for k = 1, 2, 3, 4
+
+--SUBSECTION:: r=2 round-level patches --
+
+  p.r2.unit_055_coefficients :
+    Original "leading term" nonzero arguments for F_4, F_3, F_2, F_1
+    at unit(0.55) coefficient classification were insufficient. Patched
+    with exact reduced coefficient vectors in Q[t]/(2048*t^{20} - 1).
+
+  p.r2.full_055_batchA :
+    Missing F_7, F_6, F_5 nonzero witnesses at full(0.55) Patched with
+    explicit reduced coefficients in Q[t]/(2048*t^{20} - 1).
+
+  p.r2.full_055_batchB :
+    Flawed Grok patch with impossible odd-power reduced coefficients
+    Patched. The full model produces only even-power content in its
+    S-level matrix at s=0.55 (the s=0.55 ring has even minimal
+    relation). Corrected ChatGPT t^0 witnesses integrated.
+
+  p.r2.unit_060_wrong_field :
+    Grok's initial unit(0.60) coefficient patch contained coefficients
+    copied from Q[t]/(2048*t^{20} - 1) into a round labelled for
+    Q[t]/(8*t^5 - 1). Patched / not accepted as printed. Corrected
+    ChatGPT reductions in the correct ring integrated.
+
+  p.r2.unit_060_h5_special_case :
+    h^5 = 1/3 in Q at s=0.60. a_1 was classified by direct reduction;
+    the residual t-dependence preserves non-rationality.
+
+  p.r2.full_060_batchA_b5 :
+    Original b_5 vector at full(0.60) Batch A was Patched / not
+    accepted as printed. Corrected b_5 vector integrated after
+    ChatGPT arithmetic verification and Gemini follow-up.
+
+  p.r2.full_060_batchB :
+    Original Grok witness at full(0.60) Batch B was Patched / not
+    accepted as printed (placeholder language instead of exact
+    reduced vectors). Corrected ChatGPT reduction note integrated.
+
+  p.r2.parity_rule_correction :
+    Earlier rule "no odd reduced powers in full-model S-level
+    reductions" was Patched. Correct rule:
+      - unreduced full-model S-level polynomials use even powers of t
+      - at s=0.55 (ring Q[t]/(2048*t^{20} - 1), even minimal relation)
+        reductions preserve even-power content
+      - at s=0.60 (ring Q[t]/(8*t^5 - 1), odd-degree minimal relation)
+        reductions can transfer even-power content to odd basis
+        positions because t^6 = t/8, t^8 = t^3/8, etc.
+    Parity audits MUST account for the minimal relation of the
+    reduction ring.
+
+--SUBSECTION:: r=3 patches and quarantines --
+
+  p.r3.sorted_odd_O3_ordering :
+    Beta code at the generic rank certification round used a
+    sorted-odd O_3 ordering instead of canonical O_3 order. Rank
+    result is permutation-invariant and was unaffected. Patched /
+    harmless for rank. Future r=3 artifacts MUST declare and use
+    canonical ordering.
+
+  p.r3.charpoly_chain_failures :
+    The unit r=3 s=0.50 charpoly closure required nine prompt
+    iterations. The first eight Grok beta artifacts were each
+    Patched / not accepted as printed. Failure modes:
+      1. missing executable code (sandbox-path references only)
+      2. hand-transcribed finite-field tables with wrong weighted
+         degree sums
+      3. incorrect row-sum values
+      4. trace vectors not matching independent recomputation
+      5. factor tables structured but mathematically inconsistent
+      6. hashes printed without defined preimage formats
+      7. hashes not matching displayed coefficient lists
+      8. hardcoded coefficient lists masquerading as executable code
+      9. copy-corrupted full coefficient lists
+      10. row-sum factor check bug from assuming charpoly variable name
+      11. prose summaries where exact artifacts were required
+    Final closure used executable reconstruction plus hash certificate
+    plus selected index checks. The protocol changes in
+    [ref: 08.protocol.artifact_standard] were derived from this chain.
+
+  p.r3_full_s050_chr_proof_basis_drift :
+    Origin   : Grok 27 x 27 integer matrix A spectral pipeline (the
+               full r=3 s=0.50 closure).
+    Failure  : early outputs framed modular Cayley-Hamilton plus CRT
+               as a uniqueness proof for the integer characteristic
+               polynomial. CRT yields uniqueness modulo the product
+               of primes only; absent a coefficient-height bound,
+               this is not an exact-integer uniqueness argument.
+    Detected : Claude audit; Grok subsequently revised.
+    Status   : Patched. Final witness uses direct exact SymPy charpoly
+               on the reconstructed integer matrix as the primary
+               proof. Modular Cayley-Hamilton checks (primes 13 to 97)
+               are Computational Observation supporting the primary
+               proof, NOT a standalone uniqueness witness.
+
+  p.r3_full_s050_metadata_inconsistencies :
+    Origin   : same pipeline; factorization metadata round.
+    Failure  : square-free / gcd metadata initially inconsistent;
+               cubic-root count wording error ("six roots" instead of
+               "three distinct roots each of algebraic multiplicity 2").
+    Detected : narrow-defect repair prompts; Claude audit.
+    Status   : Patched. Final gcd(Q_A, Q_A') of degree 13 = 1+3+9 is
+               consistent with Q_A = L^2 C^2 D^2; cubic correctly
+               reports three distinct roots.
+
+  p.r3_full_s050_provenance_resolution :
+    Origin   : same pipeline; final spectral capsule.
+    Failure  : matrix A's relationship to the canonical full r=3
+               family was initially undeclared. Mention of MOD = 81
+               not present in v2.0/v2.1 canonical (P_3 = 54,
+               denominator 1 - t^54).
+    Detected : Claude audit.
+    Status   : Patched at v2.2 integration. Provenance declared:
+               A = 2^{54} S_full,r3(2^{-1/2}) = R B_full,r3(0.50),
+               R = 3 (2^{27} - 1)^2 = 54043194723139587.
+               MOD = 81 documented at construction level
+               [ref: 03.construction_modulus.r3] as the reconstruction
+               congruence modulus 3^4 with 54 = ord_81(2).
+
+--SUBSECTION:: structural and convention patches --
+
+  q.shifted_doubled_package :
+    Noncanonical unless explicitly opened as a separate shifted branch.
+    Treating doubled-package artifacts as direct Frozen Convention A
+    outputs is Contradiction Detected.
+
+  q.meta_advisory_status :
+    All meta analysis, outside commentary, and advisory interpretation
+    are Advisory Only. They do not become canonical and do not alter
+    conventions, classifications, or closure status.
+
+  q.full_partition_uniqueness_initial :
+    Full r=2 unordered 3+3+3 equitable-partition uniqueness was
+    initially listed as Not Established. Patched to Verified Fact
+    after enumeration witness. [ref: 04.structural.partition.uniqueness]
+
+==SECTION:: 06.contradiction_guards ==
+
+Active contradiction guards. Any future claim matching a guard pattern
+halts the round.
+
+  guard.descent_to_Q_at_non_rational_slices :
+    For B_2^unit(0.55), B_2^full(0.55), B_2^unit(0.60),
+    B_2^full(0.60):
+    Any claim p_B(x) in Q[x] OR "descent to Q succeeds" is
+    Contradiction Detected.
+
+  guard.full_050_charpoly_incompatibility :
+    Any claim of rank drop, rank 7, exact zero modes,
+    near-zero-as-exact-zero, singularity, or any characteristic
+    polynomial for B_2^full(0.50) incompatible with
+      (1/261121) * (x - 1) * (7x - 1)^2 * (73*x^3 - 63*x^2 + 15*x - 1)^2
+    is Contradiction Detected.
+
+  guard.shifted_doubled :
+    Any treatment of doubled-package artifacts as direct Frozen
+    Convention A outputs is Contradiction Detected.
+
+  guard.routine_reopening :
+    Any reopening of a closed per-slice or structural layer as
+    routine work is Contradiction Detected unless explicitly scoped
+    as audit.
+
+  guard.cross_level_inference :
+    Any inference from closed r=2 to r=3 (or vice versa) without
+    independent level-specific witness is Contradiction Detected.
+
+  guard.compact_to_descent :
+    Any treatment of compact S-level factorization as descent to Q
+    at the B-level is Contradiction Detected.
+
+  guard.r3_matrix_provenance :
+    Any closure that invokes a specific integer or symbolic r=3
+    matrix object (e.g., a 27 x 27 integer matrix A claimed to be
+    "the full r=3 matrix") MUST declare:
+      - the canonical s-slice or non-slice integer-clearance the
+        matrix corresponds to
+      - the explicit relationship A = (scaling) * S(t) at that slice
+        OR an explicit derivation of A from the source rule with a
+        clearly stated specialization
+      - all parameters used in the construction (P_3, denominator,
+        canonical ordering, MOD if any, a_0 definition source)
+    Closures lacking matrix-provenance declaration cannot be
+    integrated as canonical at the named slice level. They can be
+    integrated only as Verified Fact closures of the specific
+    matrix object (e.g., "spectrum of this 27 x 27 integer matrix"),
+    not as r=3 slice-level closures.
+
+  guard.factor_to_eigenvalue :
+    Any conversion of compact-factor multiplicity (Q(y)^2, C(y)^2,
+    (y - L1)^2 in r=2 closures) into numerical eigenvalue
+    multiplicity without separable-factors witness is
+    Contradiction Detected.
+
+  guard.unit_to_full_transfer :
+    Any claim that the r=2 unit reversal-involution mechanism
+    transfers to the r=2 full model is Contradiction Detected.
+    [ref: 06.failed_candidates entry "full_reversal_simple"]
+
+  guard.full_partition_uniqueness_overreach :
+    Any claim of full-partition uniqueness beyond the unordered
+    3+3+3 case as currently witnessed is Not Established and must
+    not be claimed without separate witness.
+    [ref: 04.structural.partition.uniqueness]
+
+==SECTION:: 06.failed_candidates ==
+
+Witness-bearing failed candidates. These are NOT to be retested as
+new in future rounds. Reference the recorded failure witness if a
+similar candidate is proposed.
+
+  failed.full_reversal_simple :
+    Hypothesis : the simple reversal involution that closed the unit
+                 r=2 model also closes the full r=2 model.
+    Witness    : (P_full^T * T * P_full - T)_{1,2} = -X1 + X2
+    Result     : commutation fails over Q[X0..X4].
+    Status     : Failed Candidate. Do not retest as new.
+
+  failed.full_partition_corelEAF :
+    Hypothesis : the partition {1,2,3} | {4,5,6} | {7,8,9} is
+                 equitable for the full r=2 abstract matrix.
+    Witness    : row 1 Cell A sum - row 2 Cell A sum = X2 - X4 != 0
+    Result     : not equitable.
+    Status     : Failed Candidate. Do not retest as new.
+
+==SECTION:: 06.over_upgrade_patterns ==
+
+Patterns that have produced over-upgrade errors historically.
+Every arithmetic gate and proof-boundary judgment must scan for these.
+
+  pattern.compact_implies_rational :
+    Treating compact S-level factorization as descent to Q at the
+    B-level. Counterexample: the four r=2 non-rational descent
+    closures, all at slices with compact factorizations but
+    p_B(x) not in Q[x].
+
+  pattern.squared_factor_implies_repeated_eigenvalue :
+    Converting compact-factor multiplicity into numerical eigenvalue
+    multiplicity without separable-factors witness. Forbidden.
+
+  pattern.repeated_decimal_implies_multiplicity :
+    Interpreting repeated decimals in solver output as exact
+    multiplicities. Forbidden.
+
+  pattern.near_zero_implies_zero_mode :
+    Interpreting near-zero numerical eigenvalues as exact zero modes.
+    Forbidden.
+
+  pattern.cross_ring_coefficient_transfer :
+    Copying coefficient witnesses between distinct reduction rings.
+    Q[t]/(2048*t^{20} - 1) and Q[t]/(8*t^5 - 1) are NOT
+    interchangeable.
+
+  pattern.scaling_exponent_mixup :
+    Mixing c^6 (unit) with c^9 (full) in r=2, or c_3^{18} with
+    c_3^{27} in r=3. Each model has its own scaling exponent.
+
+  pattern.parity_universal :
+    Applying the s=0.55 parity rule (no odd reduced powers) uniformly
+    across all reduction rings. Forbidden; the s=0.60 ring has odd
+    minimal relation and produces odd basis terms after reduction.
+
+  pattern.h_k_universal :
+    Claiming h^k not in Q(t) for any k >= 1. Forbidden; h^{10} = 1/3
+    at s=0.55 and h^5 = 1/3 at s=0.60. Use the bounded statement.
+
+  pattern.r2_to_r3_lift :
+    Lifting r=2 mechanisms (reversal, equitable partition) to r=3
+    without independent r=3 witness. Forbidden.
+
+  pattern.charpoly_variable_implicit :
+    Implicit charpoly variable handling in symbolic-algebra libraries
+    (e.g., SymPy's M.charpoly() without explicit variable). Caused
+    a false row-sum-factor failure historically. Always declare
+    explicit variable: y = symbols('y'); cp = M.charpoly(y).
+
+  pattern.hardcoded_artifact_as_computation :
+    Code that prints precomputed values from string literals rather
+    than computing them. Forbidden by [ref: 08.protocol.artifact_standard].
+
+
+End of file 06.

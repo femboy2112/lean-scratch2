@@ -1,0 +1,522 @@
+============================================================
+FILE  : 08_RECONNAISSANCE_OBSERVATIONS.txt
+ROLE  : Computational reconnaissance results across the closed
+        r=3 slices. All entries are Computational Observation only
+        (not Verified Fact). Recorded as canonical at that label.
+
+        Topics:
+          - compact-factor reconnaissance (v2.6)
+              naive unit-to-full divisibility and row-sum-quotient
+              divisibility rejected at s=0.50, 0.55, 0.60
+          - s=0.60 hash-preimage serialization reconciliation (v2.6)
+          - shared lower-degree factor reconnaissance (v2.7)
+              one shared linear factor at s=0.50; trivial at s=0.55,
+              0.60
+          - B-level normalization reconnaissance (v2.7)
+              rational at s=0.50; k=1 nonrational at s=0.55, 0.60
+============================================================
+
+==SECTION:: 09.observations.compact_factor_recon ==
+
+target :
+  r3_compact_factor_recon_s050_s055_s060
+
+classification :
+  Computational Observation only.
+
+scope :
+  Reconnaissance over the closed unit/full r=3 S-level characteristic
+  polynomials at the three canonical slices s = 0.50, 0.55, 0.60.
+
+objects :
+  U_s(y) = chi_unit_s(y)
+  F_s(y) = chi_full_s(y)
+  R_unit_s = row-sum eigenvalue of S_unit,r3(t_s)
+  R_full_s = row-sum eigenvalue of S_full,r3(t_s)
+  Ubar_s(y) = U_s(y) / (y - R_unit_s)
+  Fbar_s(y) = F_s(y) / (y - R_full_s)
+
+observation.naive_divisibility :
+  Naive unit-to-full divisibility U_s(y) | F_s(y) is rejected at all
+  three canonical slices. Exact monic division produced a nonzero
+  remainder at each.
+
+observation.degree_sanity :
+  At all three slices: deg(U_s) = 18, deg(F_s) = 27, deg(U_s^2) = 36.
+  Therefore U_s(y)^2 cannot divide nonzero F_s(y) by degree.
+
+observation.rowsum_quotient_divisibility :
+  Ubar_s(y) | Fbar_s(y) is rejected at all three slices.
+
+observation.row_sum_eigenvalues_differ :
+  R_unit_s != R_full_s at all three slices. Own row-sum factor checks
+  pass: U_s(R_unit_s) = 0, F_s(R_full_s) = 0. Cross row-sum checks
+  fail: U_s(R_full_s) != 0, F_s(R_unit_s) != 0.
+
+factory_hash_anchors :
+  s = 0.50 :
+    unit_coefficients_hash :
+      486bd69419ff773ab3a4c9a98e405aa42211cc9e402d9772b4b934aa189dd9a5
+    full_coefficients_hash :
+      27efb04f3926b0241cfc5bccb76c958d787b780a46f3fb143bfbb95767d9079a
+    naive_division_Q1_hash :
+      525b1d2aa84adbb2bd3fef29b22b487fd5bcad2f0738b07dde017978b4650bbe
+    naive_division_R1_hash :
+      509a7fae2d340aa3f82fadb8247b8f0da62e5ccfd704f1760b1d6947a324e335
+    rowsum_Ubar_hash :
+      fce28ef0c90253df2122c1e4d871994d6e8284178ea036a25a7e407bf724b893
+    rowsum_Fbar_hash :
+      5bed25079858f1e40b1db72140fb9e9e6893524547daf4ffe8974ecaa739b751
+    rowsum_Qbar_hash :
+      9bc0ec009255e949dd808b52da62b2be12b3abd3ae336405b37c985c57c54944
+    rowsum_Rbar_hash :
+      4ce05607318f15924020bf3df71fc9f6f4310ae8c48cb735fc2d93d3db8186a7
+
+  s = 0.55 :
+    unit_coefficients_hash :
+      58613b1312e90fb10a6cc03d677a4fca3ebe85d103a1777027d7faa042ae8d1c
+    full_coefficients_hash :
+      dc7d08f6bc8000e7601e50f8d91ced963705212a8110a7f0d404693d59af2427
+    naive_division_Q1_hash :
+      6c75e967109de6a180d201835e4b3a5a0b093050d5bd0eb3280336237c01b62b
+    naive_division_R1_hash :
+      a8814237ed6d31d4fdb6d2282720fa65eb15f7432af8a427b0b060454b9ddb44
+    rowsum_Ubar_hash :
+      adbaef7b990772bee497ec5a1cab2b571a08bcc29bef7f86cca2dc36300ce054
+    rowsum_Fbar_hash :
+      9384b65b119d945463337a68cfc7d1cd43e81880a5eeb640501b7ebd21c501d7
+    rowsum_Qbar_hash :
+      153aee64b69caece0976e4da01ff950dca8c946a8059a71cbac45a9f34725df7
+    rowsum_Rbar_hash :
+      d46aa3d63cb5f543e37ce1379cc3efc6d2fd177b220b6a6cbf40cb0dcffa2fcc
+
+  s = 0.60 :
+    factory_raw_unit_coefficients_hash :
+      712bd9362c5582fa1e3761571b4a6f4e96242956223a92287ee61c361a661884
+    factory_raw_full_coefficients_hash :
+      39fb583ed80822099aa188763d056f8a23a70ea90cfd078bb2fd0de0d19a8a05
+    v24_pair_format_unit_coefficients_hash :
+      118119bc97d46553195e7d96e6d4a3be915a17552b6cf3e0c5acb1e61bbc73a7
+    v24_pair_format_full_coefficients_hash :
+      d96670ec1386b5e32d59dbba549defe7fcb2631b653172d962579dded6fb029c
+    naive_division_Q1_hash :
+      07f6b20d8b789735b44314ee85852b4014caf23bc273220a0721ccb4dac226f4
+    naive_division_R1_hash :
+      7ea1312f2d0e9da29e9ca13275da66981ad8afda13596cfe85fbf14dadb93072
+    rowsum_Ubar_hash :
+      5d4729418bab3b7458d0fa5f280f8099dd7b6b774223f0159561f9fc724a1cd1
+    rowsum_Fbar_hash :
+      e6c152d09b76fd287787aed2f5ec195500be9ce2a2c809d5279811b20910d2df
+    rowsum_Qbar_hash :
+      a9801c870c889b4be934c84f5a3e2bddc3f9cc5e581a50e26db36ef846f105d0
+    rowsum_Rbar_hash :
+      0a1d0773b7cd58c02b9eb55927d7f2fcfdcf758543c33ac60fbf5a6df5b621f3
+
+conclusion :
+  The simple compact-factor divisibility hypotheses
+    F_s(y) = U_s(y) * C_s(y)
+  and
+    Fbar_s(y) = Ubar_s(y) * Cbar_s(y)
+  are rejected as Computational Observations at s = 0.50, 0.55, 0.60.
+
+boundary :
+  This does NOT close compact factorization generally. It only rejects
+  naive unit-to-full divisibility and row-sum-quotient divisibility at
+  the tested canonical slices. It does NOT rule out shared lower-degree
+  factors. It does NOT rule out factorization after B-level
+  normalization. It does NOT rule out factorization after base change
+  or extension ring. It does NOT establish descent-to-Q, subdominant
+  spectral structure, cross-level invariance, all-real-s determinant
+  nonvanishing, or any Collatz-level conclusion.
+
+related_strategy_candidates :
+  candidate.A_shared_lower_degree_factor_search
+  candidate.B_resultant_discriminant_recon
+  candidate.D_extension_or_base_change_factorization
+  (see [ref: 09.strategy.proposed_v27_candidates])
+
+[STATUS: Computational Observation]
+[GUARD: reconnaissance only; do not upgrade to compact-factor closure,
+        B-level descent, subdominant spectrum, cross-level invariance,
+        all-real-s determinant nonvanishing, or Collatz-level claims;
+        the open item [ref: 06.open.r3.compact_factorization] is NOT
+        closed by these observations.]
+
+==SECTION:: 09.reconciliation.s060_hash_preimage ==
+
+target :
+  r3_s060_hash_preimage_reconciliation
+
+classification :
+  Serialization Reconciliation / Computational Observation.
+
+status :
+  success
+
+issue :
+  The local r3_payload_factory_all.py emitted r=3 s=0.60 coefficients
+  in compact raw-string length-5 basis representation for
+  Q[t]/(8*t^5 - 1). The prior v2.4 canonical preimage at
+  [ref: 05.charpoly.unit.s060] and [ref: 05.charpoly.full.s060] used a
+  different preimage rule: each coefficient is serialized as five
+  [numerator, denominator] rational pairs in a JSON
+  degree-descending coefficient array. The two preimages produce
+  different SHA-256 hashes for the same underlying coefficients.
+
+reconciliation_method :
+  Convert the factory raw-string coefficients into the v2.4
+  pair-format preimage and recompute SHA-256.
+
+unit_s060_reconciliation :
+  factory_raw_string_coefficient_hash :
+    712bd9362c5582fa1e3761571b4a6f4e96242956223a92287ee61c361a661884
+  v24_pair_format_expected_hash :
+    118119bc97d46553195e7d96e6d4a3be915a17552b6cf3e0c5acb1e61bbc73a7
+  v24_pair_format_observed_hash :
+    118119bc97d46553195e7d96e6d4a3be915a17552b6cf3e0c5acb1e61bbc73a7
+  coefficient_count : 19
+  coefficient_vector_length : 5
+  reconciliation : PASS
+
+full_s060_reconciliation :
+  factory_raw_string_coefficient_hash :
+    39fb583ed80822099aa188763d056f8a23a70ea90cfd078bb2fd0de0d19a8a05
+  v24_pair_format_expected_hash :
+    d96670ec1386b5e32d59dbba549defe7fcb2631b653172d962579dded6fb029c
+  v24_pair_format_observed_hash :
+    d96670ec1386b5e32d59dbba549defe7fcb2631b653172d962579dded6fb029c
+  coefficient_count : 28
+  coefficient_vector_length : 5
+  reconciliation : PASS
+
+safe_conclusion :
+  The local factory coefficients reproduce the prior v2.4 canonical
+  s=0.60 coefficient hashes under the documented pair-format
+  preimage rule. The v2.4 hashes remain canonical. The factory
+  raw-string hashes may be recorded only as supplemental
+  sidecar/preimage hashes.
+
+policy :
+  may_replace_prior_canonical_hashes : false
+  may_record_factory_hashes_as_supplemental_sidecars : true
+
+boundary :
+  This is serialization reconciliation only. No new
+  characteristic-polynomial closure is added. No compact
+  factorization, B-level descent, subdominant spectrum, cross-level
+  invariance, all-real-s determinant nonvanishing, or Collatz-level
+  claim is added. This is recorded as a hash-preimage discipline
+  reference for future rounds; see also
+  [ref: 07.risks.active] risk.hash_preimage_treated_as_math_disagreement.
+
+[STATUS: Computational Observation / Serialization Reconciliation]
+[GUARD: do not replace prior v2.4 s=0.60 canonical hashes with
+        factory raw-string hashes; record raw-string hashes only as
+        supplemental sidecar/preimage variants.]
+
+==SECTION:: 09.observations.shared_factor_recon ==
+
+target :
+  r3_shared_lower_degree_factor_recon_s050_s055_s060
+
+classification :
+  Computational Observation only.
+
+scope :
+  Strategy Candidate A (shared lower-degree factor search) per
+  [ref: 09.strategy.proposed_v27_candidates].
+  Reconnaissance over the closed unit/full r=3 S-level characteristic
+  polynomials at the three canonical slices.
+
+method :
+  Compute gcd(U_s(y), F_s(y)) in the relevant S-level reduction ring
+  at each slice. If the gcd is nontrivial, certify divisibility,
+  compute quotients and their hashes, test multiplicity by repeated
+  division, and verify coprimality of remaining quotients.
+
+input_authority :
+  unit s=0.50 coefficient_list_hash :
+    85fb9f72d47781d8c51cfee7d86c8a22d0c0d12409db76bece965381ccaa5431
+  full s=0.50 coefficient_list_hash :
+    e8c0d45f31ad89148b4fa215dc8fd60dde44bae9ad0bca413390804bd8dbbacf
+  unit s=0.55 coefficient_t20_hash :
+    58613b1312e90fb10a6cc03d677a4fca3ebe85d103a1777027d7faa042ae8d1c
+  full s=0.55 coefficient_t20_hash :
+    dc7d08f6bc8000e7601e50f8d91ced963705212a8110a7f0d404693d59af2427
+  unit s=0.60 coefficient_list_hash (v2.4 pair-format) :
+    118119bc97d46553195e7d96e6d4a3be915a17552b6cf3e0c5acb1e61bbc73a7
+  full s=0.60 coefficient_list_hash (v2.4 pair-format) :
+    d96670ec1386b5e32d59dbba549defe7fcb2631b653172d962579dded6fb029c
+
+--SUBSECTION:: 09.observations.shared_factor_recon.s050 --
+
+result :
+  U_050(y) and F_050(y) share exactly one nontrivial monic linear
+  factor.
+
+ring :
+  Q[t]/(2*t^2 - 1), basis [1, t]
+
+shared_factor :
+  G_050(y) = y - 7720456389019941 / 18014398509481984
+           = y - 7720456389019941 / 2^54
+
+G_coefficients_degree_descending :
+  [
+    [["1","1"], ["0","1"]],
+    [["-7720456389019941","18014398509481984"], ["0","1"]]
+  ]
+
+G_hash :
+  4989dbe05dc7d837aa7051eff15f4626ed73741d0903615bb6a858f565918905
+
+quotient_certificates :
+  Urem_050_degree : 17
+  Frem_050_degree : 26
+  Urem_050_hash :
+    cc218d42ffae5fbdb4424e9573f69b4d980cb91291652b12b71bc9dd56031b04
+  Frem_050_hash :
+    7e818aef355c33d27671caaaac59d1cd9703c9f274571f1c1ee163c7ada1a4e7
+  U_050 = G_050 * Urem_050 : verified exactly
+  F_050 = G_050 * Frem_050 : verified exactly
+
+multiplicity :
+  G_050   in U_050 : 1
+  G_050^2 in U_050 : false
+  G_050   in F_050 : 2
+  G_050^2 in F_050 : true
+
+coprime_after_one_shared_copy :
+  gcd(Urem_050, Frem_050) = 1
+
+consistency_with_v22_full_s050_closure :
+  The integer-cleared full-model linear factor L from
+  [ref: 05.charpoly.full.s050] has explicit integer root
+  7720456389019941, and the integer-cleared matrix is
+  A = 2^54 * S_full,r3(2^{-1/2}). Therefore the corresponding S-level
+  root of L is exactly 7720456389019941 / 2^54, which equals the
+  G_050 root above. The multiplicity of L in P_A is 2 (P_A = (x-R) L^2 C^2 D^2);
+  this matches multiplicity 2 of G_050 in F_050. The new content here
+  is that the SAME root also appears in U_050 with multiplicity 1.
+
+--SUBSECTION:: 09.observations.shared_factor_recon.s055 --
+
+result :
+  gcd(U_055, F_055) = 1
+
+ring :
+  Q[t]/(2048*t^20 - 1), basis [1, t, t^2, ..., t^19]
+
+interpretation :
+  No nontrivial shared factor at s=0.55. The shared-factor pattern
+  observed at s=0.50 does not extend to s=0.55.
+
+--SUBSECTION:: 09.observations.shared_factor_recon.s060 --
+
+result :
+  gcd(U_060, F_060) = 1
+
+ring :
+  Q[t]/(8*t^5 - 1), basis [1, t, t^2, t^3, t^4]
+
+interpretation :
+  No nontrivial shared factor at s=0.60. The shared-factor pattern
+  observed at s=0.50 does not extend to s=0.60.
+
+--SUBSECTION:: 09.observations.shared_factor_recon.summary --
+
+The shared lower-degree factor space at r=3 is currently observed as
+narrow: at s=0.50 a single shared linear factor (the S-level
+counterpart of the v2.2 integer-cleared L) appears with unequal
+multiplicities in unit and full; at s=0.55 and s=0.60 no nontrivial
+shared factor appears. The compact-factorization hypothesis space is
+not closed by these observations; it is constrained.
+
+boundary :
+  This does NOT close r=3 compact factorization.
+  This does NOT establish unit-to-full divisibility at any slice.
+  This does NOT establish a higher-degree shared-factor pattern.
+  This does NOT establish B-level descent-to-Q.
+  This does NOT establish subdominant spectral structure.
+  This does NOT establish cross-level invariance.
+  This does NOT establish determinant nonvanishing for all real s > 0.
+  This does NOT establish any Collatz-level conclusion.
+
+[STATUS: Computational Observation]
+[GUARD: do not upgrade the s=0.50 isolated shared linear factor into
+        compact factorization closure, B-level descent, subdominant
+        spectral structure, cross-level invariance, or Collatz-level
+        claims. Do not infer absence of compact factorization from
+        absence of shared factors at s=0.55 and s=0.60.]
+
+==SECTION:: 09.observations.b_level_normalization_recon ==
+
+target :
+  r3_b_level_normalization_recon_s050_s055_s060
+
+classification :
+  Computational Observation only.
+
+scope :
+  Strategy Candidate C (B-level normalization scoping) per
+  [ref: 09.strategy.proposed_v27_candidates].
+
+scaling_rule :
+  B = c_3 * S, where c_3 = h^2 / (1 - t^54)^2.
+  For p_S(y) = y^n + a_1 y^{n-1} + ... + a_n,
+  p_B(x) = c_3^n * p_S(x / c_3) = x^n + (a_1 c_3) x^{n-1} + ... + (a_n c_3^n).
+  Coefficient k from the leading term: coeff_B[k] = coeff_S[k] * c_3^k,
+  with k=0 for the leading coefficient.
+
+mode_full :
+  Full sidecar mode emits all 19 (unit) or 28 (full) B-level
+  coefficients with hash anchors.
+
+mode_k1 :
+  Minimal-certificate mode tests only the trace coefficient
+  (coefficient at degree-1 from leading, k=1). Sufficient to block
+  descent-to-Q at the first non-leading coefficient if nonrational.
+
+--SUBSECTION:: 09.observations.b_level_normalization_recon.s050 --
+
+ring_S :
+  Q[t]/(2*t^2 - 1), basis [1, t]
+
+c_3_at_s050 :
+  c_3(0.50) = h^2 / (1 - t^54)^2 with t^54 = 2^{-27}, h^2 = 1/3
+            = 2^54 / (3 * (2^27 - 1)^2)
+            = 18014398509481984 / 54043194723139587
+
+c_3_representation_basis_1_t :
+  [["18014398509481984","54043194723139587"], ["0","1"]]
+
+c_3_hash :
+  bc53907bd4a99e08fdf77008d96b6c8ccb4468f9bf7272926582291958b28758
+
+unit_B_result :
+  degree                   : 18
+  B_coefficients_hash      :
+    bc2df3390409e5a72fe6e4c8e95f0b51a60c8cb36e380f1e5c39011a07fee50c
+  all_coefficients_rational: true
+  first_nonrational_index  : null
+
+full_B_result :
+  degree                   : 27
+  B_coefficients_hash      :
+    eb7b493af9fc0db992cd949188d2cff8cbde366d9443257706462857fb18e415
+  all_coefficients_rational: true
+  first_nonrational_index  : null
+
+sidecars :
+  r50u_B_coeff.json
+  r50f_B_coeff.json
+
+preimage_rule :
+  degree-descending coefficient list; each coefficient is a
+  two-slot basis vector in [1, t]; entries are exact rational
+  strings; canonical JSON uses sort_keys=True and
+  separators=(",", ":").
+
+interpretation :
+  At s=0.50 the B-level normalization produces fully rational
+  coefficient lists for both unit and full models. This is the
+  S-level / B-level analogue of the v2.2 full s=0.50 charpoly being
+  in Z[x] under integer clearance.
+
+--SUBSECTION:: 09.observations.b_level_normalization_recon.s055 --
+
+ring_B :
+  Q[t,h]/(2048*t^20 - 1, 3^20*h^20 - 1)
+  basis t^i h^j, 0 <= i <= 19, 0 <= j <= 19
+  d_expression : 1 - t^14 / 4194304
+  d2_inverse_verified : true
+
+c_3_at_s055_hash :
+  2a91aac53b222fdf1cc374a0ac2f1ff379df8c045adf61ff863f481c684c8329
+
+unit_B_k1 :
+  B_k1_hash :
+    742e8ba5fe9308c3e8db647883e53b2d15a0f55486e55a0b3457a822f7fc568d
+  has_nonzero_h_support : true
+  is_rational           : false
+
+full_B_k1 :
+  B_k1_hash :
+    653b4b06961000cae77e59028dffcfa68e478680250c33f9cbeb93e0c5c0e040
+  has_nonzero_h_support : true
+  is_rational           : false
+
+sidecar :
+  r55_B_k1_cert.json
+
+interpretation :
+  Descent-to-Q at s=0.55 is BLOCKED at the first non-leading
+  coefficient (k=1, the trace coefficient) for both unit and full
+  models.
+
+--SUBSECTION:: 09.observations.b_level_normalization_recon.s060 --
+
+ring_B :
+  Q[t,h]/(8*t^5 - 1, 27*h^5 - 1)
+  basis t^i h^j, 0 <= i <= 4, 0 <= j <= 4
+
+c_3_at_s060_hash :
+  950768d7bdc23a45ac2a9b7119b6b09baf1dc197c1fb5ff221796f357a283963
+
+unit_B_k1 :
+  B_k1_hash :
+    6c32d4d509667d1c1e382b69013a03de1a766a0c1f272436ff264a272f4d3185
+  has_nonzero_h_support : true
+  is_rational           : false
+
+full_B_k1 :
+  B_k1_hash :
+    3aa164b49495a0ca2ff952337f995a1c97e33176311c79a8d5e16da90f5d5e32
+  has_nonzero_h_support : true
+  is_rational           : false
+
+sidecar :
+  r60_B_k1_cert.json (or equivalent corrected-term memo)
+
+patch_note :
+  In the v2.7 round at s=0.60, the Grok-emitted k=1 hash matched the
+  corrected exact terms, but the originally printed k=1 terms had
+  transcription errors in the later t-slots. The corrected terms
+  must be in the sidecar; the printed-in-prose terms must be ignored.
+
+interpretation :
+  Descent-to-Q at s=0.60 is BLOCKED at the first non-leading
+  coefficient (k=1) for both unit and full models.
+
+--SUBSECTION:: 09.observations.b_level_normalization_recon.summary --
+
+  s = 0.50 : B-level fully rational (unit and full).
+  s = 0.55 : B-level k=1 nonrational (unit and full); descent
+             blocked at trace.
+  s = 0.60 : B-level k=1 nonrational (unit and full); descent
+             blocked at trace.
+
+  The pattern matches the prior r=2 observation that B-level
+  rationality occurs at s=0.50 and fails at s=0.55, s=0.60. At r=3
+  the failure is now witnessed at the very first non-leading
+  coefficient at the two non-rational slices.
+
+boundary :
+  This is B-level normalization scoping only.
+  Rationality at s=0.50 does NOT establish general r=3 descent-to-Q.
+  Nonrationality at k=1 for s=0.55 and s=0.60 is a per-slice
+  obstruction; it does NOT establish a general r=3 theorem.
+  This does NOT establish compact factorization.
+  This does NOT establish subdominant spectral structure.
+  This does NOT establish cross-level invariance.
+  This does NOT establish determinant nonvanishing for all real s > 0.
+  This does NOT establish any Collatz-level conclusion.
+
+[STATUS: Computational Observation]
+[GUARD: do not upgrade isolated s=0.50 B-level rationality into
+        general descent-to-Q or compact-factorization closure;
+        do not upgrade k=1 nonrationality at s=0.55 or s=0.60 into
+        a general theorem beyond the tested slice and coefficient.]
+
+
+End of file 08.

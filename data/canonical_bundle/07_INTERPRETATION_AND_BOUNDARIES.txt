@@ -1,0 +1,202 @@
+============================================================
+FILE  : 07_INTERPRETATION_AND_BOUNDARIES.txt
+ROLE  : Mathematical interpretation of what each closure does and
+        does not establish. Boundary statements specifying what is
+        and is not in scope. Pure mathematical interpretation; no
+        operational risk register.
+============================================================
+
+==SECTION:: 07.interpretation.significance ==
+
+Mathematical significance of the closed material. Each entry is a
+statement of what the closure means and what it does NOT mean.
+
+--SUBSECTION:: 07.interpretation.r2_descent_failure --
+
+The descent-to-Q negative closures at the four r=2 non-rational slices
+establish that the B-level characteristic polynomial does not lie in
+Q[x]. The proof at each slice isolates one specific coefficient, the
+x^5 coefficient at unit models or the x^8 coefficient at full models,
+and exhibits it as an explicit expression containing the irrational
+factor h.
+
+  does establish :
+    - the polynomial lives genuinely over the algebraic extension,
+      not over Q itself
+    - rational-coefficient phenomenon at r=2 is isolated to s=0.50
+
+  does NOT establish :
+    - any compact factorization at the failing slice (compact closure
+      is independent and remains Verified Fact at S-level)
+    - any singularity, rank drop, or zero mode (those closures are
+      independent and remain Verified Fact)
+    - any Collatz-level conclusion
+
+--SUBSECTION:: 07.interpretation.r2_structural_theorems --
+
+The two r=2 structural theorems explain the compact factorization
+shapes at the abstract-matrix level by distinct Verified Fact
+mechanisms.
+
+  unit explanation : reversal involution, eigenspace decomposition,
+                     factor multiplicity from two independent 3D blocks
+
+  full explanation : equitable partition, cell-constant quotient
+                     plus zero-sum residual, factor multiplicity from
+                     residual-block structure
+
+  unified status   : narrow shared architecture closed
+                     [ref: 04.structural.unified.narrow]
+                     generic distinctness closed
+                     [ref: 04.structural.distinctness.generic]
+
+  does establish :
+    - exact symbolic explanations for the compact factorization shapes
+      across all four non-rational r=2 slices
+    - block-multiplicity origin of the squared compact factors
+
+  does NOT establish :
+    - that either mechanism transfers to r=3
+    - that compact-factor multiplicity equals numerical eigenvalue
+      multiplicity (separable-factors argument required)
+    - any Collatz-level conclusion
+
+--SUBSECTION:: 07.interpretation.r3_generic_rank --
+
+The r=3 generic rank closure (rank 18 unit, rank 27 full) is a strong
+structural result and a weaker numerical one.
+
+  does establish :
+    - determinant polynomials det(S_{unit,r3}(t)),
+      det(S_{full,r3}(t)) are not identically zero in Z[t]
+    - generic full rank over Q(t)
+
+  does NOT establish :
+    - det(S(t)) != 0 for every real s > 0 (a polynomial in t can be
+      generically nonzero and still vanish at finitely many specific
+      values t = 2^{-s})
+    - any characteristic polynomial; characteristic polynomial requires
+      its own witness
+    - any subdominant eigenvalue data; Perron closure identifies only
+      the dominant eigenvalue
+
+--SUBSECTION:: 07.interpretation.r3_unit_s050_charpoly --
+
+The unit r=3, s=0.50 exact characteristic polynomial closure is the
+first slice-specific exact characteristic polynomial closure at r=3.
+
+  does establish :
+    - degree-18 exact charpoly with rational coefficients for this
+      specific specialization t = sqrt(2)/2
+    - rank, kernel, zero-mode, row-sum factor, and hash-verifiable
+      reproducibility at this slice
+
+  does NOT establish :
+    - descent-to-Q at any other r=3 slice (the r=2 history shows
+      s=0.55 and s=0.60 failed descent there)
+    - compact factorization at r=3
+    - anything about the full r=3 s=0.50 charpoly (full is a separate
+      27-dim object) [v2.1 boundary; closed at v2.2 via independent
+      witness; see r3_full_s050_charpoly subsection below]
+    - cross-level invariance even if this charpoly shares factors with
+      the unit r=2 s=0.50 charpoly; any such sharing would be
+      Computational Observation only
+
+--SUBSECTION:: 07.interpretation.r3_full_s050_charpoly --
+
+The full r=3, s=0.50 exact characteristic polynomial closure (v2.2,
+[ref: 05.charpoly.full.s050]) is the largest exact spectral closure
+produced in this canonical to date.
+
+  does establish :
+    - exact integer factorization of P_A at the integer-cleared
+      matrix A: P_A = (x-R) L^2 C^2 D^2 over Z[x] with explicit L
+      monic linear (root 7720456389019941), C monic irreducible
+      cubic, D monic irreducible degree 9
+    - minimal polynomial m_A = (x-R) L C D over Z[x] of degree 14,
+      from real-symmetry diagonalizability
+    - certified spectral gap gap_A > 5259845921943359
+    - certified positivity of every eigenvalue (from exact rational
+      Sturm root isolation, not from "positive entries imply positive
+      spectrum" which would be wrong)
+    - matrix provenance: A = 2^{54} S_full,r3(2^{-1/2}) = R B_full,r3(0.50)
+      with R = 3 (2^{27} - 1)^2 = 54043194723139587
+    - corresponding scaling identities for S = A/q and B = A/R
+
+  does NOT establish :
+    - exact radical forms for the roots of C or D
+    - rationality of the roots of C or D
+    - descent-to-Q in the r=2 sense at any other r=3 slice; the
+      rationality of P_A coefficients at s=0.50 mirrors the r=2
+      pattern at s=0.50 specifically
+    - compact factorization in the canonical r=2 c-scaled sense;
+      the (x-R) L^2 C^2 D^2 shape is over Z[x], not the c-rescaled
+      compact form
+    - any cross-level invariance with the unit r=2 s=0.50 closure
+      even if specific factor-shape coincidences are observed
+    - any Collatz-level conclusion
+
+  significance for next targets :
+    The integer-cleared full r=3 closure now anchors slice s=0.50.
+    Comparison with the unit r=3 s=0.50 closure
+    [ref: 05.charpoly.unit.s050] is now Computational Observation
+    available; whether the unit factorization divides the full
+    factorization (as it does at r=2 s=0.50) is an open question
+    that the next round may scope.
+
+--SUBSECTION:: 07.interpretation.r2_compact_factorization_shape --
+
+Uniformity of compact factorization shape across r=2 non-rational
+slices is structurally explained at r=2 by the two structural theorems.
+
+  does establish :
+    - structural origin of the shape at r=2
+    - extension to any r=2 s-value not yet tracked PROVIDED the same
+      canonical substitution applies
+
+  does NOT establish :
+    - the shape persists at r=3
+    - the shape implies cross-level invariance
+
+==SECTION:: 07.interpretation.boundaries ==
+
+Hard boundaries against false inference. Every audit and every
+stakeholder summary must respect these boundaries.
+
+  boundary.no_collatz_proof :
+    No closure in this canonical proves or disproves the Collatz
+    conjecture. The closures concern exact characteristic-polynomial
+    structure of Gram matrices arising from the canonical
+    construction. They are not by themselves a Collatz argument.
+    Statements suggesting otherwise are Advisory Only at best.
+
+  boundary.no_cross_level :
+    r=2 closures do not transfer to r=3. r=3 closures do not transfer
+    to other levels. Cross-level invariance requires independent
+    witnesses at each level being compared.
+
+  boundary.no_uniformity_to_unknown_slices :
+    Closures at the tracked s-values do not establish behavior at
+    any other s-value. Each slice requires its own witness.
+
+  boundary.no_uniformity_to_unknown_models :
+    Closures for the smaller direct package do not transfer to the
+    shifted/doubled package. The shifted/doubled package is
+    noncanonical unless explicitly opened as a separate branch.
+
+  boundary.no_eigenvalue_from_factor_multiplicity :
+    Compact-factor multiplicity (Q(y)^2, C(y)^2, (y - L1)^2 in r=2
+    closures) is not numerical eigenvalue multiplicity. Conversion
+    requires separable-factors witness.
+
+  boundary.no_exact_from_numerical :
+    Numerical solver output is Computational Observation. It is not a
+    substitute for symbolic witness and does not upgrade any Not
+    Established item.
+
+  boundary.no_canonical_from_advisory :
+    Meta and advisory analysis is Advisory Only. It does not become
+    canonical and does not alter conventions or closure status.
+
+
+End of file 07.

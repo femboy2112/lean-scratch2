@@ -1,0 +1,14 @@
+name: collatz-codex-research
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - sage
+  - sympy
+  - numpy
+  - pandas
+  - matplotlib
+  - pytest
+  - rich
+  - pyyaml
+  - networkx

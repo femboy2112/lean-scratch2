@@ -1,0 +1,729 @@
+============================================================
+FILE  : 05_R3_CLOSURES.txt
+ROLE  : All r=3 Verified Fact closures.
+        Source / construction, row-sum / all-ones, Perron / spectral
+        radius, generic determinant / rank / kernel over Q(t),
+        slice-specific determinant / rank / kernel, and the
+        unit r=3 s=0.50 exact characteristic polynomial.
+LOAD  : Required for any r=3 work and for any audit. Optional for
+        rounds strictly scoped to r=2.
+DEPS  : 00, 01, 02, 03.
+SIZE  : medium. Active growth layer; new closures append at the
+        relevant APPEND-POINT.
+============================================================
+
+==SECTION:: 05.source.construction ==
+
+The r=3 source / construction layer is closed under the general
+finite-level source rule [ref: 02.source.general_rule] with parameters
+[ref: 02.source.r3_parameters].
+
+Closed objects:
+  P_3                = 54
+  denominator        = 1 - t^{54}
+  c_3                = h^2 / (1 - t^{54})^2
+  state lists        : U_3, U_4, O_3, O_4 [ref: 03.statelist.r3.unit],
+                       [ref: 03.statelist.r3.full]
+  exponent tables    : 18 x 54 unit live-support and 27 x 54 full
+                       live-support [ref: 03.exponents.r3.tables]
+  resulting S matrices: S_unit,r3 is 18 x 18; S_full,r3 is 27 x 27
+  K, B = K K^T, S(t) = B / c_3 : constructed deterministically
+                                 from the registered construction script
+                                 [ref: 08.protocol.code_registry]
+
+[STATUS: Verified Fact]
+
+==SECTION:: 05.rowsum.unit_full ==
+
+Row-sum / all-ones eigenvector identity at r=3.
+
+\[
+S_{\mathrm{unit},r3}(t) \cdot \mathbf{1} \;=\; R_{\mathrm{unit},r3}(t) \cdot \mathbf{1}
+\]
+
+\[
+S_{\mathrm{full},r3}(t) \cdot \mathbf{1} \;=\; R_{\mathrm{full},r3}(t) \cdot \mathbf{1}
+\]
+
+R_{unit,r3}(t) and R_{full,r3}(t) are the level-3 row-sum polynomials
+emitted deterministically by the registered construction script.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 05.perron.unit_full ==
+
+Perron dominance / spectral-radius equality for real s > 0:
+
+\[
+\rho(B_{\mathrm{unit},r3}(s)) \;=\; c_3 \cdot R_{\mathrm{unit},r3}(t)
+\]
+
+\[
+\rho(B_{\mathrm{full},r3}(s)) \;=\; c_3 \cdot R_{\mathrm{full},r3}(t)
+\]
+
+  domain         : real s > 0
+  positivity     : B_{unit,r3} and B_{full,r3} are strictly positive,
+                   so Perron-Frobenius applies
+  equality_basis : combined with the row-sum identity, all-ones is the
+                   Perron eigenvector
+
+[STATUS: Verified Fact]
+[GUARD: identifies only the dominant spectral radius; subdominant
+        eigenvalues remain Not Established at every slice]
+
+==SECTION:: 05.generic.det_rank_kernel ==
+
+Generic determinant / rank / kernel over Q(t).
+
+\[
+\det\!\bigl(S_{\mathrm{unit},r3}(t)\bigr) \;\not\equiv\; 0
+\qquad
+\det\!\bigl(S_{\mathrm{full},r3}(t)\bigr) \;\not\equiv\; 0
+\]
+
+\[
+\operatorname{rank}_{\mathbb{Q}(t)} S_{\mathrm{unit},r3} \;=\; 18
+\qquad
+\operatorname{rank}_{\mathbb{Q}(t)} S_{\mathrm{full},r3} \;=\; 27
+\]
+
+\[
+\ker_{\mathbb{Q}(t)} S_{\mathrm{unit},r3} \;=\; \{0\}
+\qquad
+\ker_{\mathbb{Q}(t)} S_{\mathrm{full},r3} \;=\; \{0\}
+\]
+
+The same generic rank / kernel hold at the B-level because
+B = c_3 * S(t) and c_3 != 0.
+
+Certificates:
+  exact finite-field rank certificates at:
+    (p, alpha) = (11, 2)
+    (p, alpha) = (13, 2)
+  Each yields rank 18 (unit) and rank 27 (full).
+
+  Certificate method establishes that the determinant polynomials are
+  not identically zero in Z[t]. It establishes generic full rank over
+  Q(t). It does NOT establish all-real-s determinant nonvanishing.
+
+[STATUS: Verified Fact]
+[GUARD: generic rank over Q(t) does NOT imply det != 0 at every real
+        s > 0; see [ref: 06.open.list] entry "r3.determinant.all_real_s"]
+[GUARD: generic rank does NOT provide a characteristic polynomial]
+
+==SECTION:: 05.slice.s050.det_rank_kernel ==
+
+Slice-specific determinant / rank / kernel at r=3, s = 0.50.
+
+  setup        : t = sqrt(2)/2; reduction ring Q[t]/(2*t^2 - 1) iso Q(sqrt(2))
+  unit         : rank 18, kernel {0}, det != 0
+  full         : rank 27, kernel {0}, det != 0
+
+[STATUS: Verified Fact]
+
+==SECTION:: 05.slice.s055.det_rank_kernel ==
+
+Slice-specific determinant / rank / kernel at r=3, s = 0.55.
+
+  setup        : t = 2^{-11/20}; reduction ring at this slice for r=3
+                 (heavier than the r=2 ring; declared explicitly per
+                 round in the registered construction script)
+  unit         : rank 18, kernel {0}, det != 0
+  full         : rank 27, kernel {0}, det != 0
+
+[STATUS: Verified Fact]
+
+==SECTION:: 05.slice.s060.det_rank_kernel ==
+
+Slice-specific determinant / rank / kernel at r=3, s = 0.60.
+
+  setup        : t = 2^{-3/5}; reduction ring at this slice for r=3
+                 (declared explicitly per round in the registered
+                 construction script)
+  unit         : rank 18, kernel {0}, det != 0
+  full         : rank 27, kernel {0}, det != 0
+
+[STATUS: Verified Fact]
+
+==SECTION:: 05.charpoly.unit.s050 ==
+
+Unit r=3 s=0.50 exact characteristic polynomial.
+
+Object:
+\[
+\chi_{\mathrm{unit},\,r3,\,s=0.50}(y)
+\;=\;
+\det\!\bigl(y\,I \;-\; S_{\mathrm{unit},r3}(t_{0.50})\bigr),
+\qquad
+t_{0.50} = \frac{\sqrt{2}}{2}.
+\]
+
+Closed certificate properties:
+
+  degree                        : 18
+  coefficient_count             : 19
+  all_exponent_sums_even        : true
+  coefficients_lie_in_Q         : true (for this artifact)
+  rank                          : 18
+  kernel                        : {0}
+  zero_modes                    : none
+  row_sum_factor_y_minus_R      : present (verified divisibility)
+  representation                : executable reconstruction plus
+                                  hash certificate
+
+Hashes:
+  matrix_hash :
+    2d939178b08b44b45bce5dfec09a29054614f1bd4ddb28b0416cc33be199ecfb
+
+  coefficient_list_hash :
+    85fb9f72d47781d8c51cfee7d86c8a22d0c0d12409db76bece965381ccaa5431
+
+Hash preimage descriptions:
+  matrix_hash_preimage :
+    SHA-256 of the canonicalized JSON dump of S_{unit,r3}(t_{0.50})
+    over Q(sqrt(2)), with entries written as pairs (a, b) for
+    a + b*sqrt(2), serialized in row-major order with sorted keys
+    and no whitespace, UTF-8 encoded.
+
+  coefficient_list_hash_preimage :
+    SHA-256 of the canonicalized JSON dump of the 19-coefficient
+    list of chi(y) in degree-descending order, each coefficient
+    written as (a, b) for a + b*sqrt(2), serialized as a JSON
+    array with no whitespace, UTF-8 encoded.
+
+Reconstruction:
+  registered script             : r3_unit_s050_charpoly.py
+  script_registration           : [ref: 08.protocol.code_registry]
+  reproduction_method           : run the registered script; verify
+                                  emitted hashes match the values
+                                  above. Verification by ChatGPT
+                                  arithmetic gate is mandatory.
+
+Selected coefficient index checks (for human-readable verification of
+the machine-emitted artifact; full coefficient list lives in the
+script's stdout, not in this canonical text):
+  index_0_check                 : (verified by registered script run)
+  index_1_check                 : (verified by registered script run)
+  index_8_check                 : (verified by registered script run)
+  index_9_check                 : (verified by registered script run)
+  index_18_check                : leading coefficient = 1
+
+[STATUS: Verified Fact]
+[GUARD: rationality of coefficients at this specific slice does NOT
+        entail descent-to-Q at any other r=3 slice; per the r=2 history
+        s=0.55 and s=0.60 failed descent at r=2 by isolating an
+        irrational coefficient]
+[GUARD: this charpoly does NOT entail compact factorization at r=3]
+[GUARD: this charpoly does NOT entail anything about the full r=3
+        s=0.50 charpoly; the full model is 27-dimensional and is an
+        independent object]
+[GUARD: subdominant eigenvalues remain Not Established]
+[GUARD: cross-level invariance remains Not Established even if this
+        charpoly shares factors with the unit r=2 s=0.50 charpoly;
+        any such observation is Computational Observation only and
+        requires a separate Verified Fact theorem to upgrade]
+
+<<APPEND-POINT::05.charpoly>>
+
+==SECTION:: 05.charpoly.full.s050 ==
+
+Full r=3 s=0.50 exact characteristic polynomial.
+
+Provenance (resolved v2.2 per [ref: 06.contradiction_guards]
+guard_r3_matrix_provenance):
+  matrix_object   : the 27 x 27 integer matrix A reconstructed from
+                    O_3, U_4, P_3 = 54, MOD = 81, and a_0(n,m) per
+                    [ref: 03.construction_modulus.r3]
+  slice_form      : A = 2^{54} * S_full,r3(t_*)  with t_* = 2^{-1/2}
+  integer_clearance_form :
+                    A = R * B_full,r3(0.50)  with
+                    R = 3 * (2^{27} - 1)^2 = 54043194723139587
+  consistency     : R * c_3(0.50) = q = 2^{54} = 18014398509481984
+                    (so the two forms agree)
+
+Locked matrix facts:
+  symmetry        : A is real symmetric
+  positivity      : A has strictly positive entries
+  row sum         : A * 1 = R * 1, where R = 54043194723139587
+  trace           : tr(A) = 486388759756013541
+  matrix hashes   :
+    sha256_matrix_json_compact :
+      5d996ccb6dcb3b1003e854b9986aab58495c7db1f062bccc2d59db5296978f99
+    sha256_flat_ints :
+      a9c5ea8b5521c6ccd82862fe3b8ba67cf6094b78869ff592834562f080a8ace3
+
+Closed object:
+\[
+P_A(x) \;=\; \det(xI - A) \;=\; (x - R)\,L(x)^2\,C(x)^2\,D(x)^2
+\]
+
+where:
+  L : monic linear, integer coefficients
+      explicit: L(x) = x - 7720456389019941
+      hash : 272cae123ffbcac287bba90c2820db1605c669abd54707ae4e4e01bb63ad9020
+  C : monic irreducible cubic over Q, integer coefficients
+      hash : 087cfb4af9e86ce7391d3712a6c8e516b8bdf00d450d84efea009cbc4c213d2f
+  D : monic irreducible degree 9 over Q, integer coefficients
+      hash : 70202de1a4ae958ae28244e2c58a4166746384a1dc17b67c4f583320785ad8cf
+
+Coefficient-list and quotient hashes:
+  P_A coefficients high-to-low :
+    e8c0d45f31ad89148b4fa215dc8fd60dde44bae9ad0bca413390804bd8dbbacf
+  Q_A := P_A / (x - R)  coefficients high-to-low :
+    43c865af36b2dbe1589adb9c6f1418504ed40288768d4b8bc195488066598786
+
+Degree check:
+  deg(P_A) = 1 + 2*1 + 2*3 + 2*9 = 27  (matches dim A)
+
+Square-free / multiplicity certificate:
+  gcd(Q_A, Q_A') has degree 13 = 1 + 3 + 9 = deg(L * C * D)
+  consistent with Q_A = L^2 * C^2 * D^2
+
+Spectral structure:
+  by Perron-Frobenius (A real symmetric, strictly positive,
+  A * 1 = R * 1):
+    rho(A) = R, simple
+    every other eigenvalue lambda satisfies |lambda| < R
+  by symmetry:
+    A is orthogonally diagonalizable over R
+  algebraic multiplicities in P_A:
+    Perron root R       : 1
+    integer root of L   : 2
+    each root of C      : 2  (3 distinct roots; total 6)
+    each root of D      : 2  (9 distinct roots; total 18)
+    total               : 1 + 2 + 6 + 18 = 27
+
+Minimal polynomial (consequence of real-symmetry diagonalizability;
+each distinct irreducible factor appears once):
+\[
+m_A(x) \;=\; (x - R)\,L(x)\,C(x)\,D(x), \qquad \deg m_A = 14.
+\]
+
+Spectral gap (from exact rational Sturm root isolation):
+  largest non-Perron isolation interval :
+    (48783348801196227, 48783348801196228)
+  -> largest non-Perron eigenvalue is strictly less than 48783348801196228
+  -> certified bound:
+\[
+\mathrm{gap}_A \;=\; R - \lambda_{\max,\text{non-Perron}}
+\;>\; R - 48783348801196228
+\;=\; 5259845921943359.
+\]
+  positivity of all eigenvalues:
+    every isolation interval (linear, cubic, degree-9) lies in (0, R);
+    therefore every eigenvalue is real (by symmetry) and certified
+    positive (by exact root isolation in Q).
+
+Scaling to S = A/q with q = 2^{54}:
+\[
+P_S(x) \;=\; q^{-27}\,P_A(qx),
+\qquad
+m_S(x) \;=\; q^{-14}\,m_A(qx),
+\qquad
+\mathrm{gap}_S \;>\; 5259845921943359 / 2^{54}.
+\]
+
+Scaling to B = A/R:
+\[
+P_B(x) \;=\; R^{-27}\,P_A(Rx),
+\qquad
+m_B(x) \;=\; R^{-14}\,m_A(Rx),
+\qquad
+\rho(B) \;=\; 1.
+\]
+  this is the canonical B-level form at this slice.
+
+Witness format:
+  representation        : executable reconstruction plus hash certificates
+                          (matches v2.0/v2.1 artifact-protocol pattern
+                          per [ref: 08.protocol.artifact_standard])
+  primary proof         : direct exact SymPy charpoly computation on
+                          the reconstructed integer matrix A; coefficient
+                          hash matches independent recomputation
+  supporting verification :
+                          modular Cayley-Hamilton checks on primes
+                          13 through 97; classified as Computational
+                          Observation supporting the primary proof,
+                          NOT as standalone uniqueness witness via CRT
+  proof_basis_history   : the proof basis was Patched mid-pipeline.
+                          See [ref: 06.withdrawn.ledger]
+                          p.r3_full_s050_chr_proof_basis_drift.
+
+Round-level patches integrated during this round:
+  - early framing of modular Cayley-Hamilton + CRT as a standalone
+    integer-uniqueness proof: Patched. Final witness uses direct
+    exact SymPy charpoly as the primary proof basis.
+  - factorization metadata: gcd-degree initially inconsistent;
+    Patched to gcd(Q_A, Q_A') of degree 13.
+  - cubic-root count wording: initially "six roots"; Patched to
+    "three distinct roots each of algebraic multiplicity 2".
+  - matrix provenance: initially undeclared; Patched at canonical
+    integration v2.2 with explicit slice-form and integer-clearance
+    relationships above.
+  - reproducibility script import: an early "self-contained" script
+    referenced sympy.symbols('x') without importing symbols; Patched
+    by adding the missing import and rerunning from a fresh kernel.
+
+Boundary notes:
+  - this closure does NOT establish exact radical forms for the roots
+    of C or D
+  - this closure does NOT establish rationality of the roots of C or D
+  - this closure does NOT establish descent-to-Q at any other r=3
+    slice; the rationality of P_A coefficients at s=0.50 mirrors the
+    r=2 s=0.50 pattern but does not generalize without independent
+    witnesses
+  - this closure does NOT establish compact factorization at r=3 in
+    the sense of the r=2 compact-factorization shape; the (x-R) L^2 C^2 D^2
+    factorization is over Z[x], not the canonical c-scaled compact form
+  - this closure does NOT transfer to other s-values, levels, or models
+  - this closure does NOT establish cross-level invariance with the
+    r=2 s=0.50 closures even if specific factor-shape coincidences are
+    later observed; any such observation is Computational Observation
+    only
+
+Workflow note (v2.2):
+  This closure was produced via the Grok spectral pipeline followed by
+  Claude audit and ChatGPT-supplied provenance declaration, rather than
+  the standard four-stage round-table gate with separate Gemini and
+  DeepSeek runs. The math is independently verified by Claude audit
+  against the v2.1 canonical and the user's accepted v2.2 integration
+  decision. Future closures of this magnitude should run the standard
+  researcher-handoff workflow [ref: 08.protocol.researcher_handoff].
+
+[STATUS: Verified Fact]
+[GUARD: factor multiplicities Q^2 in L, C, D in P_A are
+        block/symbolic multiplicities over Z[x]; numerical eigenvalue
+        multiplicity in m_A is 1 for each distinct irreducible factor's
+        root, by orthogonal diagonalizability over R]
+[GUARD: this closure does not transfer to other levels, slices, or
+        models without independent witness per the boundary notes above]
+
+<<APPEND-POINT::05.charpoly>>
+==SECTION:: 05.charpoly.unit.s060 ==
+
+Unit r=3 s=0.60 exact S-level characteristic polynomial.
+
+Target:
+  chi_unit_060(y) = det(y I_18 - S_unit,r3(t))
+  at s = 0.60 = 3/5
+  over the reduction ring Q[t] / (8*t^5 - 1)
+
+Setup:
+  s = 3/5, t = 2^(-3/5), ring Q[t]/(8*t^5 - 1).
+  S_unit,r3(t) is the 18 x 18 S-matrix defined by the general
+  finite-level source rule [ref: 02.source.r3_parameters].
+  The characteristic-polynomial witness is reproduced by the
+  registered script r3_unit_s060_charpoly.py
+  [ref: 08.protocol.code_registry].
+
+Closed object:
+  The exact S-level characteristic polynomial of degree 18.
+  Coefficients lie in Q[t]/(8*t^5 - 1) and are represented as
+  5-tuples of rationals in basis [1, t, t^2, t^3, t^4].
+
+Verified witness artifacts:
+  - coefficient_list_sha256:
+      118119bc97d46553195e7d96e6d4a3be915a17552b6cf3e0c5acb1e61bbc73a7
+    preimage: compact JSON array of the 19 coefficients, each
+      expressed as five [numerator, denominator] rational pairs,
+      degree-descending order, no whitespace, UTF-8.
+  - matrix_sha256:
+      aa501ae2c814792d9cbe2395906e9a82f70e32475e1d927c8342e8706f165ffe
+    preimage: compact JSON array of the 18 x 18 S-level matrix entries,
+      each expressed as five [numerator, denominator] rational pairs,
+      row-major order, no whitespace, UTF-8.
+  - degree = 18, coefficient_count = 19.
+  - Row-sum factor check: chi(ROWSUM_0) = 0 exactly, where
+    ROWSUM_0 = R_unit_r3(t) at this S-level slice.
+    ROWSUM_0 is the vector:
+      [
+        55915475669129635/576460752303423488,
+        1821898414123415841/4611686018427387904,
+        1283057195283718853/1152921504606846976,
+        5967944574651654593/9223372036854775808,
+        2472293508428141187/1152921504606846976
+      ]
+  - Trace relation: TRACE = -COEFF_Y17 exactly, where:
+      TRACE = [
+        164703072086692425/576460752303423488,
+        10540996613548315209/4611686018427387904,
+        10540996613548315209/576460752303423488,
+        10540996613548315209/4611686018427387904,
+        10540996613548315209/576460752303423488
+      ]
+      COEFF_Y17 = -TRACE (explicitly verified).
+  - All 18 row sums of S_unit,r3(t) are equal (verified by
+    construction).
+
+  The full coefficient list is machine-emitted and verified via
+  the SHA-256 hash above; it is not reproduced in this canonical
+  text. Selected-index checks are deferred to the registered script
+  stdout and ChatGPT arithmetic-gate artifact; the full coefficient
+  list is hash-anchored and not reproduced in this canonical text.
+
+  The witness was produced by the standard researcher-handoff
+  round-table gate: Grok beta produced the witness artifact; ChatGPT
+  arithmetic gate verified exact controls and hash packaging; Gemini
+  independently recomputed the coefficient-list hash and classified
+  the artifact as Verified Fact; DeepSeek integrated the closure.
+
+Boundary notes (active guards):
+  - This closure is S-level only.
+  - It does NOT provide the B-level characteristic polynomial
+    unless separately scaled and witnessed.
+  - It does NOT close the full r=3, s=0.60 charpoly.
+  - It does NOT close any other s-value.
+  - It does NOT establish compact factorization at r=3.
+  - It does NOT establish descent-to-Q as a general theorem.
+  - It does NOT establish subdominant spectral structure.
+  - It does NOT establish cross-level invariance.
+  - It does NOT establish any Collatz-level conclusion.
+
+[STATUS: Verified Fact]
+[GUARD: treat as S-level only; do not upgrade to B-level, full, or
+        any other slice without independent witness]
+
+
+
+==SECTION:: 05.charpoly.full.s060 ==
+
+Full r=3 s=0.60 exact S-level characteristic polynomial.
+
+Target:
+  chi_full_060(y) = det(y I_27 - S_full,r3(t))
+  at s = 0.60 = 3/5
+  over the reduction ring Q[t] / (8*t^5 - 1)
+
+Setup:
+  s = 3/5, t = 2^(-3/5), ring Q[t]/(8*t^5 - 1).
+  S_full,r3(t) is the 27 x 27 S-matrix defined by the general
+  finite-level source rule [ref: 02.source.r3_parameters].
+  The characteristic-polynomial witness is reproduced by the
+  registered script r3_full_s060_charpoly.py
+  [ref: 08.protocol.code_registry].
+
+Closed object:
+  The exact S-level characteristic polynomial of degree 27.
+  Coefficients lie in Q[t]/(8*t^5 - 1) and are represented as
+  5-tuples of rationals in basis [1, t, t^2, t^3, t^4].
+
+Verified witness artifacts:
+  - payload_sha256:
+      a804a65768d6b8f5adf26152b1def2dc65800781deedaf0c4a6aca03a4c23bf4
+    preimage: compact JSON payload containing target, ring, basis,
+      degree, coefficient_count, the full coefficient list
+      (coefficients_degree_desc) in basis representation, and controls.
+  - coefficients_sha256:
+      d96670ec1386b5e32d59dbba549defe7fcb2631b653172d962579dded6fb029c
+    preimage: compact JSON array of the 28 coefficients, each
+      expressed as five [numerator, denominator] rational pairs,
+      degree-descending order, no whitespace, UTF-8.
+  - script_sha256:
+      a46d1d54725f291b49faac18cb8ffe3d9a27bab8f31a6410a101da38803e5863
+    preimage: UTF-8 bytes of r3_full_s060_charpoly.py as packaged in v2.4.
+  - degree = 27, coefficient_count = 28.
+
+Controls:
+  - Row-sum factor check:
+      chi_full_060(ROWSUM_0) = [0,0,0,0,0] exactly.
+    ROWSUM_0 = R_full_r3(t) at this S-level slice.
+    ROWSUM_0 is recorded in the verified payload under controls.rowsum0.
+    The zero evaluation was verified by the ChatGPT arithmetic gate.
+  - Trace relation:
+      coeff_y26 = -trace exactly.
+    The trace and coeff_y26 vectors are recorded explicitly in the
+    verified payload under controls.trace and controls.coeff_y26.
+  - All 27 row sums of S_full,r3(t) are equal (verified by
+    construction and recorded in the payload controls).
+
+  The full coefficient list is machine-emitted and hash-anchored; it is
+  not reproduced in this canonical text. The payload and coefficient-list
+  hashes are sufficient for verification; the ChatGPT arithmetic gate
+  recomputed both hashes and confirmed the listed control relations.
+
+  The witness was produced by the standard researcher-handoff round-table
+  gate: Grok beta produced the witness artifact; ChatGPT arithmetic gate
+  verified exact controls and hash packaging; Gemini proof-boundary
+  judgment classified the artifact as Verified Fact; DeepSeek integrated
+  the closure.
+
+Boundary notes (active guards):
+  - This closure is S-level only.
+  - It does NOT provide the B-level characteristic polynomial.
+  - It does NOT close any other s-value.
+  - It does NOT establish compact factorization at r=3.
+  - It does NOT establish descent-to-Q.
+  - It does NOT establish eigenvalue multiplicity.
+  - It does NOT establish subdominant spectral structure.
+  - It does NOT establish cross-level invariance.
+  - It does NOT establish any Collatz-level conclusion.
+
+[STATUS: Verified Fact]
+[GUARD: treat as S-level only; do not upgrade to B-level, compact,
+        eigenvalue-multiplicity, or any other slice without independent witness]
+
+==SECTION:: 05.charpoly.unit.s055 ==
+
+Unit r=3 s=0.55 exact S-level characteristic polynomial.
+
+Target:
+  chi_unit_055(y) = det(y I_18 - S_unit,r3(t))
+  at s = 0.55 = 11/20
+  over the reduction ring Q[t] / (2048*t^20 - 1)
+
+Setup:
+  s = 11/20, t = 2^(-11/20), ring Q[t]/(2048*t^20 - 1).
+  S_unit,r3(t) is the 18 x 18 S-matrix defined by the canonical
+  r=3 construction rule [ref: 03.exponents.r3.tables].
+
+Closed object:
+  The exact S-level characteristic polynomial of degree 18.
+  Coefficients lie in Q[t]/(2048*t^20 - 1) and are represented as a
+  19-entry degree-descending coefficient list in basis:
+    [1, t, t^2, ..., t^19]
+
+Computation method:
+  Local exact Faddeev-LeVerrier over the even subring:
+    Q[u]/(2048*u^10 - 1), u = t^2
+  followed by canonical lift to:
+    Q[t]/(2048*t^20 - 1)
+
+Verified witness artifacts:
+  coefficient_t20_sha256:
+    58613b1312e90fb10a6cc03d677a4fca3ebe85d103a1777027d7faa042ae8d1c
+
+  coefficient_u10_sha256:
+    9612bed3c24b6077022b97504d02d5bc22671189a751f69d35f3dd5c73b67938
+
+  payload_sha256:
+    a65571e42dbc90c1118ea19fa61c1ca2fb8c841f102dc91309c5ec2493b2c7c2
+
+Coefficient sidecars:
+  r3_s055_unit_payload.json
+  r3_s055_unit_coefficients_t20.json
+  r3_s055_unit_coefficients_u10.json
+
+Verified controls:
+  degree = 18
+  coefficient_count = 19
+  leading coefficient = 1
+  row-sum factor check: chi_unit_055(R_unit_055) = 0 exactly
+  negative row-sum control: chi_unit_055(R_unit_055 + 1) != 0 exactly
+  trace relation: coeff_y17 = -trace(S_unit,r3(t)) exactly
+  constant coefficient nonzero
+  all lifted odd t-basis slots zero
+  all 18 Faddeev-LeVerrier checkpoints completed
+  construction hashes matched prior clearance
+
+The full coefficient list is machine-emitted and hash-anchored; it is
+not reproduced in this canonical text. The witness was cleared by the
+ChatGPT arithmetic gate and accepted by Gemini proof-boundary judgment.
+
+Boundary notes:
+  - This closure is S-level only.
+  - It does NOT provide the B-level characteristic polynomial.
+  - It does NOT itself close the full r=3 s=0.55 charpoly; the full
+    closure is recorded separately at [ref: 05.charpoly.full.s055].
+  - It does NOT establish compact factorization.
+  - It does NOT establish descent-to-Q.
+  - It does NOT establish subdominant spectral structure.
+  - It does NOT establish cross-level invariance.
+  - It does NOT establish determinant nonvanishing for all real s > 0.
+  - It does NOT establish any Collatz-level conclusion.
+
+[STATUS: Verified Fact]
+[GUARD: S-level unit model only; do not upgrade to B-level, full,
+        compact, subdominant, cross-level, all-real-s, or Collatz-level
+        claims.]
+
+==SECTION:: 05.charpoly.full.s055 ==
+
+Full r=3 s=0.55 exact S-level characteristic polynomial.
+
+Target:
+  chi_full_055(y) = det(y I_27 - S_full,r3(t))
+  at s = 0.55 = 11/20
+  over the reduction ring Q[t] / (2048*t^20 - 1)
+
+Setup:
+  s = 11/20, t = 2^(-11/20), ring Q[t]/(2048*t^20 - 1).
+  S_full,r3(t) is the 27 x 27 S-matrix defined by the canonical
+  r=3 construction rule [ref: 03.exponents.r3.tables].
+  Rows are O_3.
+  Live columns are U_4.
+  The final 27 zero columns from O_4 are excluded from live-support sums.
+
+Closed object:
+  The exact S-level characteristic polynomial of degree 27.
+  Coefficients lie in Q[t]/(2048*t^20 - 1) and are represented as a
+  28-entry degree-descending coefficient list in basis:
+    [1, t, t^2, ..., t^19]
+
+Computation method:
+  Local exact Faddeev-LeVerrier over the even subring:
+    Q[u]/(2048*u^10 - 1), u = t^2
+  followed by canonical lift to:
+    Q[t]/(2048*t^20 - 1)
+
+Verified witness artifacts:
+  coefficient_t20_sha256:
+    dc7d08f6bc8000e7601e50f8d91ced963705212a8110a7f0d404693d59af2427
+
+  coefficient_ring_u10_sha256:
+    493cf6cdfb19eb2c852c021bbfcdfc2ff2e36b0a98580370995e064e8ba37950
+
+  payload_sha256:
+    c31cd0ce22625134fd04fcfb575f611515f2b8c261f4743b4f5ac76921ed23aa
+
+  full_live_exponent_table_sha256:
+    d9f2b4b4899b1c1069c09c5052405dce56d675d16dc1d7a64962cdcf7e1d7904
+
+  full_S_exponent_count_matrix_sha256:
+    ffaac264f899eea43f2b805c9910aa012536a7985c3c4ba8a8dd66e53bdbb758
+
+Coefficient sidecars:
+  r3_s055_full_payload.json
+  r3_s055_full_coefficients_t20.json
+  r3_s055_full_coefficients_u10.json
+  r3_s055_full_coefficients_ring.json
+
+Verified controls:
+  degree = 27
+  coefficient_count = 28
+  leading coefficient = 1
+  row-sum factor check: chi_full_055(R_full_055) = 0 exactly
+  negative row-sum control: chi_full_055(R_full_055 + 1) != 0 exactly
+  trace relation: coeff_y26 = -trace(S_full,r3(t)) exactly
+  constant coefficient nonzero
+  all lifted odd t-basis slots zero
+  all 27 Faddeev-LeVerrier checkpoints completed
+  construction hashes matched prior clearance
+
+The full coefficient list is machine-emitted and hash-anchored; it is
+not reproduced in this canonical text. The witness was cleared by the
+ChatGPT arithmetic gate and accepted by Gemini proof-boundary judgment.
+
+Boundary notes:
+  - This closure is S-level only.
+  - It does NOT provide the B-level characteristic polynomial.
+  - It does NOT establish compact factorization.
+  - It does NOT establish descent-to-Q.
+  - It does NOT establish eigenvalue multiplicity.
+  - It does NOT establish subdominant spectral structure.
+  - It does NOT establish cross-level invariance.
+  - It does NOT establish determinant nonvanishing for all real s > 0.
+  - It does NOT establish any Collatz-level conclusion.
+  - It does NOT imply every r=3 open item is closed.
+
+[STATUS: Verified Fact]
+[GUARD: S-level full model only; do not upgrade to B-level, compact,
+        subdominant, cross-level, all-real-s, or Collatz-level claims.]
+
+<<APPEND-POINT::05.charpoly>>
+<<APPEND-POINT::05.compact>>
+<<APPEND-POINT::05.descent>>
+<<APPEND-POINT::05.coefficients>>
+<<APPEND-POINT::05.structural>>
+
+End of file 05.

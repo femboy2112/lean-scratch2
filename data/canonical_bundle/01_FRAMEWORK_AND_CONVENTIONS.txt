@@ -1,0 +1,95 @@
+============================================================
+FILE  : 01_FRAMEWORK_AND_CONVENTIONS.txt
+ROLE  : Active convention, direct operator definition, scaling
+        rules, model index sets. Pure mathematical definitions.
+============================================================
+
+==SECTION:: 01.convention.frozenA ==
+
+Frozen Convention A is active for r=2.
+
+  exponent_range     : a0(n,m) in {1, 2, ..., 18}
+  literal_18_inside  : 2^{-s a0}
+  forbidden          : a0 -> 0 before exponentiation
+  forbidden          : a0 in {0, 1, ..., 17} (shifted convention)
+  forbidden          : treating shifted/doubled package as canonical
+                       unless explicitly opened as a separate branch
+
+For r >= 3, the active convention is the general finite-level source
+rule [ref: 02.source.general_rule], which extends Frozen Convention A
+to higher P_r values. At r=3 the parameter is P_3 = 54 [ref:
+02.source.r3_parameters].
+
+==SECTION:: 01.operator.K_definition ==
+
+The direct operator at any tracked level is:
+
+\[
+K_{n,m}(s) \;=\; \frac{3^{-s} \cdot 2^{-s\,a_0(n,m)}}{1 - 2^{-P_r s}}
+\]
+
+with P_r the level parameter:
+  P_2 = 18  (r=2)
+  P_3 = 54  (r=3)
+
+The Gram matrix is:
+
+\[
+B \;=\; K K^{\!\top}
+\]
+
+The S-form is:
+
+\[
+S(t) \;=\; B / c_r, \qquad c_r = \frac{h^2}{(1 - t^{P_r})^2}, \qquad
+t = 2^{-s}, \quad h = 3^{-s}.
+\]
+
+==SECTION:: 01.scaling.s_to_b_scaling ==
+
+Compact characteristic-polynomial scaling between S-level and B-level:
+
+\[
+p_B(x) \;=\; c_r^{\,n} \cdot p_S(x / c_r)
+\]
+
+where n is the matrix dimension:
+
+  unit r=2 :  n = 6
+  full r=2 :  n = 9
+  unit r=3 :  n = 18
+  full r=3 :  n = 27
+
+  rule    : do NOT mix scaling exponents across models.
+  rule    : a unit computation written with the full exponent is a
+            Contradiction Detected error, and conversely.
+
+Determinant sign convention at y = 0:
+
+\[
+p_S(0) \;=\; (-1)^{n} \det(S)
+\]
+
+  dim 6, 18 (even) : no sign flip
+  dim 9, 27 (odd)  : sign flips
+
+==SECTION:: 01.indexsets.r2 ==
+
+Unit r=2 row indices  : U_2 = [1, 2, 4, 5, 7, 8]
+Full r=2 row indices  : O_2 = [1, 2, 4, 5, 7, 8, 3, 9, 15]
+Unit r=2 column indices: U_3_r2 = [1,2,4,5,7,8,10,11,13,14,
+                                   16,17,19,20,22,23,25,26]
+Full r=2 column indices: O_3_r2 = U_3_r2 ++ [3,9,15,21,27,33,39,45,51]
+
+Full r=2 has 27 source columns. The first 18 are the live
+positive-support block; the last 9 are identically zero and are
+excluded from S_full(t). [ref: 03.exponents.r2.full_leaves]
+
+==SECTION:: 01.indexsets.r3 ==
+
+Unit r=3 row indices and column indices, full r=3 row indices and
+column indices, are recorded in [ref: 03.statelist.r3.unit] and [ref:
+03.statelist.r3.full]. The matrix dimensions are 18 x 18 for unit and
+27 x 27 for full.
+
+End of file 01.

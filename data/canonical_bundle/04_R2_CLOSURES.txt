@@ -1,0 +1,522 @@
+============================================================
+FILE  : 04_R2_CLOSURES.txt
+ROLE  : All r=2 Verified Fact closures across every layer.
+        Per-slice exact / compact characteristic polynomials,
+        determinant / rank / kernel, descent-to-Q, detailed coefficient
+        classifications, and the structural theorems.
+LOAD  : Required for any r=2 work and for any audit. Optional for
+        rounds strictly scoped to r=3.
+DEPS  : 00, 01, 02, 03.
+SIZE  : large. Most stable layer; new entries only on rare audits.
+============================================================
+
+==SECTION:: 04.s050.unit.exact_charpoly ==
+
+slice : B_2^unit(0.50)
+
+Exact matrix:
+  B = (1/511) * M_unit
+  M_unit =
+    [[171,  44,  24,  86,  24,  16],
+     [ 44, 171,  16,  24,  86,  24],
+     [ 24,  16, 171,  44,  24,  86],
+     [ 86,  24,  44, 171,  16,  24],
+     [ 24,  86,  24,  16, 171,  44],
+     [ 16,  24,  86,  24,  44, 171]]
+
+Exact characteristic polynomial:
+  p_unit_050(x) = (1/261121) * (7*x - 5) * (7*x - 1) * (73*x^2 - 42*x + 5)^2
+  with 261121 = 511^2.
+
+Exact quotient (scalar-quotient patch applied):
+  using printed linear factor (7x - 5):
+    p / (7x - 5) = (1/261121) * (7x - 1) * (73*x^2 - 42*x + 5)^2
+  using monic Perron factor (x - 5/7):
+    p / (x - 5/7) = (7/261121) * (7x - 1) * (73*x^2 - 42*x + 5)^2
+
+Spectral data:
+  rho                  : 5/7
+  rank                 : 6
+  kernel               : {0}
+  zero modes           : none
+  det(B_2^unit(0.50))  : 125/261121
+
+Non-Perron spectrum (excluding rho = 5/7):
+  1/7              with algebraic multiplicity 1
+  (21+2*sqrt(19))/73  with algebraic multiplicity 2
+  (21-2*sqrt(19))/73  with algebraic multiplicity 2
+
+[STATUS: Verified Fact]
+
+==SECTION:: 04.s050.full.exact_charpoly ==
+
+slice : B_2^full(0.50)
+
+Exact matrix:
+  B = (1/511) * M_full
+  M_full =
+    [[171,  44,  24,  86,  24,  16,  44,  86,  16],
+     [ 44, 171,  16,  24,  86,  24,  16,  86,  44],
+     [ 24,  16, 171,  44,  24,  86,  86,  16,  44],
+     [ 86,  24,  44, 171,  16,  24,  86,  44,  16],
+     [ 24,  86,  24,  16, 171,  44,  16,  44,  86],
+     [ 16,  24,  86,  24,  44, 171,  44,  16,  86],
+     [ 44,  16,  86,  86,  16,  44, 171,  24,  24],
+     [ 86,  86,  16,  44,  44,  16,  24, 171,  24],
+     [ 16,  44,  44,  16,  86,  86,  24,  24, 171]]
+
+Exact characteristic polynomial:
+  p_full_050(x) = (1/261121) * (x - 1) * (7x - 1)^2 * (73*x^3 - 63*x^2 + 15*x - 1)^2
+
+Exact non-Perron factor:
+  q_full_050(x) = p / (x - 1)
+                = (1/261121) * (7x - 1)^2 * (73*x^3 - 63*x^2 + 15*x - 1)^2
+
+Spectral data:
+  rho                  : 1
+  rank                 : 9
+  kernel               : {0}
+  zero modes           : none
+  det(B_2^full(0.50))  : 1/261121
+  p_full_050(0)        : -1/261121 (nonzero)
+
+Non-Perron spectrum is the multiset of roots of
+  (7x - 1)^2 * (73*x^3 - 63*x^2 + 15*x - 1)^2
+with multiplicities exactly as exhibited.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 04.s055.unit.compact ==
+
+slice : B_2^unit(0.55)
+
+Setup:
+  s = 11/20, t = 2^{-11/20}, h = 3^{-1/10}, h^{10} = 1/3 in Q
+  c = 3^{-11/10} / (1 - t^{18})^2
+
+Matrix / Perron / det closure:
+  S(t) corrected per [ref: 03.abstract.r2.unit_S] with substitution
+    A,B,C,D,E -> A(t),B(t),C(t),D(t),E(t).
+  rho_unit_055 = c * R_unit(t) with t = 2^{-11/20}
+  rank = 6, kernel = {0}, no zero modes.
+  det(S(t)) != 0; det(B) = c^6 * det(S(t)) != 0.
+  determinant vector (corrected) lives in Q[t]/(2048*t^{20} - 1).
+
+Compact characteristic polynomial:
+  p_S(y) = (y - L0(t)) * (y - L1(t)) * Q_t(y)^2
+  p_B(x) = c^6 * p_S(x/c)
+  L0(t) = R_unit(t) at this slice.
+
+S-level non-Perron factor : (y - L1(t)) * Q_t(y)^2
+B-level non-Perron factor : (x/c - L1(t)) * Q_t(x/c)^2
+
+[STATUS: Verified Fact (compact-factor multiplicity at factor level only)]
+
+==SECTION:: 04.s055.unit.descent ==
+
+The x^5 coefficient of p_unit,B,055(x):
+
+  a5 = -6 * c * A(t) = -2 * h * A(t) / (1 - t^{18})^2
+
+with h = 3^{-1/10} not in Q(t). Therefore a5 not in Q, and:
+
+  p_unit,B,055(x) NOT in Q[x]
+
+Descent to Q FAILS at this slice.
+
+[STATUS: Verified Fact (closed negatively)]
+[GUARD: any future claim that p_unit,B,055(x) in Q[x] or that descent
+        succeeds at this slice is Contradiction Detected]
+
+==SECTION:: 04.s055.unit.coefficients ==
+
+Detailed individual coefficient classification of
+  p_unit,B,055(x) = a_6 x^6 + a_5 x^5 + ... + a_0
+
+  coefficient | classification | witness
+  ------------|----------------|-----------------------------------------
+  a_6 = 1     | rational       | leading
+  a_5         | non-rational   | -2*h*A(t)/(1 - t^{18})^2 ; h^1 not in Q(t)
+  a_4         | non-rational   | F_4 reduced vector in Q[t]/(2048*t^{20}-1)
+  a_3         | non-rational   | F_3 reduced vector
+  a_2         | non-rational   | F_2 reduced vector
+  a_1         | non-rational   | F_1 reduced vector
+  a_0         | non-rational   | F_0 reduced vector
+
+Round-level patches integrated:
+  - original "leading term" nonzero arguments for F_4, F_3, F_2, F_1
+    were insufficient and were Patched. Final witnesses are exact
+    reduced coefficient vectors.
+  - overbroad claim "h^k not in Q(t) for any k >= 1" was flagged
+    Over-Upgraded (because h^{10} = 1/3 in Q). The bounded statement
+    "h^k not in Q(t) for k = 1, 2, 3, 4, 5, 6" is the integrated form.
+
+[STATUS: Verified Fact (complete)]
+
+==SECTION:: 04.s055.full.compact ==
+
+slice : B_2^full(0.55)
+
+Setup:
+  same as unit; uses 9 x 9 abstract T(X0..X4) with substitution
+  X_i = P_i(t) [ref: 03.polylabels.r2.full].
+
+Matrix / Perron / det closure:
+  S_full(t) per [ref: 03.abstract.r2.full_T].
+  rho_full_055 = c * R_full(t)
+  rank = 9, kernel = {0}, no zero modes.
+  det(S_full(t)) != 0; det(B) = c^9 * det(S_full(t)) != 0.
+  determinant vector integrated through the determinant-patch round.
+
+Compact characteristic polynomial:
+  p_S(y) = (y - L0(t)) * (y - L1(t))^2 * C_t(y)^2
+  p_B(x) = c^9 * p_S(x/c)
+  L0(t) = R_full(t) at this slice.
+
+S-level non-Perron factor : (y - L1(t))^2 * C_t(y)^2
+B-level non-Perron factor : (x/c - L1(t))^2 * C_t(x/c)^2
+
+Sign check at S-level y=0 (odd dim 9): p_S(0) = -det(S_full(t)),
+verified during coefficient-classification round.
+
+[STATUS: Verified Fact (compact-factor multiplicity at factor level only)]
+
+==SECTION:: 04.s055.full.descent ==
+
+The x^8 coefficient of p_full,B,055(x):
+
+  a8 = -9 * c * P_0(t) = -3 * h * P_0(t) / (1 - t^{18})^2
+
+with h = 3^{-1/10} not in Q(t). Therefore a8 not in Q, and:
+
+  p_full,B,055(x) NOT in Q[x]
+
+Descent to Q FAILS at this slice.
+
+[STATUS: Verified Fact (closed negatively)]
+[GUARD: any future claim that p_full,B,055(x) in Q[x] or that descent
+        succeeds at this slice is Contradiction Detected]
+
+==SECTION:: 04.s055.full.coefficients ==
+
+Detailed individual coefficient classification of
+  p_full,B,055(x) = a_9 x^9 + a_8 x^8 + ... + a_0
+
+  coefficient | classification | witness
+  ------------|----------------|----------------------------------------
+  a_9 = 1     | rational       | leading
+  a_8         | non-rational   | -3*h*P_0(t)/(1 - t^{18})^2 ; h^1 not in Q(t)
+  a_7         | non-rational   | Batch A, F_7 in Q[t]/(2048*t^{20}-1)
+  a_6         | non-rational   | Batch A, F_6
+  a_5         | non-rational   | Batch A, F_5
+  a_4         | non-rational   | Batch B, corrected t^0 witness
+  a_3         | non-rational   | Batch B, corrected t^0 witness
+  a_2         | non-rational   | Batch B, corrected t^0 witness
+  a_1         | non-rational   | Batch B, corrected t^0 witness
+  a_0         | non-rational   | Batch B, sign check a_0 = -det(B) != 0
+
+Round-level patches integrated:
+  - Batch A missing F_7, F_6, F_5 nonzero witnesses Patched by
+    explicit reduced coefficients.
+  - Batch B flawed Grok patch with impossible odd-power reduced
+    coefficients Patched by corrected ChatGPT t^0 witnesses.
+  - Dimension-9 sign check a_0 = (-1)^9 * det(B_2^full(0.55)) confirms
+    a_0 != 0 independently.
+
+[STATUS: Verified Fact (complete)]
+
+==SECTION:: 04.s060.unit.compact ==
+
+slice : B_2^unit(0.60)
+
+Setup:
+  s = 3/5, t = 2^{-3/5}, h = 3^{-1/5}, h^5 = 1/3 in Q
+  c = 3^{-6/5} / (1 - t^{18})^2
+  reduction ring : Q[t]/(8*t^5 - 1), basis 1, t, t^2, t^3, t^4
+
+Matrix / Perron / det closure:
+  rho_unit_060 = c * R_unit(t)
+  rank = 6, kernel = {0}, no zero modes.
+  det(S(t)) != 0; det(B) = c^6 * det(S(t)) != 0.
+
+Determinant vector (corrected, in Q[t]/(8*t^5 - 1)):
+  D_S(t) = (1/N) * (d_0 + d_1*t + d_2*t^2 + d_3*t^3 + d_4*t^4)
+
+  N    = 680564733841876926926749214863536422912
+  d_0  = 10506385903012002154920359279250997040
+  d_1  = 25544755042255864966381136285584422145
+  d_2  = 24444872142165680112182937707755022480
+  d_3  = 51613276688900137390274845529918787520
+  d_4  = 78604365874162668540587375945753147440
+
+Compact characteristic polynomial:
+  p_S(y) = (y - L0(t)) * (y - L1(t)) * Q_t(y)^2
+  p_B(x) = c^6 * p_S(x/c)
+  L0(t) = R_unit(t)
+  Perron check p_B(rho_unit_060) = 0 holds exactly.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 04.s060.unit.descent ==
+
+The x^5 coefficient of p_unit,B,060(x):
+
+  a5 = -6 * c * A(t) = -2 * h * A(t) / (1 - t^{18})^2
+
+with h = 3^{-1/5} not in Q(t). Therefore a5 not in Q, and:
+
+  p_unit,B,060(x) NOT in Q[x]
+
+Descent to Q FAILS at this slice.
+
+[STATUS: Verified Fact (closed negatively)]
+[GUARD: any future claim that p_unit,B,060(x) in Q[x] is Contradiction]
+
+==SECTION:: 04.s060.unit.coefficients ==
+
+Detailed individual coefficient classification of
+  p_unit,B,060(x)
+
+  coefficient | classification | witness
+  ------------|----------------|-------------------------------------
+  a_6 = 1     | rational       | leading
+  a_5         | non-rational   | -2*h*A(t)/(1 - t^{18})^2 ; h^1 not in Q(t)
+  a_4         | non-rational   | reduced vector in Q[t]/(8*t^5 - 1)
+  a_3         | non-rational   | reduced vector in Q[t]/(8*t^5 - 1)
+  a_2         | non-rational   | reduced vector in Q[t]/(8*t^5 - 1)
+  a_1         | non-rational   | special h^5 = 1/3 case; direct reduction
+  a_0         | non-rational   | reduced vector in Q[t]/(8*t^5 - 1)
+
+Round-level patches:
+  - Grok's initial coefficient patch contained wrong-field coefficients
+    copied from Q[t]/(2048*t^{20} - 1). Patched / not accepted as
+    printed. Corrected ChatGPT reductions in Q[t]/(8*t^5 - 1) integrated.
+  - Special case: h^5 = 1/3 in Q means h^5 alone cannot serve as
+    irrational witness. a_1 was classified by direct reduction; the
+    residual t-dependence preserves non-rationality.
+
+[STATUS: Verified Fact (complete)]
+
+==SECTION:: 04.s060.full.compact ==
+
+slice : B_2^full(0.60)
+
+Setup: same as unit at this slice; uses 9 x 9 T.
+
+Matrix / Perron / det closure:
+  rho_full_060 = c * R_full(t)
+  rank = 9, kernel = {0}, no zero modes.
+  det(S_full(t)) != 0; det(B) = c^9 * det(S_full(t)) != 0.
+
+Determinant vector (corrected, in Q[t]/(8*t^5 - 1)):
+  D_full,S(t) = (1/N) * (d_0 + d_1*t + d_2*t^2 + d_3*t^3 + d_4*t^4)
+
+  N    = 6277101735386680763835789423207666416102355444464034512896
+  d_0  = 15585906495575005044336693290631543270419960018416437540
+  d_1  = 23998523702651649439389866009151921874384476845812737520
+  d_2  = 55529555212663433360719254842734354782569143115808773385
+  d_3  = 35906096235209715568029737826705367618509725529407493280
+  d_4  = 128192838353677850012474360486482663181925460141013409665
+
+Compact characteristic polynomial:
+  p_S(y) = (y - L0(t)) * (y - L1(t))^2 * C_t(y)^2
+  p_B(x) = c^9 * p_S(x/c)
+  L0(t) = R_full(t)
+  Perron check holds exactly.
+  Sign check at S-level y=0: p_S(0) = -det(S_full(t)).
+
+The unpatched determinant witness at this slice was Patched /
+incomplete at the determinant-vector artifact layer; the explicit
+corrected vector above is the integrated form. [ref:
+06.withdrawn.ledger]
+
+[STATUS: Verified Fact]
+
+==SECTION:: 04.s060.full.descent ==
+
+The x^8 coefficient of p_full,B,060(x):
+
+  a8 = -9 * c * P_0(t) = -3 * h * P_0(t) / (1 - t^{18})^2
+
+with h = 3^{-1/5} not in Q(t). Therefore a8 not in Q, and:
+
+  p_full,B,060(x) NOT in Q[x]
+
+Descent to Q FAILS at this slice.
+
+[STATUS: Verified Fact (closed negatively)]
+[GUARD: any future claim that p_full,B,060(x) in Q[x] is Contradiction]
+
+==SECTION:: 04.s060.full.coefficients ==
+
+Detailed individual coefficient classification of
+  p_full,B,060(x) = a_9 x^9 + a_8 x^8 + ... + a_0
+
+  coefficient | classification | witness
+  ------------|----------------|----------------------------------------
+  a_9 = 1     | rational       | leading
+  a_8         | non-rational   | -3*h*P_0(t)/(1 - t^{18})^2 ; h^1 not in Q(t)
+  a_7         | non-rational   | Batch A in Q[t]/(8*t^5 - 1)
+  a_6         | non-rational   | Batch A in Q[t]/(8*t^5 - 1)
+  a_5         | non-rational   | Batch A; b_5 vector Patched, corrected
+  a_4         | non-rational   | Batch B; h^5 = 1/3 direct reduction
+  a_3         | non-rational   | Batch B in Q[t]/(8*t^5 - 1)
+  a_2         | non-rational   | Batch B in Q[t]/(8*t^5 - 1)
+  a_1         | non-rational   | Batch B in Q[t]/(8*t^5 - 1)
+  a_0         | non-rational   | Batch B; sign check a_0 = -det(B) != 0
+
+Round-level patches:
+  - Batch A: original b_5 vector Patched / not accepted as printed.
+    Corrected b_5 vector accepted after ChatGPT arithmetic verification
+    and Gemini follow-up.
+  - Batch B: original Grok witness Patched / not accepted as printed
+    (placeholder language instead of exact reduced vectors). Corrected
+    ChatGPT reduction note accepted by Gemini.
+  - Parity correction: unreduced full-model S-level polynomials use
+    even powers of t, but reductions modulo 8*t^5 - 1 may produce odd
+    basis terms because t^6 = t/8 and similar. [ref: 03.reduction_rings]
+
+[STATUS: Verified Fact (complete)]
+
+==SECTION:: 04.structural.unit.reversal ==
+
+The r=2 unit-model exact symbolic block-structure / invariant-subspace
+theorem.
+
+Mechanism:
+  The unit abstract matrix S(A,B,C,D,E) [ref: 03.abstract.r2.unit_S]
+  commutes with the reversal involution sigma = (1 6)(2 5)(3 4):
+    sigma * S = S * sigma
+
+  Consequence:
+    The +1 and -1 eigenspaces of sigma are 3-dimensional and are
+    S-invariant. Restriction blocks:
+      M_plus  (symmetric 3D restriction)
+      M_minus (antisymmetric 3D restriction)
+    with:
+      det(y*I - M_plus)  = (y - L0) * Q(y)
+      det(y*I - M_minus) = (y - L1) * Q(y)
+
+  Therefore:
+    det(y*I - S) = (y - L0) * (y - L1) * Q(y)^2
+
+[STATUS: Verified Fact]
+[GUARD: this mechanism does NOT transfer to the full r=2 model;
+        see [ref: 06.failed_candidates] entry "full reversal candidate"]
+[GUARD: this mechanism does NOT transfer to r=3 without independent
+        witness]
+[GUARD: Q(y)^2 is compact-factor multiplicity from two independent
+        3D blocks; NOT numerical eigenvalue multiplicity]
+
+==SECTION:: 04.structural.full.equitable ==
+
+The r=2 full-model exact symbolic block-structure / invariant-subspace
+theorem.
+
+Mechanism:
+  Equitable partition of the index set {1, ..., 9}:
+    A = {1, 3, 5}
+    B = {2, 4, 6}
+    C = {7, 8, 9}
+
+  This partition is equitable for the full abstract matrix
+  T(X0,X1,X2,X3,X4) [ref: 03.abstract.r2.full_T] over Q[X0..X4].
+
+  Cell-constant quotient block Q satisfies:
+    det(y*I - Q) = (y - L0) * (y - L1)^2
+
+  The zero-sum residual complement is invariant because T is symmetric
+  and the cell-constant subspace is invariant.
+
+  Residual block R satisfies:
+    det(y*I - R) = C(y)^2
+
+  Therefore:
+    det(y*I - T) = (y - L0) * (y - L1)^2 * C(y)^2
+
+Failed alternative partition:
+  {1,2,3} | {4,5,6} | {7,8,9}
+  failure witness: row 1 Cell A sum - row 2 Cell A sum = X2 - X4 != 0
+  classification: Failed Candidate. Not equitable.
+
+[STATUS: Verified Fact]
+[GUARD: existence of the equitable partition is Verified Fact;
+        uniqueness is recorded separately at
+        [ref: 04.structural.partition.uniqueness]]
+[GUARD: this mechanism does NOT transfer to r=3 without independent
+        witness]
+[GUARD: C(y)^2 is residual-block compact-factor multiplicity; NOT
+        numerical eigenvalue multiplicity]
+
+==SECTION:: 04.structural.unified.narrow ==
+
+A narrow unified r=2 quotient-residual framework.
+
+Both r=2 structural mechanisms admit a shared abstract description:
+
+  - decompose the index set into invariant blocks (eigenspace blocks
+    for unit; cell-constant quotient + zero-sum residual for full)
+  - obtain block-diagonal characteristic polynomial structure
+  - factor multiplicities arise from the dimensions of the invariant
+    blocks rather than from genuine eigenvalue degeneracy
+
+This shared architecture is the narrow unified framework. It is
+canonical at this narrow level.
+
+[STATUS: Verified Fact (narrow unified framework)]
+[GUARD: this does NOT imply that the unit and full mechanisms are
+        instances of a single, more rigorous abstract mechanism in
+        the strong sense (block isomorphism, common group action,
+        common representation). See
+        [ref: 04.structural.distinctness.generic]]
+
+==SECTION:: 04.structural.distinctness.generic ==
+
+Generic structural distinctness of the unit and full quotient-residual
+blocks.
+
+Statement:
+  The unit r=2 reversal-involution decomposition and the full r=2
+  equitable-partition decomposition are GENERICALLY distinct
+  mechanisms. There is no canonical map (embedding, projection,
+  compression, or specialization in the generic sense) between the
+  two mechanisms that turns one into the other while preserving the
+  abstract-matrix structure.
+
+Witness:
+  (recorded in 16_STRUCTURAL_THEOREMS of the prior canonical;
+   exact witness involves dimension-counting and label-ring argument
+   showing no equivariant injection exists between the relevant block
+   ambient spaces over Q[X0..X4])
+
+[STATUS: Verified Fact]
+[GUARD: this rules out a "stronger" unification in the generic
+        equivariant sense; it does NOT rule out coincidence under
+        artificial label specializations]
+
+==SECTION:: 04.structural.partition.uniqueness ==
+
+Uniqueness of the full-model equitable 3+3+3 partition.
+
+Statement:
+  Among UNORDERED 3+3+3 partitions of {1, ..., 9}, the partition
+    {1,3,5} | {2,4,6} | {7,8,9}
+  is UNIQUE as an equitable partition of T(X0,X1,X2,X3,X4) viewed
+  over the ring Q[X0,X1,X2,X3,X4].
+
+Witness:
+  exhaustive enumeration of all unordered 3+3+3 partitions of
+  {1,...,9} with equitable-partition test against T.
+
+[STATUS: Verified Fact]
+[GUARD: uniqueness is established only among UNORDERED 3+3+3
+        equitable partitions. Other partition types (different cell
+        sizes; ordered partitions) are not the target of this claim.]
+
+<<APPEND-POINT::04.s050>>
+<<APPEND-POINT::04.s055>>
+<<APPEND-POINT::04.s060>>
+<<APPEND-POINT::04.structural>>
+<<APPEND-POINT::04.new_slices>>
+
+End of file 04.

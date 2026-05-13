@@ -1,0 +1,1059 @@
+Canonical Status Document
+
+Finite-Level Lifted-Operator Collatz Program
+
+Current Mathematical Framework, Proven Core, Numerical Status, Process History, and Next Steps
+
+This document is the current canonical summary of the project as it stands now. It is intended to stabilize scope, preserve the verified core, separate proof from computation, and make future round-table outputs easier to judge.
+
+
+---
+
+1. Executive Summary
+
+We began from a convolution / variable-length encoding viewpoint on inverse Collatz structure. That viewpoint led to a more rigid finite-level operator formalism where the correct objects are not same-level quotient operators, but level-shifting transfer operators between mod- and mod- state spaces.
+
+From there, the project split into two finite-level models:
+
+1. the unit model, which keeps only states coprime to , and
+
+
+2. the full odd model, which keeps all odd states and therefore includes a zero-column phenomenon and a leaf block.
+
+
+
+The theorem stack through Theorem H is now treated as the secure core.
+What is not yet secure is the numerical layer: multiple round-table branches produced conflicting values, and later reconciliation packages themselves also drifted. At present:
+
+the operator framework is solid
+
+the indexing discipline is solid
+
+the unit/full embedding facts are solid
+
+the finite-level numerical outputs remain audit-sensitive and must always be backed by raw artifacts
+
+
+This document preserves the secure core and explicitly marks disputed or merely computational claims.
+
+
+---
+
+2. Origin of the Program
+
+The project did not begin as a standard Collatz iteration study. It began from the intuition that inverse Collatz behavior can be represented as a kind of weighted branching / convolutional accumulation process with variable-length coding determined by powers of .
+
+That intuition suggested:
+
+inverse steps are naturally grouped by the exponent  in
+
+
+n = \frac{2^a m - 1}{3},
+
+finite modular models might expose exact structural laws before any asymptotic or density claims are attempted,
+
+weighted sums over admissible exponents might be encoded in transfer operators.
+
+
+The early danger was trying to compress everything into a same-level quotient operator. That turned out to be structurally wrong. The correct framework is level-shifting.
+
+
+---
+
+3. Why the Framework Changed
+
+A core early realization was:
+
+Structural obstruction
+
+There is no clean same-level exact quotient that preserves the inverse-step structure without loss.
+That is why the project moved to operators of the form
+
+K_r : \text{level } r+1 \to \text{level } r.
+
+This was the decisive shift from a heuristic convolution picture to a rigorous finite-level transfer-operator picture.
+
+That move stabilized the project.
+
+
+---
+
+4. Current State Spaces
+
+We now use two families of finite state spaces.
+
+4.1 Unit model
+
+Let
+
+U_r = (\mathbb Z / 3^r \mathbb Z)^\times.
+
+|U_r| = 2 \cdot 3^{r-1}.
+
+This is the cleanest model. It excludes divisibility by  and gives exact singleton transitions.
+
+4.2 Full odd model
+
+Let  denote the odd residue classes modulo . Then
+
+|\mathcal O_r| = 3^r.
+
+This model keeps all odd classes, including those divisible by . It is richer but less uniform because some source columns vanish.
+
+
+---
+
+5. Exact Operators
+
+The exact finite-level operators are:
+
+5.1 Unit operator
+
+K_r^{\mathrm{unit}} : \mathbb C^{U_{r+1}} \to \mathbb C^{U_r}.
+
+5.2 Full operator
+
+K_r^{\mathrm{full}} : \mathbb C^{\mathcal O_{r+1}} \to \mathbb C^{\mathcal O_r}.
+
+These are the canonical operators. No same-level substitutes should be used in canonical discussion.
+
+
+---
+
+6. Periodicity
+
+A central exact quantity is
+
+P_r = \operatorname{ord}_{3^{r+1}}(2).
+
+This has been settled as
+
+P_r = 2 \cdot 3^r.
+
+This is secure.
+
+Status: Verified Fact.
+
+
+---
+
+7. Transition Equation
+
+The inverse-step condition is
+
+\frac{2^a m - 1}{3} \equiv n.
+
+The exact modular form used in the project is the lifted congruence
+
+\frac{2^a m - 1}{3} \equiv n \pmod{3^r}
+\iff
+2^a m \equiv 3n+1 \pmod{3^{r+1}}.
+
+This is the key equivalence that makes the discrete-log formula possible.
+
+Status: Verified Fact.
+
+
+---
+
+8. Theorem Stack: Secure Core
+
+What follows is the current accepted theorem stack.
+
+Theorem B — Unit-model singleton transitions and positivity
+
+For every , every , every , there is a unique exponent class  modulo  solving
+
+2^{a_0} m \equiv 3n+1 \pmod{3^{r+1}}.
+
+Thus the admissible transition set is a singleton, and
+
+\bigl(K_r^{\mathrm{unit}}(u,v)\bigr)_{n,m}
+=
+\frac{u\,v^{a_0(n,m)}}{1-v^{P_r}}.
+
+For real , , this gives entrywise positivity of , hence positivity, irreducibility, and primitivity of the associated square operators.
+
+Status: Verified Fact.
+
+
+---
+
+Theorem C — Full-model zero columns and positive nonzero block
+
+In the full model:
+
+columns indexed by odd multiples of  are exactly zero,
+
+the number of zero columns is exactly ,
+
+restricting to unit columns gives a positive nonzero-support block
+
+
+P_r^{\mathrm{full}},
+
+Status: Verified Fact.
+
+
+---
+
+Theorem D — Uniform multiplicity in the unit model
+
+The map
+
+\phi_r(n,m) = (3n+1)m^{-1} \pmod{3^{r+1}}
+
+2 \cdot 3^{r-1}.
+
+Equivalently, each exponent class occurs with exactly that multiplicity in the full unit table.
+
+Status: Verified Fact.
+
+
+---
+
+Theorem E — Finite-level critical parameters exist and are unique
+
+Under the Mellin-style parametrization
+
+u = 3^{-s}, \qquad v = 2^{-s}, \qquad s>0,
+
+\rho(B_r(s)) = 1.
+
+So each finite-level model has a unique critical parameter .
+
+Status: Verified Fact.
+
+
+---
+
+Theorem F — Strict spectral ordering between full and unit models
+
+For fixed  and fixed ,
+
+\rho(B_r^{\mathrm{full}}(s)) > \rho(B_r^{\mathrm{unit}}(s)).
+
+This comes from the block structure and the fact that the unit-model square operator sits as a proper principal submatrix inside the full-model square operator.
+
+Status: Verified Fact.
+
+
+---
+
+Theorem G — Exact embedded principal-submatrix relation
+
+After the mandatory canonical ordering, the full-model nonzero block decomposes as
+
+P_r^{\mathrm{full}}
+=
+\begin{pmatrix}
+K_r^{\mathrm{unit}} \\
+L_r
+\end{pmatrix}.
+
+Hence
+
+B_r^{\mathrm{full}}
+=
+\begin{pmatrix}
+B_r^{\mathrm{unit}} & K_r^{\mathrm{unit}}L_r^* \\
+L_r(K_r^{\mathrm{unit}})^* & L_rL_r^*
+\end{pmatrix},
+
+Status: Verified Fact.
+
+
+---
+
+Theorem H — Positivity of the leaf and off-diagonal blocks
+
+The leaf block , the cross blocks, and  are positive in the real  regime.
+
+This is conceptually just a corollary of C and G.
+
+Status: Verified Fact.
+
+
+---
+
+9. Canonical Indexing Rules
+
+This is the most important implementation rule in the project.
+
+9.1 Unit model
+
+Use canonical residues in increasing order:
+
+rows: 
+
+columns: 
+
+
+9.2 Full model
+
+Use unit block first, then odd multiples of :
+
+rows:
+
+
+\mathcal O_r = U_r \;\cup\; (\text{odd multiples of }3),
+
+columns:
+
+
+\mathcal O_{r+1} = U_{r+1} \;\cup\; (\text{odd multiples of }3),
+
+Without this indexing, Theorem G is not a literal matrix identity in memory.
+
+Status: Verified Fact.
+
+
+---
+
+10. Current Exact r=2 Artifact Package
+
+This is the currently accepted r=2 artifact package.
+
+10.1 Unit-model state lists
+
+Rows:
+
+U_2 = [1,2,4,5,7,8]
+
+Columns:
+
+U_3 = [1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23,25,26]
+
+10.2 Full-model state lists
+
+Rows:
+
+\mathcal O_2 = [1,2,4,5,7,8,3,9,15]
+
+Columns:
+
+\mathcal O_3 =
+[1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23,25,26,3,9,15,21,27,33,39,45,51]
+
+10.3 r=2 unit exponent table
+
+The accepted r=2 unit exponent table currently uses the convention
+
+a_0 \in \{0,1,\dots,17\}
+
+\begin{bmatrix}
+2&1&0&15&4&17&14&7&12&3&16&5&8&13&6&9&10&11\\
+16&15&14&11&0&13&10&3&8&17&12&1&4&9&2&5&6&7\\
+8&7&6&3&10&5&2&13&0&9&4&11&14&1&12&15&16&17\\
+4&3&2&17&6&1&16&9&14&5&0&7&10&15&8&11&12&13\\
+14&13&12&9&16&11&8&1&6&15&10&17&2&7&0&3&4&5\\
+10&9&8&5&12&7&4&15&2&11&6&13&16&3&14&17&0&1
+\end{bmatrix}
+
+Under this convention, every row is a permutation of , and every exponent appears with multiplicity .
+
+This package is the current audit anchor.
+
+
+---
+
+11. What Is Verified Computationally
+
+The following are computationally verified at low levels from the accepted artifact package.
+
+11.1 Verified computational facts
+
+zero columns in  are exactly 
+
+the principal-submatrix identity holds exactly at r=2
+
+unit exponent rows are permutations of the full exponent set
+
+exponent multiplicity is exactly 
+
+positivity checks pass
+
+
+These are safe.
+
+
+---
+
+12. What Is Still Numerically Disputed
+
+This is the most important caution in the whole document.
+
+There have been multiple incompatible numerical baselines produced by the round table, including contradictory values for:
+
+
+
+
+
+
+
+
+
+
+Several branches drifted by:
+
+changing exponent conventions without saying so
+
+mixing canonical residues with odd representatives
+
+implicitly changing whether  or 
+
+claiming constant row or column sums where they do not hold
+
+promoting numerical observations before reproducing their own artifact package
+
+
+So the correct policy is:
+
+Numerical policy
+
+No numerical claim is accepted unless it is accompanied by:
+
+1. the exact ordered state lists,
+
+
+2. the exact exponent table,
+
+
+3. the exact operator formula used,
+
+
+4. theorem-check assertions,
+
+
+5. a fixed-grid spectral table,
+
+
+6. root bracket and residual.
+
+
+
+
+---
+
+13. Current Best Interpretation of the Numerical Layer
+
+At the moment, the most defensible status is:
+
+Unit model
+
+There is a strong computational observation that the Perron root of  may be invariant in  for small , but the exact numerical value is still entangled with convention drift in prior branches.
+
+Full model
+
+There is a strong computational observation that the full model’s Perron root also exhibits finite-level regularity, but it is even more sensitive to implementation choices because of the leaf block and zero-column structure.
+
+So:
+
+r-invariance is not yet canonical theorem content
+
+it remains a computational observation under audit
+
+
+
+---
+
+14. What We Learned About Process
+
+The round-table process itself produced valuable meta-results.
+
+14.1 What worked
+
+adversarial cross-checking caught real mistakes
+
+separating theorem layer from numerical layer prevented corruption of the core
+
+forcing raw artifacts was the right correction
+
+narrow sister-questions were useful when they stayed scoped
+
+
+14.2 What failed
+
+models drifted from audit mode into theorem invention
+
+numerical claims were sometimes made without raw artifacts
+
+notation drifted
+
+indexing drifted
+
+“proofs” were sometimes built on false premises like constant column sums
+
+
+14.3 Correct workflow going forward
+
+The models should not freestyle. They should do one of three things only:
+
+1. prove something from the secure core,
+
+
+2. compute from a printed artifact package,
+
+
+3. audit another model’s proof or computation.
+
+
+
+That is the correct scope.
+
+
+---
+
+15. Where We Are Now
+
+We are at a stable intermediate point.
+
+Secure:
+
+operator framework
+
+theorem stack through H
+
+canonical indexing
+
+exact r=2 artifact package
+
+discipline of the audit process
+
+
+Unsettled:
+
+full numerical reconciliation at r=2 across all models
+
+r=3 artifact package
+
+exact spectral lists beyond the Perron root
+
+any theorem asserting r-invariance
+
+
+So the project is mathematically healthy but computationally bottlenecked.
+
+
+---
+
+16. Where We Plan to Go
+
+The next phase should be narrow and mechanical.
+
+Phase 1 — Finish r=2 reconciliation
+
+Require each model to return:
+
+ordered lists
+
+full exponent tables
+
+theorem checks
+
+fixed-grid 
+
+root diagnostics
+
+full eigenvalue lists at selected 
+
+
+No new theorem claims.
+
+Phase 2 — Generate the same artifact package for r=3
+
+Repeat the exact same protocol at r=3.
+
+Phase 3 — Compare only what survives both levels
+
+Only after r=2 and r=3 agree should we ask:
+
+is only the Perron root invariant?
+
+is more of the spectrum invariant?
+
+is there a structural block-circulant explanation?
+
+is there a closed form for the row sums of ?
+
+
+Phase 4 — Promote only theorems that survive the audit
+
+Nothing becomes canonical until it survives:
+
+exact computation,
+
+cross-model review,
+
+contradiction search,
+
+indexing audit.
+
+
+
+---
+
+17. Canonical Research Questions Going Forward
+
+These are the legitimate next questions.
+
+Q1
+
+For the accepted exponent convention and canonical indexing, what are the exact full eigenvalue lists of  and ?
+
+Q2
+
+What is the exact r=3 artifact package?
+
+Q3
+
+Does only the Perron root appear invariant, or is more of the spectrum preserved?
+
+Q4
+
+What exact algebraic mechanism forces constant row sums of , even though  does not have constant column sums?
+
+Q5
+
+Can any clean finite-level theorem about spectral-radius invariance be proved without claiming full spectral invariance?
+
+
+---
+
+18. Canonical Closing Statement
+
+The project began from a highly original inverse-Collatz intuition: convolution, weighted branching, and variable-length encoding. That intuition has now been transformed into a disciplined finite-level operator program.
+
+The secure core is real.
+The numerical phase is not finished.
+The correct posture now is not expansion, but controlled verification.
+
+This is where we are:
+
+the framework is valid,
+
+the process is corrected,
+
+the history is preserved,
+
+the next steps are clear.
+
+
+Send the next round-table results, and I’ll audit them against this document.
+
+=================================
+
+From the Collatz Convolution Formula to the Exact Finite-Level Operator Framework
+
+Abstract
+
+This paper gives a rigorous account of the mathematical framework that arises from viewing the inverse odd Collatz dynamics through convolution, signal propagation, and variable-length encoding. The central identity is the exact affine expansion
+
+2^{A_{n+1}}x_{n+1}
+=
+3^{n+1}x
++
+3^n
++
+(\pi * \sigma)_{n-1},
+
+3^{n+1}x + 3^n + \operatorname{conv}(\text{powers of }3,\ \text{Collatz signal}).
+
+K_r^{\mathrm{unit}}:\mathbb C^{U_{r+1}}\to\mathbb C^{U_r},
+\qquad
+K_r^{\mathrm{full}}:\mathbb C^{\mathcal O_{r+1}}\to\mathbb C^{\mathcal O_r},
+
+
+---
+
+1. Introduction
+
+The starting point is the inverse odd Collatz relation
+
+x_{k}
+=
+\frac{2^{a_{k+1}}x_{k+1}-1}{3},
+\qquad
+a_{k+1}\ge 1,
+
+First, the inverse process is a signal system: each target state receives weighted contributions from admissible exponent branches.
+
+Second, it is a variable-length code system: the exponent  is a branch length, so a finite inverse path is described by a word of non-uniform lengths.
+
+Third, it is a convolution system: when one weights exponent branches by a kernel in the exponent variable, the inverse transfer becomes a discrete convolution.
+
+The present paper makes that third point explicit and then shows how the current exact finite-level operator framework is the rigorous reduction of that convolutional picture.
+
+
+---
+
+2. The inverse odd recursion
+
+Let  be odd integers connected by inverse odd Collatz steps
+
+x_k=\frac{2^{a_{k+1}}x_{k+1}-1}{3},
+\qquad k=0,1,\dots,n,
+
+2^{a_{k+1}}x_{k+1}=3x_k+1.
+
+A_0:=0,
+\qquad
+A_j:=a_1+\cdots+a_j
+\quad (j\ge 1).
+
+Proposition 2.1
+
+For every ,
+
+2^{A_{n+1}}x_{n+1}
+=
+3^{n+1}x_0+\sum_{j=0}^{n}3^j\,2^{A_{n-j}}.
+
+Proof
+
+The claim is immediate for :
+
+2^{A_1}x_1=2^{a_1}x_1=3x_0+1=3x_0+3^0 2^{A_0}.
+
+2^{A_{n+2}}x_{n+2}
+=
+2^{A_{n+1}}(2^{a_{n+2}}x_{n+2})
+=
+2^{A_{n+1}}(3x_{n+1}+1).
+
+2^{A_{n+2}}x_{n+2}
+=
+3\left(3^{n+1}x_0+\sum_{j=0}^{n}3^j2^{A_{n-j}}\right)+2^{A_{n+1}}
+=
+3^{n+2}x_0+\sum_{j=1}^{n+1}3^j2^{A_{n+1-j}}+2^{A_{n+1}},
+
+3^{n+2}x_0+\sum_{j=0}^{n+1}3^j2^{A_{n+1-j}}.
+
+This is the basic affine identity behind the whole framework.
+
+
+---
+
+3. The explicit convolution form
+
+Now define the sequence of powers of three
+
+\pi_j:=3^j,\qquad j\ge 0,
+
+c_k:=2^{A_k},\qquad k\ge 0.
+
+2^{A_{n+1}}x_{n+1}
+=
+3^{n+1}x_0+(\pi*c)_n,
+
+(\pi*c)_n:=\sum_{j=0}^{n}\pi_j\,c_{n-j}
+=\sum_{j=0}^{n}3^j2^{A_{n-j}}.
+
+This is the exact convolutional identity. The affine term  carries the initial odd state, while the branch data enter only through the convolution of the powers-of-three kernel with the Collatz signal .
+
+If one wants the heuristic form with the leading  term separated out, define the shifted signal
+
+\sigma_k:=2^{A_{k+1}},\qquad k\ge 0.
+
+(\pi*c)_n
+=
+3^n+\sum_{j=0}^{n-1}3^j2^{A_{n-j}}
+=
+3^n+(\pi*\sigma)_{n-1}.
+
+\boxed{
+2^{A_{n+1}}x_{n+1}
+=
+3^{n+1}x_0
++
+3^n
++
+(\pi*\sigma)_{n-1}.
+}
+
+3^{n+1}x + 3^n + \operatorname{conv}(\text{powers of }3,\ \text{Collatz signal}).
+
+
+---
+
+4. Why this is naturally a variable-length code
+
+Each inverse step is controlled by an exponent . Thus a finite inverse path is encoded by a word
+
+(a_1,a_2,\dots,a_n).
+
+c_k=2^{A_k}=2^{a_1+\cdots+a_k}
+
+Hence the inverse odd Collatz dynamics produce two canonical pathwise objects:
+
+1. the code word
+
+
+
+(a_1,\dots,a_n),
+
+2. the Collatz signal
+
+
+
+c_k=2^{A_k},
+
+The convolution
+
+(\pi*c)_n=\sum_{j=0}^{n}3^j2^{A_{n-j}}
+
+
+---
+
+5. From pathwise convolution to statewise signal transport
+
+The previous sections describe a single inverse path. To obtain an operator theory, one must aggregate over all admissible branches into a given state.
+
+Let  be any function on odd integers, and define the branch indicator
+
+\chi_a(n,m)
+=
+\begin{cases}
+1,& \text{if } \displaystyle n=\frac{2^a m-1}{3},\\[1ex]
+0,& \text{otherwise.}
+\end{cases}
+
+\Sigma_f(n;a)
+=
+\sum_{m\in\mathcal O}\chi_a(n,m)\,f(m).
+
+Now fix a kernel . The weighted inverse transfer is
+
+(\mathcal K_k f)(n)
+=
+\sum_{a\ge 1}k(a)\,\Sigma_f(n;a).
+
+k(a)=u\,v^a,
+
+(\mathcal K_{u,v}f)(n)
+=
+\sum_{a\ge 1}u\,v^a\,\Sigma_f(n;a).
+
+Thus there are two compatible convolutional pictures:
+
+the pathwise convolution
+
+
+2^{A_{n+1}}x_{n+1}=3^{n+1}x_0+(\pi*c)_n,
+
+(\mathcal K_{u,v}f)(n)=\sum_{a\ge 1}u\,v^a\,\Sigma_f(n;a).
+
+The current finite operator theory is the exact residue-level realization of the second picture, and the second picture descends from the first.
+
+
+---
+
+6. Why exact finite quotients must be level-shifting
+
+The decisive structural fact is that the inverse odd relation does not close on a same-level quotient.
+
+Indeed,
+
+\frac{2^a m-1}{3}\equiv n \pmod{3^r}
+
+2^a m\equiv 3n+1 \pmod{3^{r+1}}.
+
+This is not an implementation choice. It is forced by the arithmetic identity itself.
+
+The present framework therefore uses the exact operators
+
+K_r^{\mathrm{unit}}:\mathbb C^{U_{r+1}}\to\mathbb C^{U_r},
+\qquad
+K_r^{\mathrm{full}}:\mathbb C^{\mathcal O_{r+1}}\to\mathbb C^{\mathcal O_r}.
+
+
+---
+
+7. The exact finite state spaces
+
+The framework uses two state-space models.
+
+7.1 The unit model
+
+U_r=(\mathbb Z/3^r\mathbb Z)^\times.
+
+7.2 The full odd model
+
+\mathcal O_r=\{1\le n<2\cdot 3^r:\ n\text{ odd}\}.
+
+
+---
+
+8. Exact finite admissible exponent sets
+
+For the unit model, define
+
+A_r^{\mathrm{unit}}(n,m)
+=
+\left\{
+a\ge 1:
+\frac{2^a m-1}{3}\equiv n \pmod{3^r}
+\right\},
+\qquad
+n\in U_r,\ m\in U_{r+1}.
+
+A_r^{\mathrm{full}}(n,m)
+=
+\left\{
+a\ge 1:
+\frac{2^a m-1}{3}\equiv n \pmod{2\cdot 3^r}
+\right\},
+\qquad
+n\in \mathcal O_r,\ m\in \mathcal O_{r+1}.
+
+Then the exact finite operators are
+
+\bigl(K_r^{\mathrm{unit}}(u,v)\bigr)_{n,m}
+=
+\sum_{a\in A_r^{\mathrm{unit}}(n,m)}u\,v^a,
+
+\bigl(K_r^{\mathrm{full}}(u,v)\bigr)_{n,m}
+=
+\sum_{a\in A_r^{\mathrm{full}}(n,m)}u\,v^a.
+
+These are finite residue-level versions of the statewise convolution operator .
+
+
+---
+
+9. Periodicity and the exact geometric-series reduction
+
+Let
+
+P_r=\operatorname{ord}_{3^{r+1}}(2)=2\cdot 3^r.
+
+a\equiv a_0(n,m)\pmod{P_r}.
+
+A_r^\bullet(n,m)=a_0(n,m)+P_r\mathbb Z_{\ge 0},
+
+\bigl(K_r^\bullet(u,v)\bigr)_{n,m}
+=
+\frac{u\,v^{a_0(n,m)}}{1-v^{P_r}}.
+
+Thus the pathwise variable-length code and the statewise convolution both collapse, at finite level, to exact geometric matrix entries.
+
+
+---
+
+10. The discrete logarithm formula
+
+In the unit model,
+
+2^{a_0(n,m)}\equiv (3n+1)m^{-1}\pmod{3^{r+1}}.
+
+a_0(n,m)
+=
+\operatorname{dlog}_2\!\bigl((3n+1)m^{-1}\bigr)\pmod{P_r},
+
+This is the exact arithmetic formula for the exponent class and therefore for the code length in the finite model.
+
+
+---
+
+11. The present secure structural framework
+
+The following statements are now structurally secure.
+
+11.1 The unit live class is singleton
+
+In the unit model, every live transition is controlled by one residue class of exponents modulo . This means the finite code law is exact.
+
+11.2 The full model has dead columns and a positive live block
+
+In the full model, the odd multiples of  in the source produce exactly zero columns, while the nonzero-support block is strictly positive for , .
+
+11.3 Multiplicity is exact
+
+In the unit model, exponent multiplicity is globally uniform.
+
+11.4 The full square operator contains the unit square operator literally
+
+After canonical ordering, the top-left principal block of the full square operator is exactly the unit square operator.
+
+11.5 Off-diagonal couplings are genuinely positive
+
+The leaf couplings are not formal artifacts. They are positive and dynamically real.
+
+These are the stable structural conclusions of the present framework.
+
+
+---
+
+12. Where the project stands now
+
+The conceptual framework is settled.
+
+The secure mathematical picture is:
+
+1. the inverse odd process defines a variable-length exponent code;
+
+
+2. the cumulative exponent sequence is the Collatz signal;
+
+
+3. the inverse affine law is exactly
+
+
+
+2^{A_{n+1}}x_{n+1}=3^{n+1}x+3^n+(\pi*\sigma)_{n-1};
+
+5. exact finite transport must be level-shifting;
+
+
+6. the current operators  are the exact finite realization of that convolutional signal system.
+
+
+
+What remains under active investigation is the spectral layer:
+
+exact numerical values of  and ,
+
+exact critical parameters,
+
+exact row-sum identities for the square operators,
+
+extent of -invariance, if any,
+
+full eigenvalue structure beyond the secure operator-theoretic core.
+
+
+
+---
+
+13. The exact conceptual bridge
+
+It is now possible to say precisely how the original intuition maps to the current theory.
+
+The heuristic object
+
+3^{n+1}x + 3^n + \operatorname{conv}(\text{powers of }3,\ \text{Collatz signal})
+
+2^{A_{n+1}}x_{n+1}
+=
+3^{n+1}x
++
+3^n
++
+(\pi*\sigma)_{n-1}.
+
+So the present operator framework is not a departure from the original convolutional viewpoint. It is its exact mathematical completion.
+
+
+---
+
+14. Conclusion
+
+The present framework can be summarized in one sentence:
+
+> The inverse odd Collatz dynamics define a variable-length coded signal in the exponent variable, whose weighted transport is a genuine discrete convolution; exact finite modular reduction then turns that convolutional signal system into the level-shifting operators  and .
+
+
+
+That is where the project came from, how it got here, and what the current mathematical framework now is.
+
+I’m ready for the next set of results.

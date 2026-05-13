@@ -1,0 +1,488 @@
+============================================================
+FILE  : 03_CONSTRUCTION_DATA.txt
+ROLE  : State lists, exponent tables, column-sum polynomials, row-sum
+        polynomials, abstract matrix structures, factorization
+        identities. All slice-independent reusable construction data
+        for r=2 and r=3.
+LOAD  : Witness rounds, structural rounds, exploratory rounds at any
+        s-value or level. Required for any matrix construction.
+DEPS  : 00, 01, 02.
+SIZE  : large. Stable; only changes when a new level (r=4+) opens.
+============================================================
+
+==SECTION:: 03.statelist.r2.unit ==
+
+Unit r=2 row indices:
+  U_2 = [1, 2, 4, 5, 7, 8]
+
+Unit r=2 column indices:
+  U_3_r2 = [1,  2,  4,  5,  7,  8,
+           10, 11, 13, 14, 16, 17,
+           19, 20, 22, 23, 25, 26]
+
+  count : 18 columns; all live (no zero columns in unit model).
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 03.statelist.r2.full ==
+
+Full r=2 row indices:
+  O_2 = [1, 2, 4, 5, 7, 8, 3, 9, 15]
+
+Full r=2 column indices:
+  O_3_r2 = [1,  2,  4,  5,  7,  8,
+           10, 11, 13, 14, 16, 17,
+           19, 20, 22, 23, 25, 26,
+            3,  9, 15, 21, 27, 33,
+           39, 45, 51]
+
+  count : 27 source columns
+  live  : first 18 columns (positive-support block)
+  zero  : last 9 columns (identically zero; excluded from S_full(t))
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 03.statelist.r3.unit ==
+
+Unit r=3 row indices:
+  U_3 = [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26]
+
+  count : 18 rows
+  source: derived from the general finite-level source rule with
+          P_3 = 54  [ref: 02.source.r3_parameters]
+
+Unit r=3 live column indices (canonical ordering):
+  U_4 = [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26,
+         28, 29, 31, 32, 34, 35, 37, 38, 40, 41, 43, 44, 46, 47, 49, 50,
+         52, 53, 55, 56, 58, 59, 61, 62, 64, 65, 67, 68, 70, 71, 73, 74,
+         76, 77, 79, 80]
+
+  count : 54 live columns; all live in the unit model.
+  source: derived from the general finite-level source rule with
+          P_3 = 54  [ref: 02.source.r3_parameters]
+
+  ordering_warning : a beta round used a sorted-odd O_3 ordering by
+                     mistake; rank result was unaffected (rank is
+                     permutation-invariant) but the artifact required
+                     a Patched note. Future r=3 artifacts MUST declare
+                     and use canonical ordering.
+                     [ref: 06.withdrawn.ledger entry "r3 sorted-odd
+                     ordering Patched"]
+
+[STATUS: Verified Fact (locked construction)]
+
+==SECTION:: 03.statelist.r3.full ==
+
+Full r=3 row indices (canonical ordering):
+  O_3 = U_3 ++ [3, 9, 15, 21, 27, 33, 39, 45, 51]
+      = [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26,
+         3, 9, 15, 21, 27, 33, 39, 45, 51]
+
+  count : 27 rows
+
+Full r=3 source column indices (canonical ordering):
+  O_4 = U_4 ++ [3, 9, 15, 21, 27, 33, 39, 45, 51,
+                57, 63, 69, 75, 81, 87, 93, 99, 105,
+                111, 117, 123, 129, 135, 141, 147, 153, 159]
+
+  count : 81 source columns
+  live  : first 54 columns, exactly U_4
+  zero  : last 27 columns (odd multiples of 3 mod 162), identically
+          zero and excluded from S_full(t) live-support sums
+
+[STATUS: Verified Fact (locked construction)]
+
+==SECTION:: 03.exponents.r2.unit_6x18 ==
+
+The 6 x 18 unit r=2 exponent table. Entry (i, k) is a0(U_2[i], U_3_r2[k]).
+
+Row 1 (n = 1):
+  [2, 1, 18, 15, 4, 17, 14, 7, 12, 3, 16, 5, 8, 13, 6, 9, 10, 11]
+
+Row 2 (n = 2):
+  [16, 15, 14, 11, 18, 13, 10, 3, 8, 17, 12, 1, 4, 9, 2, 5, 6, 7]
+
+Row 3 (n = 4):
+  [8, 7, 6, 3, 10, 5, 2, 13, 18, 9, 4, 11, 14, 1, 12, 15, 16, 17]
+
+Row 4 (n = 5):
+  [4, 3, 2, 17, 6, 1, 16, 9, 14, 5, 18, 7, 10, 15, 8, 11, 12, 13]
+
+Row 5 (n = 7):
+  [14, 13, 12, 9, 16, 11, 8, 1, 6, 15, 10, 17, 2, 7, 18, 3, 4, 5]
+
+Row 6 (n = 8):
+  [10, 9, 8, 5, 12, 7, 4, 15, 2, 11, 6, 13, 16, 3, 14, 17, 18, 1]
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 03.exponents.r2.full_leaves ==
+
+Full r=2 leaf rows. Rows 7 through 9 of K_2^full live exponent table.
+
+Row 7 (n = 3):
+  [6, 5, 4, 1, 8, 3, 18, 11, 16, 7, 2, 9, 12, 17, 10, 13, 14, 15]
+
+Row 8 (n = 9):
+  [18, 17, 16, 13, 2, 15, 12, 5, 10, 1, 14, 3, 6, 11, 4, 7, 8, 9]
+
+Row 9 (n = 15):
+  [12, 11, 10, 7, 14, 9, 6, 17, 4, 13, 8, 15, 18, 5, 16, 1, 2, 3]
+
+The complete r=2 full 9 x 18 live exponent table is the unit 6 x 18
+table [ref: 03.exponents.r2.unit_6x18] concatenated with these three
+leaf rows, in O_2 order.
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 03.exponents.r3.tables ==
+
+The r=3 live exponent tables are derived deterministically from the
+general finite-level source rule with P_3 = 54.
+
+  unit_live_exponent_table : 18 x 54, rows U_3 and live columns U_4
+  full_live_exponent_table : 27 x 54, rows O_3 and live columns U_4
+  full_source_columns      : 81 total columns in O_4, with the last
+                             27 zero columns excluded from S_full(t)
+                             live-support sums
+
+  resulting_S_matrices     : S_unit,r3 is 18 x 18;
+                             S_full,r3 is 27 x 27
+
+  storage   : the full numerical r=3 exponent tables are large; they
+              are NOT inlined here in the canonical text. They are
+              regenerated deterministically by the registered
+              construction script in [ref: 08.protocol.code_registry]
+              under entry r3_construction.py.
+  hash      : declared in [ref: 09.manifest.file_hashes] for the
+              registered script.
+  rule      : every r=3 round must regenerate these tables from the
+              registered script and declare the matching script hash.
+
+[STATUS: Verified Fact (locked construction; data regenerable)]
+
+==SECTION:: 03.construction_modulus.r3 ==
+
+The reconstruction congruence modulus at level r=3 is
+
+\[
+\mathrm{MOD} \;=\; 81 \;=\; 3^4.
+\]
+
+Definition of \(a_0(n,m)\) at r=3:
+For each live row index \(n \in U_3\) (unit) or \(n \in O_3\) (full),
+and each live column index \(m \in U_4\), the exponent \(a_0(n, m)\)
+is the unique integer in \(\{1, 2, \ldots, 54\}\) such that
+
+\[
+2^{a_0(n,m)}\,m \;\equiv\; 3n + 1 \pmod{81}.
+\]
+
+Why \(P_3 = 54\):
+The multiplicative order of 2 modulo 81 is exactly 54. Verification:
+\(\phi(81) = 54\); a direct check gives \(2^{27} \equiv -1 \pmod{81}\)
+and therefore \(2^{54} \equiv 1 \pmod{81}\). So 54 is the period of
+the powers of 2 modulo 81, which is exactly the period structure
+inherited by the canonical denominator \(1 - t^{54}\) and the
+normalization \(c_3 = h^2 / (1 - t^{54})^2\)
+[ref: 02.source.r3_parameters].
+
+What MOD = 81 is NOT:
+  - it is NOT a competing convention parameter
+  - it is NOT a side-channel ID
+  - it is NOT a denominator period parameter (the denominator period
+    is \(P_3 = 54\), a derived quantity)
+  - it is NOT independent canonical metadata; it is construction-
+    internal to the source rule
+
+Why this matters:
+Witness rounds at r=3 must use the correct congruence and the correct
+\(a_0\) range. A witness that uses a different modulus or a different
+\(a_0\) range is reconstructing a different matrix and is a
+sanity-gate failure. ChatGPT's arithmetic gate at Stage 4 of the
+researcher-handoff workflow [ref: 08.protocol.researcher_handoff]
+must verify both \(\mathrm{MOD} = 81\) and \(a_0 \in \{1, \ldots, 54\}\)
+when the round involves r=3 matrix construction.
+
+Cross-reference: this same congruence pattern lifts to higher levels
+with \(\mathrm{MOD} = 3^{r+1}\) and \(P_r = \mathrm{ord}_{\mathrm{MOD}}(2)\);
+recording is reserved for future canonical levels and is NOT a
+Verified Fact at any level above r=3 in this canonical.
+
+[STATUS: Verified Fact (locked construction; integrated v2.2)]
+
+==SECTION:: 03.colsum.r2.unit ==
+
+The 18 column-sum polynomials of the r=2 unit 6 x 18 exponent table:
+
+  C_1(t)  = t^2  + t^4  + t^8  + t^10 + t^14 + t^16
+  C_2(t)  = t^1  + t^3  + t^7  + t^9  + t^13 + t^15
+  C_3(t)  = t^2  + t^6  + t^8  + t^12 + t^14 + t^18
+  C_4(t)  = t^3  + t^5  + t^9  + t^11 + t^15 + t^17
+  C_5(t)  = t^4  + t^6  + t^10 + t^12 + t^16 + t^18
+  C_6(t)  = t^1  + t^5  + t^7  + t^11 + t^13 + t^17
+  C_7(t)  = C_1
+  C_8(t)  = C_2
+  C_9(t)  = C_3
+  C_10(t) = C_4
+  C_11(t) = C_5
+  C_12(t) = C_6
+  C_13(t) = C_1
+  C_14(t) = C_2
+  C_15(t) = C_3
+  C_16(t) = C_4
+  C_17(t) = C_5
+  C_18(t) = C_6
+
+  pattern : 6-fold repeating across the 18 columns.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.colsum.r2.full ==
+
+For r=2 full, each live column has either all even or all odd
+exponents across the 9 rows. The 18 column-sum coefficient vectors
+over powers t^1, ..., t^18:
+
+  Odd columns (1, 3, 5, 7, 9, 11, 13, 15, 17):
+    [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
+
+  Even columns (2, 4, 6, 8, 10, 12, 14, 16, 18):
+    [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+
+  parity_consequence : every entry of S_full(t) = K_full * K_full^T
+                       is a polynomial in EVEN powers of t in [t^2, t^36].
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.rowsum.r2.unit ==
+
+The unit row-sum polynomial. Independent of s as a polynomial in t.
+
+  R_unit(t) =
+      t^2  + 2*t^4  + 3*t^6  + 5*t^8  + 6*t^10 + 7*t^12
+    + 9*t^14 + 10*t^16 + 11*t^18 + 11*t^20 + 10*t^22 + 9*t^24
+    + 7*t^26 + 6*t^28 + 5*t^30 + 3*t^32 + 2*t^34 + t^36
+
+  per_slice_perron :
+    rho_unit(s) = c(s) * R_unit(t)  with t = 2^{-s}
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.rowsum.r2.full ==
+
+The full row-sum polynomial. Independent of s as a polynomial in t.
+
+  R_full(t) =
+      t^2  + 3*t^4  + 5*t^6  + 7*t^8  + 9*t^10 + 11*t^12
+    + 13*t^14 + 15*t^16 + 17*t^18 + 17*t^20 + 15*t^22 + 13*t^24
+    + 11*t^26 + 9*t^28 + 7*t^30 + 5*t^32 + 3*t^34 + t^36
+
+  per_slice_perron :
+    rho_full(s) = c(s) * R_full(t)  with t = 2^{-s}
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.polylabels.r2.unit ==
+
+The 5 unique polynomial labels of the r=2 unit S(t):
+
+  A(t) = t^2  + t^4  + t^6  + t^8  + t^10 + t^12 + t^14 + t^16 + t^18
+       + t^20 + t^22 + t^24 + t^26 + t^28 + t^30 + t^32 + t^34 + t^36
+
+  B(t) = t^6  + t^8  + t^10 + t^12 + t^14 + 2*t^16 + 2*t^18 + 2*t^20
+       + 2*t^22 + t^24 + t^26 + t^28 + t^30 + t^32
+
+  C(t) = t^8  + t^10 + t^12 + 2*t^14 + 2*t^16 + 2*t^18 + 2*t^20
+       + 2*t^22 + 2*t^24 + t^26 + t^28 + t^30
+
+  D(t) = t^4  + t^6  + t^8  + t^10 + t^12 + t^14 + t^16 + 2*t^18
+       + 2*t^20 + t^22 + t^24 + t^26 + t^28 + t^30 + t^32 + t^34
+
+  E(t) = t^10 + 2*t^12 + 2*t^14 + 2*t^16 + 2*t^18 + 2*t^20
+       + 2*t^22 + 2*t^24 + 2*t^26 + t^28
+
+  identity_with_full : A(t) equals P_0(t) of the r=2 full model
+                       [ref: 03.polylabels.r2.full]
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.polylabels.r2.full ==
+
+The 5 unique polynomial labels P_0 through P_4 of r=2 full S_full(t).
+Coefficient vectors over EVEN powers t^2, t^4, ..., t^36 (length 18).
+
+  P_0(t) : [1, 1, 1, 1, 1, 1, 1, 1, 1,  1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+  P_1(t) : [0, 0, 1, 1, 1, 1, 1, 2, 2,  2, 2, 1, 1, 1, 1, 1, 0, 0]
+
+  P_2(t) : [0, 0, 0, 1, 1, 1, 2, 2, 2,  2, 2, 2, 1, 1, 1, 0, 0, 0]
+
+  P_3(t) : [0, 1, 1, 1, 1, 1, 1, 1, 2,  2, 1, 1, 1, 1, 1, 1, 1, 0]
+
+  P_4(t) : [0, 0, 0, 0, 1, 2, 2, 2, 2,  2, 2, 2, 2, 1, 0, 0, 0, 0]
+
+  P_0_polynomial : t^2 + t^4 + ... + t^36 (sum of all 18 even powers)
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.abstract.r2.unit_S ==
+
+The 6 x 6 abstract unit matrix.
+
+  S(A, B, C, D, E) =
+    [[A, B, C, D, C, E],
+     [B, A, E, C, D, C],
+     [C, E, A, B, C, D],
+     [D, C, B, A, E, C],
+     [C, D, C, E, A, B],
+     [E, C, D, C, B, A]]
+
+  variables : A, B, C, D, E are the 5 distinct polynomial labels of
+              S_unit(t). Substitute A(t), B(t), C(t), D(t), E(t) from
+              [ref: 03.polylabels.r2.unit] for the canonical instance.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.abstract.r2.full_T ==
+
+The 9 x 9 abstract full matrix.
+
+  T(X0, X1, X2, X3, X4) =
+    [[X0, X1, X2, X3, X2, X4, X1, X3, X4],
+     [X1, X0, X4, X2, X3, X2, X4, X3, X1],
+     [X2, X4, X0, X1, X2, X3, X3, X4, X1],
+     [X3, X2, X1, X0, X4, X2, X3, X1, X4],
+     [X2, X3, X2, X4, X0, X1, X4, X1, X3],
+     [X4, X2, X3, X2, X1, X0, X1, X4, X3],
+     [X1, X4, X3, X3, X4, X1, X0, X2, X2],
+     [X3, X3, X4, X1, X1, X4, X2, X0, X2],
+     [X4, X1, X1, X4, X3, X3, X2, X2, X0]]
+
+  variables : X0..X4 are the 5 distinct polynomial labels of S_full(t).
+              Substitute Xi = Pi(t) from [ref: 03.polylabels.r2.full].
+
+  symmetric_label_matrix : the 9 x 9 matrix of indices k such that
+                           S_full(t)_{ij} = P_k(t).
+    [[0, 1, 2, 3, 2, 4, 1, 3, 4],
+     [1, 0, 4, 2, 3, 2, 4, 3, 1],
+     [2, 4, 0, 1, 2, 3, 3, 4, 1],
+     [3, 2, 1, 0, 4, 2, 3, 1, 4],
+     [2, 3, 2, 4, 0, 1, 4, 1, 3],
+     [4, 2, 3, 2, 1, 0, 1, 4, 3],
+     [1, 4, 3, 3, 4, 1, 0, 2, 2],
+     [3, 3, 4, 1, 1, 4, 2, 0, 2],
+     [4, 1, 1, 4, 3, 3, 2, 2, 0]]
+
+  diagonal : all P_0(t).
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.abstract.r2.unit_factorization ==
+
+The compact characteristic-polynomial identity for the abstract unit
+matrix.
+
+  det(y*I - S(A,B,C,D,E)) = (y - L0) * (y - L1) * Q(y)^2
+
+  L0 = A + B + 2*C + D + E
+  L1 = A - B + 2*C - D - E
+
+  Q(y) = y^2
+       + (-2*A + 2*C) * y
+       + (A^2 - 2*A*C - B^2 + B*D + B*E + C^2 - D^2 + D*E - E^2)
+
+  perron_identification : after canonical substitution,
+                          L0(t) = R_unit(t) [ref: 03.rowsum.r2.unit].
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.abstract.r2.full_factorization ==
+
+The compact characteristic-polynomial identity for the abstract full
+matrix.
+
+  det(y*I - T(X0,X1,X2,X3,X4)) = (y - L0) * (y - L1)^2 * C(y)^2
+
+  L0 = X0 + 2*X1 + 2*X2 + 2*X3 + 2*X4
+  L1 = X0 - X1 + 2*X2 - X3 - X4
+
+  C(y) : the canonical full-model cubic produced by the accepted
+         full-model compact characteristic-polynomial witnesses.
+         Per-slice explicit forms recorded in [ref: 04.s055.full.compact]
+         and [ref: 04.s060.full.compact].
+
+  perron_identification : after canonical substitution,
+                          L0(t) = R_full(t) [ref: 03.rowsum.r2.full].
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.scaling.b_to_s_relations ==
+
+Per-model relations linking abstract S-level factorizations to the
+B-level characteristic polynomial:
+
+  unit r=2 :
+    p_B(x) = c^6 * (x/c - L0(t)) * (x/c - L1(t)) * Q_t(x/c)^2
+
+  full r=2 :
+    p_B(x) = c^9 * (x/c - L0(t)) * (x/c - L1(t))^2 * C_t(x/c)^2
+
+  unit r=3 :
+    p_B(x) = c_3^{18} * p_S(x / c_3)
+
+  full r=3 :
+    p_B(x) = c_3^{27} * p_S(x / c_3)
+
+When L0(t) = R(t) is identified with the Perron row-sum:
+
+  (x/c - R(t)) = (x - c * R(t)) / c = (x - rho) / c
+
+confirming the Perron anchor at the B-level. Used as a sanity check
+in every compact-charpoly closure.
+
+[STATUS: Verified Fact]
+
+==SECTION:: 03.reduction_rings ==
+
+Reduction rings used across slice-specific witnesses.
+
+  s = 0.50 :
+    t = 2^{-1/2} = sqrt(2)/2
+    minimal relation : 2*t^2 - 1 = 0
+    ring             : Q[t]/(2*t^2 - 1)
+    isomorphic to    : Q(sqrt(2))
+    h                : 3^{-1/2} (involves sqrt(3))
+
+  s = 0.55 :
+    t = 2^{-11/20}
+    minimal relation : 2048*t^{20} - 1 = 0
+    ring             : Q[t]/(2048*t^{20} - 1)
+    basis            : 1, t, t^2, ..., t^{19}
+    h_for_unit       : h = 3^{-1/10}, h^{10} = 1/3 in Q
+                       bounded fact: h^k not in Q(t) for k = 1..6
+
+  s = 0.60 :
+    t = 2^{-3/5}
+    minimal relation : 8*t^5 - 1 = 0
+    ring             : Q[t]/(8*t^5 - 1)
+    basis            : 1, t, t^2, t^3, t^4
+    h                : 3^{-1/5}, h^5 = 1/3 in Q
+                       bounded fact: h^k not in Q(t) for k = 1..4
+
+  parity_warning :
+    At s = 0.55, the minimal relation is even in t; reductions
+    preserve even-power content.
+    At s = 0.60, the minimal relation is odd-degree in t; reductions
+    can transfer even-power content to odd basis positions because
+    t^6 = t/8, t^8 = t^3/8, etc. Parity audits MUST account for the
+    minimal relation of the reduction ring.
+
+  cross_ring_warning : artifacts in Q[t]/(2048*t^{20} - 1) and
+                       Q[t]/(8*t^5 - 1) are NOT interchangeable.
+                       A historical Patched failure copied between
+                       them. [ref: 06.withdrawn.ledger]
+
+[STATUS: Verified Fact]
+
+End of file 03.

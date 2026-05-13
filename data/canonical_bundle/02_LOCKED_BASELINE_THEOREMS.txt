@@ -1,0 +1,199 @@
+============================================================
+FILE  : 02_LOCKED_BASELINE_THEOREMS.txt
+ROLE  : Theorem stack through H, canonical indexing patch, locked
+        Perron values, locked row-sum / all-ones eigenvector identities,
+        locked direct-package structure, general source rule and
+        per-level parameters.
+LOAD  : ALWAYS. Required for every model session.
+DEPS  : 00, 01.
+SIZE  : medium. Locked. Never changes routinely. If any item here is
+        challenged, halt all round-table activity and audit before
+        proceeding.
+============================================================
+
+==SECTION:: 02.theorem.stack_through_H ==
+
+The theorem stack through theorem H is accepted as the locked theorem
+layer for the Frozen Convention A branch.
+
+  status      : Verified Fact (locked)
+  storage     : The verbatim text of theorems A through H is NOT
+                reproduced in this canonical. It resides in the
+                authoritative theorem source file (file 99 in the
+                prior canonical layout, shipped separately as
+                source_collatz_canonical_theorem_v1).
+  retrieval   : When a witness or audit requires a verbatim theorem
+                statement, retrieve from the source file. Do not
+                paraphrase.
+  scope       : Applies to r=2 directly. The general finite-level
+                source rule [ref: 02.source.general_rule] extends the
+                applicable theorems to r=3 and beyond, but extension
+                must be witnessed per level.
+
+==SECTION:: 02.indexing.canonical_patch ==
+
+The canonical indexing patch is mandatory for every construction of
+B = K K^T from the Frozen Convention A operator.
+
+  status      : Verified Fact (locked)
+  necessity   : Without the patch, the literal principal-submatrix
+                identity of theorem G does not hold.
+  content     : The patch defines the permutation and index set used
+                consistently across all six tracked r=2 slices and
+                across the r=3 layers.
+  storage     : Patch details reside in the authoritative theorem
+                source file. Do not infer or invent.
+
+==SECTION:: 02.perron.locked_values ==
+
+Six locked Perron spectral radii at r=2. Any computation that
+contradicts any locked value halts the round and triggers audit.
+
+  slice              | rho (locked Verified Fact)
+  -------------------|------------------------------------------
+  B_2^unit(0.50)     | 5/7
+  B_2^full(0.50)     | 1
+  B_2^unit(0.55)     | approximately 0.5190567166
+  B_2^full(0.55)     | approximately 0.7179241895
+  B_2^unit(0.60)     | approximately 0.38374946903378676
+  B_2^full(0.60)     | approximately 0.5241795939106411
+
+The exact algebraic form at s = 0.55 and s = 0.60 is rho = c * R(t),
+where R(t) is the row-sum polynomial in [ref: 03.rowsum.r2.unit] or
+[ref: 03.rowsum.r2.full] and c is the slice normalization in
+[ref: 01.operator.K_definition].
+
+The decimal values at s = 0.55 and s = 0.60 are Computational
+Observation consistency anchors. The exact algebraic forms are the
+locked Verified Facts.
+
+Two locked Perron spectral radii at r=3 (functional form):
+
+  rho(B_unit_r3(s))  =  c_3 * R_unit_r3(t),  for real s > 0
+  rho(B_full_r3(s))  =  c_3 * R_full_r3(t),  for real s > 0
+
+[STATUS: Verified Fact]
+
+==SECTION:: 02.perron.row_sum_identity ==
+
+Every closed slice and the r=3 layer satisfy the row-sum / all-ones
+eigenvector identity exactly:
+
+\[
+B \cdot \mathbf{1} \;=\; \rho \cdot \mathbf{1}
+\]
+
+The all-ones vector is an eigenvector of B with eigenvalue rho at
+every closed slice. This is locked across the Perron layer and
+provides the Perron anchor used in every closure.
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 02.direct_package.structure ==
+
+The smaller spectral package is the direct Frozen Convention A
+output. The doubled package is a shifted-convention artifact produced
+by a0 -> a0 - 1.
+
+  scaling under shift  : B_shifted(s) = 2^{2s} * B_ConventionA(s)
+  canonicality         : doubled package is noncanonical unless
+                         explicitly opened as a separate shifted branch
+  current closures     : NO closure in this canonical treats the
+                         doubled package as the primary object
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 02.source.general_rule ==
+
+The general finite-level source rule defines K, B, S(t), and the
+state lists for any r >= 2 from the canonical theorem.
+
+  per-level parameters     : P_r is the level period.
+                             [ref: 02.source.r2_parameters]
+                             [ref: 02.source.r3_parameters]
+  derived quantities       : t = 2^{-s}; h = 3^{-s};
+                             c_r = h^2 / (1 - t^{P_r})^2;
+                             K_{n,m}(s) per [ref: 01.operator.K_definition];
+                             B = K K^T; S(t) = B / c_r.
+  state-list construction  : recorded per level in
+                             [ref: 03.statelist.r2.unit],
+                             [ref: 03.statelist.r2.full],
+                             [ref: 03.statelist.r3.unit],
+                             [ref: 03.statelist.r3.full].
+  exponent-table construction : per level in [ref: 03.exponents.*].
+
+[STATUS: Verified Fact (locked source rule)]
+
+==SECTION:: 02.source.r2_parameters ==
+
+  level             : r = 2
+  period            : P_2 = 18
+  denominator       : 1 - 2^{-18 s}  (or equivalently  1 - t^{18})
+  c_2               : h^2 / (1 - t^{18})^2
+  unit dim          : 6
+  full dim          : 9
+  full source cols  : 27 (first 18 live, last 9 zero)
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 02.source.r3_parameters ==
+
+  level             : r = 3
+  period            : P_3 = 54
+  denominator       : 1 - 2^{-54 s}  (or equivalently  1 - t^{54})
+  c_3               : h^2 / (1 - t^{54})^2
+  unit dim          : 18
+  full dim          : 27
+
+[STATUS: Verified Fact (locked)]
+
+==SECTION:: 02.locked.compact_factorization_shape ==
+
+The compact characteristic-polynomial closures at r=2, s = 0.55 and
+s = 0.60 exhibit the same shape across both unit and full models:
+
+  unit r=2 :  p_S(y) = (y - L0) * (y - L1) * Q(y)^2
+  full r=2 :  p_S(y) = (y - L0) * (y - L1)^2 * C(y)^2
+
+This uniformity is structurally explained at r=2 by two distinct
+Verified Fact theorems:
+
+  unit r=2 explained by reversal-involution decomposition
+              [ref: 04.structural.unit.reversal]
+  full r=2 explained by equitable-partition / quotient-residual
+              decomposition  [ref: 04.structural.full.equitable]
+
+The two mechanisms are distinct as currently witnessed. A unified
+mechanism in the narrow sense is closed [ref:
+04.structural.unified.narrow], but generic structural distinctness is
+also closed [ref: 04.structural.distinctness.generic].
+
+The statement "this shape holds at any r=2 s-value not yet tracked"
+follows from the abstract-matrix-level structural theorems plus the
+slice-independence of the abstract matrix structure recorded in
+[ref: 03.abstract.r2.unit_S] and [ref: 03.abstract.r2.full_T],
+PROVIDED the same canonical substitution P_i(t) and A(t) through E(t)
+applies to the new s-value.
+
+The statement "this shape holds at r=3 or at cross-level" is NOT
+established and is NOT a locked baseline item. Both r=2 structural
+theorems are explicitly r=2 only.
+
+[STATUS: Verified Fact (locked at the structural-theorem level for r=2)]
+[STATUS: Not Established (cross-level extension)]
+
+==SECTION:: 02.locked.r3_construction_layer ==
+
+The r=3 source / construction layer is closed as Verified Fact under
+the general source rule. Specifically:
+
+  P_3 = 54, denominator 1 - t^{54}, c_3 = h^2 / (1 - t^{54})^2,
+  state lists U_3, U_4, O_3, O_4 (unit and full), exponent tables,
+  K, B = K K^T, S(t) = B / c_3 are all constructed and locked.
+
+  storage : detailed construction data lives in
+            [ref: 03.statelist.r3.*] and [ref: 03.exponents.r3.tables].
+
+[STATUS: Verified Fact (locked construction)]
+
+End of file 02.
