@@ -1,0 +1,13 @@
+name: collatz-research-orchestrator
+version: 1.0.0
+description: Master orchestration skill for finite-level Collatz lifted-operator research.
+capabilities:
+  - repo_planning
+  - subagent_coordination
+  - python_execution
+  - sage_routing
+  - proof_boundary_enforcement
+entrypoints:
+  preflight: scripts/preflight.sh
+  summarize: scripts/summarize_state.py
+  orchestrate: scripts/orchestrate.py

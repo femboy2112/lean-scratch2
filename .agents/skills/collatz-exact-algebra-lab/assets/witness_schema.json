@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Collatz finite-level witness",
+  "type": "object",
+  "required": ["status", "target", "scope", "method", "claim_boundary", "reproduction_command", "created_utc"],
+  "properties": {
+    "status": {
+      "enum": [
+        "Verified Fact",
+        "Computational Observation",
+        "Not Established",
+        "Withdrawn",
+        "Patched",
+        "Contradiction Detected",
+        "Over-Upgraded",
+        "Advisory Only"
+      ]
+    },
+    "target": {"type": "string"},
+    "scope": {"type": "string"},
+    "method": {"type": "string"},
+    "claim_boundary": {"type": "string"},
+    "reproduction_command": {"type": "string"},
+    "input_hashes": {"type": "object"},
+    "outputs": {"type": "array"},
+    "warnings": {"type": "array"},
+    "created_utc": {"type": "string"}
+  }
+}

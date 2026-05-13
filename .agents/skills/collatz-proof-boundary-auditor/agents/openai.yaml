@@ -1,0 +1,14 @@
+name: collatz-proof-boundary-auditor
+version: 1.0.0
+description: Claim-boundary and formalization audit skill for finite-level Collatz spectral research.
+capabilities:
+  - claim_classification
+  - forbidden_language_detection
+  - theorem_candidate_extraction
+  - lean_stub_generation
+  - report_auditing
+entrypoints:
+  audit_report: scripts/audit_report.py
+  validate_claim_ladder: scripts/validate_claim_ladder.py
+  extract_theorem_candidates: scripts/extract_theorem_candidates.py
+  generate_lean_stub: scripts/generate_lean_stub.py

@@ -1,0 +1,14 @@
+name: collatz-exact-algebra-lab
+version: 1.0.0
+description: Exact algebra and data-analysis skill for finite-level Collatz spectral research.
+capabilities:
+  - python_execution
+  - sage_execution
+  - exact_algebra
+  - witness_generation
+  - report_generation
+entrypoints:
+  run_target: scripts/run_exact_target.py
+  run_sage: scripts/run_sage_target.sh
+  collect_witnesses: scripts/collect_witnesses.py
+  compare_outputs: scripts/compare_outputs.py
