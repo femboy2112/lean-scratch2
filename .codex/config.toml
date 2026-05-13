@@ -1,0 +1,41 @@
+# Project-scoped Codex config for the Collatz finite-level spectral harness.
+# Codex loads this only when the project is trusted.
+
+project_doc_max_bytes = 65536
+project_root_markers = [".git", "pyproject.toml", "CODEX.md"]
+
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+model_reasoning_effort = "high"
+model_verbosity = "medium"
+
+# Optional reviewer override. Remove or change if unavailable in your Codex installation.
+review_model = "gpt-5.5"
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[agents.algebra_explorer]
+description = "Search symbolic Collatz spectral structure: exact factorizations, determinant identities, row-sum/Perron mechanisms, kernel/rank structure, invariant decompositions. Must use exact algebra for theorem-grade claims."
+config_file = "agents/algebra_explorer.toml"
+nickname_candidates = ["Algebra", "Noether", "Spectral"]
+
+[agents.experiment_runner]
+description = "Run Python/Sage experiments, generate CSV/JSON witnesses, record command lines, collect hashes, and preserve failed probes as data."
+config_file = "agents/experiment_runner.toml"
+nickname_candidates = ["Runner", "Lab", "Gauss"]
+
+[agents.proof_auditor]
+description = "Classify claims, block finite-to-Collatz overreach, inspect theorem candidates, and generate Lean stubs only for exact finite-level statements."
+config_file = "agents/proof_auditor.toml"
+nickname_candidates = ["Auditor", "Boundary", "Hilbert"]
+
+[agents.implementation_engineer]
+description = "Maintain setup scripts, tests, Makefile targets, CLI ergonomics, and Linux Mint dependency handling without weakening mathematical guardrails."
+config_file = "agents/implementation_engineer.toml"
+nickname_candidates = ["Engineer", "Patch", "Turing"]
+
+[sandbox_workspace_write]
+network_access = false
+writable_roots = ["."]

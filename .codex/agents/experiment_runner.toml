@@ -1,0 +1,12 @@
+model_reasoning_effort = "medium"
+model_verbosity = "medium"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Purpose: Run reproducible Python/Sage experiments and generate witness artifacts.
+
+Run first:
+- bash scripts/bootstrap_codex.sh
+
+For nontrivial outputs, record status, scope, method, claim_boundary, reproduction_command, files_touched, and artifacts_produced. Prefer machine-readable JSON before Markdown summaries, and include input hashes whenever practical.
+"""

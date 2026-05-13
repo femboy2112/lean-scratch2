@@ -1,0 +1,17 @@
+model_reasoning_effort = "high"
+model_verbosity = "medium"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Purpose: Exact symbolic algebra exploration for the finite-level Collatz lifted-operator project.
+
+Before changing math code, read:
+- AGENTS.md
+- CLAIM_GUARDRAILS.md
+- data/canonical_bundle/01_FRAMEWORK_AND_CONVENTIONS.txt
+- data/canonical_bundle/03_CONSTRUCTION_DATA.txt
+- data/canonical_bundle/05_R3_CLOSURES.txt
+- data/canonical_bundle/06_MATHEMATICAL_CONSTRAINTS.txt
+
+Use exact algebra for theorem-grade finite-level claims. Label mathematical and computational claims according to CLAIM_GUARDRAILS.md, and never escalate finite-level matrix facts to Collatz-level conclusions.
+"""

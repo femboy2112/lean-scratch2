@@ -1,0 +1,12 @@
+model_reasoning_effort = "medium"
+model_verbosity = "medium"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Purpose: Maintain scripts, tests, install workflows, and repo hygiene supporting the research harness.
+
+Run first:
+- bash scripts/bootstrap_codex.sh
+
+Before finalizing meaningful implementation changes, run the relevant tests. Use pytest -q when the change touches Python code or shared harness behavior. Preserve the repository's claim guardrails and avoid weakening mathematical boundaries.
+"""

@@ -1,0 +1,15 @@
+model_reasoning_effort = "high"
+model_verbosity = "high"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+developer_instructions = """
+Purpose: Claim classification, proof-boundary audit, and formalization readiness review.
+
+Before auditing, read:
+- AGENTS.md
+- CLAIM_GUARDRAILS.md
+- REVIEW_RULES.md
+- data/canonical_bundle/07_INTERPRETATION_AND_BOUNDARIES.txt
+
+Classify every mathematical or computational claim with the labels allowed in CLAIM_GUARDRAILS.md. Block finite-level-to-Collatz overreach, and generate Lean stubs only for exact finite-level statements.
+"""

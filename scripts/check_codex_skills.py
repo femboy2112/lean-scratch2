@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import re
+import tomllib
 from pathlib import Path
 
 
@@ -28,6 +29,70 @@ def parse_frontmatter(text: str) -> dict:
             k, v = line.split(":", 1)
             data[k.strip()] = v.strip().strip('"').strip("'")
     return data
+
+
+def validate_codex_agents(root: Path, findings: list[dict]) -> None:
+    codex_dir = root / ".codex"
+    config_path = codex_dir / "config.toml"
+    agents_dir = codex_dir / "agents"
+    if not config_path.exists() and not agents_dir.exists():
+        return
+
+    agent_files = set()
+    if config_path.exists():
+        try:
+            config = tomllib.loads(config_path.read_text(encoding="utf-8"))
+        except tomllib.TOMLDecodeError as exc:
+            findings.append({
+                "severity": "BLOCKER",
+                "path": str(config_path.relative_to(root)),
+                "message": f"invalid TOML: {exc}",
+            })
+            config = {}
+
+        agents = config.get("agents", {})
+        if isinstance(agents, dict):
+            for role, role_config in sorted(agents.items()):
+                if not isinstance(role_config, dict):
+                    continue
+                rel = role_config.get("config_file")
+                if not rel:
+                    continue
+                path = codex_dir / rel
+                agent_files.add(path)
+                if not path.exists():
+                    findings.append({
+                        "severity": "BLOCKER",
+                        "agent": role,
+                        "path": str(path.relative_to(root)),
+                        "message": "agent config_file target missing",
+                    })
+
+    if agents_dir.exists():
+        agent_files.update(agents_dir.glob("*.toml"))
+
+    for path in sorted(agent_files):
+        if not path.exists():
+            continue
+        rel = str(path.relative_to(root))
+        try:
+            data = tomllib.loads(path.read_text(encoding="utf-8"))
+        except tomllib.TOMLDecodeError as exc:
+            findings.append({"severity": "BLOCKER", "path": rel, "message": f"invalid TOML: {exc}"})
+            continue
+        if "model_context" in data:
+            findings.append({
+                "severity": "BLOCKER",
+                "path": rel,
+                "message": "Codex agent role files do not support model_context; use developer_instructions",
+            })
+        instructions = data.get("developer_instructions")
+        if not isinstance(instructions, str) or not instructions.strip():
+            findings.append({
+                "severity": "BLOCKER",
+                "path": rel,
+                "message": "missing non-empty developer_instructions",
+            })
 
 
 def main() -> int:
@@ -67,6 +132,8 @@ def main() -> int:
     missing = sorted(expected - found)
     for name in missing:
         findings.append({"severity": "BLOCKER", "skill": name, "message": "expected skill not found"})
+
+    validate_codex_agents(root, findings)
 
     result = {
         "ok": not any(f["severity"] == "BLOCKER" for f in findings),
