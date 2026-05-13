@@ -1,0 +1,108 @@
+{
+  "status": "Advisory Only",
+  "created_utc": "2026-05-13T06:35:31.279951+00:00",
+  "scope": "finite-level Collatz harness report artifacts",
+  "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+  "entries": [
+    {
+      "path": "reports/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reports/20260513T063142Z_next_best_steps_orchestration.json",
+      "bytes": 8830,
+      "sha256": "d592395ee1ac637019cf7de122b6e85972b90e6d5ea15bec42b9daabf04720d3"
+    },
+    {
+      "path": "reports/20260513T063142Z_next_best_steps_orchestration.md",
+      "bytes": 6871,
+      "sha256": "62d7ee89b7238dfd248d2e5d4da9c34f4acd5e775f43e3cc88eeb7452f5f7e11"
+    },
+    {
+      "path": "reports/20260513T063352Z_20260513T063142Z_next_best_steps_orchestration_audit.json",
+      "bytes": 581,
+      "sha256": "a4f21cac0082b9ec58120051585ae9959de4c4aafb41021704d6f756e4b6b52e"
+    },
+    {
+      "path": "reports/20260513T063352Z_20260513T063142Z_next_best_steps_orchestration_audit.md",
+      "bytes": 791,
+      "sha256": "ab4783f38df94a71a9a3db82f6513a2a416c9abaa80ec3bcb5a95b4de27eab02"
+    },
+    {
+      "path": "reports/20260513T063352Z_py_sanity_checks_audit.json",
+      "bytes": 553,
+      "sha256": "9e7e11bbdb8032bad0d5307800ae2875dde5706b0a9e4183140f07b7b36faf24"
+    },
+    {
+      "path": "reports/20260513T063352Z_py_sanity_checks_audit.md",
+      "bytes": 735,
+      "sha256": "940c5ad9668428cd9d19013d80afa849584b876d54586572d3dc456178ccf908"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063142Z_next_best_steps_orchestration_audit.json",
+      "bytes": 581,
+      "sha256": "cf989174252dc42e49b6d61bd9f4a270e156eb0100067ce63ac3a4f25f6e822e"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063142Z_next_best_steps_orchestration_audit.md",
+      "bytes": 791,
+      "sha256": "cc605d62bd54092f445ecc02139a2f4fa844e808da05b9bd954320bce6e145b4"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063352Z_20260513T063142Z_next_best_steps_orchestration_audit_audit.json",
+      "bytes": 604,
+      "sha256": "002ccfccc28651b2712b9500423e981ba4975a71c05c5b9ae8347c39c661ec8c"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063352Z_20260513T063142Z_next_best_steps_orchestration_audit_audit.md",
+      "bytes": 837,
+      "sha256": "e7058bcc6f712df2d95a4e917a09f19f72311549d52121b66945b94ab8245158"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063352Z_py_sanity_checks_audit_audit.json",
+      "bytes": 574,
+      "sha256": "0972d128fa0c05c2a01973dfd6bbfc94003b81aca421effed80e99063db79b7a"
+    },
+    {
+      "path": "reports/20260513T063408Z_20260513T063352Z_py_sanity_checks_audit_audit.md",
+      "bytes": 777,
+      "sha256": "fa87adf54b6d444c651b6c3771b6a818831a60d07565332bcbe2c5156fd69a90"
+    },
+    {
+      "path": "reports/20260513T063408Z_py_sanity_checks_audit.json",
+      "bytes": 553,
+      "sha256": "3560d2750696456815e027a321d37a4bdf1dc38c3ee43d987492330d34734cb1"
+    },
+    {
+      "path": "reports/20260513T063408Z_py_sanity_checks_audit.md",
+      "bytes": 735,
+      "sha256": "d595c6b90c74fae05dc9ba3c7cf898ed3883bd6fa06f361f2b7eb96e532eff01"
+    },
+    {
+      "path": "reports/20260513T063408Z_witness_manifest_audit.json",
+      "bytes": 726,
+      "sha256": "57ef38e80179adc782e0e8d3e8ca4b7bdf412431c1d8a9babc5935e2b3ecbae3"
+    },
+    {
+      "path": "reports/20260513T063408Z_witness_manifest_audit.md",
+      "bytes": 816,
+      "sha256": "924c79c7effec410e396434be33d1aaa3b66a33ad14efedc78cac6f41ceeafe5"
+    },
+    {
+      "path": "reports/20260513T063448Z_witness_manifest_status_patch_audit.json",
+      "bytes": 553,
+      "sha256": "d7f0198620663a57da9961e34c86279145fc33c0eb00d708791814b05409bcfd"
+    },
+    {
+      "path": "reports/20260513T063448Z_witness_manifest_status_patch_audit.md",
+      "bytes": 735,
+      "sha256": "0038e4dd9b7a76d69cbd74e772358e30e86b03a21e873aa157387af9359b8d37"
+    },
+    {
+      "path": "reports/py_sanity_checks.json",
+      "bytes": 1763,
+      "sha256": "7c9816d0f591d256142f86e941de7280198bf90336aefe15ece2c199c461c29d"
+    }
+  ]
+}
