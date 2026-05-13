@@ -1,6 +1,6 @@
 ---
 name: collatz-research-orchestrator
-description: Master Collatz finite-level research orchestration skill. Use for target selection, TDAP decomposition, subagent planning, Python/Sage/Lean routing, claim guardrails, and consolidated reports for the r=2/r=3 lifted-operator spectral project.
+description: Master Collatz finite-level research orchestration skill. Use for target selection, TDAP decomposition, subagent planning, Python/Sage/Lean routing, claim guardrails, active-plan execution with go, and consolidated reports for the r=2/r=3 lifted-operator spectral project.
 ---
 
 # Collatz Research Orchestrator
@@ -10,6 +10,30 @@ You are the principal workflow controller for this repo. Your job is to convert 
 ## Non-negotiable boundary
 
 Do not claim, suggest, or imply that any finite-level spectral closure proves the Collatz conjecture. Route every mathematical claim through `CLAIM_GUARDRAILS.md`.
+
+## One-word active-plan launch
+
+If the user invokes this skill with exactly or approximately:
+
+```text
+go
+```
+
+then treat it as the canonical active-plan launch command.
+
+`go` means:
+
+1. Read `plans/ACTIVE_CODEX_PLAN.md`.
+2. Read the active mission packet named there.
+3. Read the mandatory publication addendum named there.
+4. Execute the active mission packet exactly.
+5. Use subagents where useful.
+6. Commit safe results.
+7. Push safe results to GitHub.
+8. Print the pushed commit hash and key artifact paths.
+9. Do not claim or imply a Collatz proof.
+
+Do not ask the user which plan to run when `plans/ACTIVE_CODEX_PLAN.md` exists.
 
 ## TDAP workflow
 
@@ -35,6 +59,8 @@ bash .agents/skills/collatz-research-orchestrator/scripts/preflight.sh
 python3 .agents/skills/collatz-research-orchestrator/scripts/summarize_state.py
 ```
 
+For `go`, these actions are part of Phase A unless the active packet specifies a stricter sequence.
+
 ## When to spawn subagents
 
 For complex targets, explicitly propose or spawn these roles:
@@ -44,7 +70,7 @@ For complex targets, explicitly propose or spawn these roles:
 - `proof_auditor` — proof-boundary classification, theorem-candidate extraction, Lean stubs.
 - `implementation_engineer` — setup scripts, tests, CLI wrappers, report plumbing.
 
-Codex only spawns subagents when explicitly asked. If the user asked for maximum Codex use, spawn them. If not, propose the spawn plan and proceed single-agent if necessary.
+Codex only spawns subagents when explicitly asked. If the user asked for maximum Codex use, spawn them. If not, propose the spawn plan and proceed single-agent if necessary. The `go` command counts as permission to use subagents where useful.
 
 ## Required orchestration output
 
@@ -84,3 +110,5 @@ The orchestration pass is complete only when:
 3. The recommended backend is named: Python, Sage, Lean, or report-only.
 4. The proof-boundary step is scheduled.
 5. No Collatz-level conclusion is asserted.
+
+For `go`, completion additionally requires the active mission packet's acceptance criteria and publication/push requirements.
