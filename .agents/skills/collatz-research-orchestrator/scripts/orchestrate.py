@@ -116,10 +116,10 @@ def main() -> int:
 
     suggested_commands = [
         "bash scripts/bootstrap_codex.sh",
-        "python scripts/check_codex_skills.py",
-        f"python .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py spectral-fast",
-        "python .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
-        "python .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py",
+        "python3 scripts/check_codex_skills.py",
+        "python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py spectral-fast",
+        "python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
+        "python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py",
     ]
 
     data = {
@@ -183,7 +183,7 @@ def main() -> int:
         "Run:",
         "",
         "```bash",
-        "python .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py",
+        "python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py",
         "```",
         "",
     ]

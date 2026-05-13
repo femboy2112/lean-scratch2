@@ -12,7 +12,7 @@ cd "$ROOT"
 
 case "$TARGET" in
   sage-r2|sage-r3-unit|sage-r3-full)
-    python .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py "$TARGET"
+    python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py "$TARGET"
     ;;
   *)
     echo "Unknown Sage target: $TARGET" >&2

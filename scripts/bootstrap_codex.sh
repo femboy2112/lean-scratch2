@@ -18,14 +18,14 @@ cd "$ROOT"
 
 echo "[codex-bootstrap] root=$ROOT"
 
-if [[ ! -x .venv/bin/python ]]; then
+if [[ ! -x .venv/bin/python3 ]]; then
   echo "[codex-bootstrap] .venv missing; running Python-only setup first"
   bash scripts/setup_linux_mint.sh --sage skip
 fi
 
 . .venv/bin/activate
 
-python - <<'PY'
+python3 - <<'PY'
 missing=[]
 for mod in ["sympy", "numpy", "pandas", "matplotlib", "rich", "yaml", "networkx"]:
     try:
@@ -36,10 +36,10 @@ if missing:
     raise SystemExit("missing Python modules: " + ", ".join(missing))
 PY
 
-python scripts/run_py_checks.py
+python3 scripts/run_py_checks.py
 
 if [[ -f scripts/check_codex_skills.py ]]; then
-  python scripts/check_codex_skills.py
+  python3 scripts/check_codex_skills.py
 fi
 
 if [[ "$WITH_SAGE" -eq 1 || "${CODEX_REQUIRE_SAGE:-0}" == "1" ]]; then

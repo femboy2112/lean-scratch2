@@ -70,9 +70,9 @@ setup_venv() {
   echo "[setup] preparing Python virtual environment"
   python3 -m venv .venv
   . .venv/bin/activate
-  python -m pip install --upgrade pip wheel setuptools
-  python -m pip install -r requirements.txt
-  python -m pip install -e .
+  python3 -m pip install --upgrade pip wheel setuptools
+  python3 -m pip install -r requirements.txt
+  python3 -m pip install -e .
   echo "[setup] Python environment ready: $ROOT/.venv"
 }
 

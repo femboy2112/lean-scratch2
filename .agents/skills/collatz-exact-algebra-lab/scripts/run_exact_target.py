@@ -15,30 +15,30 @@ from pathlib import Path
 
 TARGETS = {
     "spectral-fast": {
-        "cmd": ["python", "experiments/r3_spectral_probe.py", "--slices", "0.50", "0.55", "0.60", "--models", "unit", "full"],
+        "cmd": ["python3", "experiments/r3_spectral_probe.py", "--slices", "0.50", "0.55", "0.60", "--models", "unit", "full"],
         "status": "Computational Observation",
         "method": "Python numerical/symbolic reconnaissance",
     },
     "modular-unit-fast": {
-        "cmd": ["python", "experiments/r3_modular_determinant_probe.py", "--model", "unit", "--samples", "4"],
+        "cmd": ["python3", "experiments/r3_modular_determinant_probe.py", "--model", "unit", "--samples", "4"],
         "status": "Computational Observation",
         "method": "Python modular determinant probe",
     },
     "modular-full-fast": {
-        "cmd": ["python", "experiments/r3_modular_determinant_probe.py", "--model", "full", "--samples", "4"],
+        "cmd": ["python3", "experiments/r3_modular_determinant_probe.py", "--model", "full", "--samples", "4"],
         "status": "Computational Observation",
         "method": "Python modular determinant probe",
     },
     "factor-python": {
         "cmds": [
-            ["python", "experiments/r3_factor_search.py", "unit"],
-            ["python", "experiments/r3_factor_search.py", "full"],
+            ["python3", "experiments/r3_factor_search.py", "unit"],
+            ["python3", "experiments/r3_factor_search.py", "full"],
         ],
         "status": "Computational Observation",
         "method": "Python/SymPy factor reconnaissance",
     },
     "cross-level": {
-        "cmd": ["python", "experiments/cross_level_invariance.py"],
+        "cmd": ["python3", "experiments/cross_level_invariance.py"],
         "status": "Computational Observation",
         "method": "Python cross-level invariant reconnaissance",
     },

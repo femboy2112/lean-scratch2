@@ -24,7 +24,7 @@ Use this backend order:
 
 ```bash
 bash scripts/bootstrap_codex.sh
-python scripts/run_py_checks.py
+python3 scripts/run_py_checks.py
 ```
 
 If Sage is needed:
@@ -38,7 +38,7 @@ bash scripts/bootstrap_codex.sh --with-sage
 Use:
 
 ```bash
-python .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py <target>
+python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py <target>
 ```
 
 Known targets:
@@ -57,7 +57,7 @@ sage-r3-full
 Then collect witnesses:
 
 ```bash
-python .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py
+python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py
 ```
 
 ## Required report fields

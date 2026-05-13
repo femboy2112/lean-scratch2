@@ -4,7 +4,7 @@
 ## Tier -1 — Codex skill validation
 
 ```bash
-python scripts/check_codex_skills.py
+python3 scripts/check_codex_skills.py
 ```
 
 Use the skills in this order for serious work:
@@ -21,7 +21,7 @@ $collatz-proof-boundary-auditor
 ```bash
 bash scripts/bootstrap_codex.sh
 pytest -q
-python scripts/run_py_checks.py
+python3 scripts/run_py_checks.py
 ```
 
 Expected: all construction sanity checks pass.
@@ -29,9 +29,9 @@ Expected: all construction sanity checks pass.
 ## Tier 1 — cheap reconnaissance
 
 ```bash
-python experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full
-python experiments/r3_modular_determinant_probe.py --model unit --samples 20
-python experiments/r3_modular_determinant_probe.py --model full --samples 20
+python3 experiments/r3_spectral_probe.py --slices 0.50 0.55 0.60 --models unit full
+python3 experiments/r3_modular_determinant_probe.py --model unit --samples 20
+python3 experiments/r3_modular_determinant_probe.py --model full --samples 20
 ```
 
 Outputs are **Computational Observation** only.

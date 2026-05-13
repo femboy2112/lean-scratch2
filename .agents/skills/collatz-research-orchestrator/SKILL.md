@@ -32,7 +32,7 @@ bash .agents/skills/collatz-research-orchestrator/scripts/preflight.sh
 3. Summarize current state:
 
 ```bash
-python .agents/skills/collatz-research-orchestrator/scripts/summarize_state.py
+python3 .agents/skills/collatz-research-orchestrator/scripts/summarize_state.py
 ```
 
 ## When to spawn subagents
@@ -72,7 +72,7 @@ next_step:
 ## Preferred command
 
 ```bash
-python .agents/skills/collatz-research-orchestrator/scripts/orchestrate.py --target "<target>" --run-preflight
+python3 .agents/skills/collatz-research-orchestrator/scripts/orchestrate.py --target "<target>" --run-preflight
 ```
 
 ## Completion criteria

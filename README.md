@@ -44,7 +44,7 @@ $collatz-proof-boundary-auditor audit the newest reports for over-upgraded claim
 Validate the skill installation:
 
 ```bash
-python scripts/check_codex_skills.py
+python3 scripts/check_codex_skills.py
 ```
 
 The repo also now includes:

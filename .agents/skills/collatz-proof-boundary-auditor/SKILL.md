@@ -33,25 +33,25 @@ data/canonical_bundle/07_INTERPRETATION_AND_BOUNDARIES.txt
 Audit one file:
 
 ```bash
-python .agents/skills/collatz-proof-boundary-auditor/scripts/audit_report.py reports/<file>.md
+python3 .agents/skills/collatz-proof-boundary-auditor/scripts/audit_report.py reports/<file>.md
 ```
 
 Audit all reports:
 
 ```bash
-python .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py
+python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py
 ```
 
 Extract theorem candidates:
 
 ```bash
-python .agents/skills/collatz-proof-boundary-auditor/scripts/extract_theorem_candidates.py reports/<file>.md
+python3 .agents/skills/collatz-proof-boundary-auditor/scripts/extract_theorem_candidates.py reports/<file>.md
 ```
 
 Generate Lean stub:
 
 ```bash
-python .agents/skills/collatz-proof-boundary-auditor/scripts/generate_lean_stub.py --name <TheoremName> --statement "<finite-level statement>"
+python3 .agents/skills/collatz-proof-boundary-auditor/scripts/generate_lean_stub.py --name <TheoremName> --statement "<finite-level statement>"
 ```
 
 ## Claim classification

@@ -17,5 +17,5 @@ else
   exit 1
 fi
 
-python scripts/check_codex_skills.py
+python3 scripts/check_codex_skills.py
 echo "[orchestrator-preflight] ok"

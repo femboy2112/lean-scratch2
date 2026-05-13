@@ -42,7 +42,7 @@ Preferred workflow:
 Validate skills:
 
 ```bash
-python scripts/check_codex_skills.py
+python3 scripts/check_codex_skills.py
 ```
 
 Use `CODEX_SKILLS.md` for explicit invocation prompts.
