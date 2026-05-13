@@ -3,10 +3,16 @@
 Active mission packet:
 
 ```text
+plans/codex/2026-05-13_r3_factorization_audit_packet.md
+```
+
+Prior cycle packet:
+
+```text
 plans/codex/2026-05-13_r3_next_research_cycle.md
 ```
 
-Machine-readable companion:
+Machine-readable companion for prior cycle:
 
 ```text
 plans/codex/2026-05-13_r3_next_research_cycle.json
@@ -18,12 +24,20 @@ Mandatory publication addendum:
 plans/codex/2026-05-13_r3_next_research_cycle_publish_addendum.md
 ```
 
-## Codex start command
+## One-word launch
 
-From repo root, after pulling this branch or merging the PR, start Codex and run:
+From repo root, after pulling `main`, start Codex and run:
 
 ```text
-$collatz-research-orchestrator read plans/ACTIVE_CODEX_PLAN.md and execute it exactly. Also read the mandatory publication addendum. Use subagents where useful. Run Python reconnaissance first, collect witnesses, audit proof boundaries, and promote to Sage exact algebra only when the plan's promotion rules are satisfied. Commit and push safe results to GitHub. Commit only scripts, reports, witness data, theorem-candidate notes, and safe plan-status updates. Do not claim or imply a Collatz proof.
+$collatz-research-orchestrator go
+```
+
+`go` means: read this active plan, read the active mission packet, read the publication addendum, execute the mission, commit safe results, and push them to GitHub.
+
+## Expanded equivalent command
+
+```text
+$collatz-research-orchestrator go. Read plans/ACTIVE_CODEX_PLAN.md, execute the active mission packet exactly, obey the mandatory publication addendum, use subagents where useful, commit and push safe results to GitHub, and do not claim or imply a Collatz proof.
 ```
 
 ## Required boundary
