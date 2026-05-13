@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/20260513T152602Z_sage-r3-unit_witness.json",
+  "audited_sha256": "1fa2ac40d3d09ad0be95c62b61d6c1dd40af2e19f43e43ddc3f8a726b11c20ec",
+  "created_utc": "20260513T161625Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 1,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

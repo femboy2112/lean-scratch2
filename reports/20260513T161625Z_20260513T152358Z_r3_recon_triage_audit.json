@@ -1,0 +1,31 @@
+{
+  "disposition": "PASS_WITH_PATCHES",
+  "audited_file": "reports/20260513T152358Z_r3_recon_triage.md",
+  "audited_sha256": "76429731a7507f14ffb6f644dfc99816193817ce4fefde872f4fed32d418ec96",
+  "created_utc": "20260513T161625Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 4,
+    "Not Established": 5,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 1,
+    "Advisory Only": 5
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "line": 28,
+      "pattern": "\\bnumerical(?:ly)?\\b.*\\b(proves?|establishes?|shows?)\\b",
+      "text": "| numerical subdominant spectral pattern | `r3_spectral_probe.csv` shows numerical second absolute eigenvalue and positive gap at three slices for both models | Computational Observation | No exact test until a symbolic eigenvalue/factor candidate is specified | Floating-point eigenvalues do not prove algebraic spectral structure |"
+    },
+    {
+      "severity": "WARNING",
+      "line": 28,
+      "pattern": "\\bfloat(?:ing[- ]point)?\\b.*\\b(proves?|establishes?)\\b",
+      "text": "| numerical subdominant spectral pattern | `r3_spectral_probe.csv` shows numerical second absolute eigenvalue and positive gap at three slices for both models | Computational Observation | No exact test until a symbolic eigenvalue/factor candidate is specified | Floating-point eigenvalues do not prove algebraic spectral structure |"
+    }
+  ],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

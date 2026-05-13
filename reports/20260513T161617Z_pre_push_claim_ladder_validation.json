@@ -1,0 +1,757 @@
+{
+  "ok": true,
+  "count": 75,
+  "results": [
+    {
+      "file": "reports/20260513T063142Z_next_best_steps_orchestration.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T063142Z_next_best_steps_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T063142Z_next_best_steps_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T063142Z_next_best_steps_orchestration.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T063142Z_next_best_steps_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T063142Z_next_best_steps_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064034Z_spectral-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064034Z_spectral-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064034Z_spectral-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064034Z_spectral_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064040Z_modular-unit-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064040Z_modular-unit-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064040Z_modular-unit-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161623Z_20260513T064040Z_modular_unit_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064045Z_modular-full-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064045Z_modular-full-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064045Z_modular-full-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064045Z_modular_full_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064053Z_factor-python.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064053Z_factor-python_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064053Z_factor-python_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064053Z_factor_python_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064103Z_cross-level.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064103Z_cross-level_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064103Z_cross-level_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064103Z_cross_level_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064252Z_factor-python.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064252Z_factor-python_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064252Z_factor-python_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064252Z_factor_python_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064411Z_plan_execution_orchestration.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064411Z_plan_execution_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064411Z_plan_execution_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T064411Z_plan_execution_orchestration.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064411Z_plan_execution_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T064411Z_plan_execution_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152017Z_state_summary.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152017Z_state_summary_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152017Z_state_summary_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152142Z_r3_next_research_cycle_orchestration.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152142Z_r3_next_research_cycle_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152142Z_r3_next_research_cycle_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152142Z_r3_next_research_cycle_orchestration.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152142Z_r3_next_research_cycle_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152142Z_r3_next_research_cycle_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152202Z_spectral-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152202Z_spectral-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152202Z_spectral-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152202Z_spectral_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152206Z_modular-unit-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152206Z_modular-unit-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152206Z_modular-unit-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152206Z_modular_unit_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152209Z_modular-full-fast.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152209Z_modular-full-fast_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152209Z_modular-full-fast_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152209Z_modular_full_fast_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152214Z_factor-python.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152214Z_factor_python_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161624Z_20260513T152214Z_factor_python_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152214Z_factor-python_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152214Z_factor_python_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152214Z_factor_python_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152214Z_factor-python_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152214Z_factor_python_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152214Z_factor_python_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152220Z_cross-level.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152220Z_cross-level_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152220Z_cross-level_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152220Z_cross_level_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152235Z_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152235Z_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152235Z_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152358Z_r3_recon_triage.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152358Z_r3_recon_triage_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152358Z_r3_recon_triage_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152358Z_r3_recon_triage.md",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152358Z_r3_recon_triage_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152358Z_r3_recon_triage_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152525Z_sage-r2.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152525Z_sage-r2_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152525Z_sage-r2_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152525Z_sage_r2_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152551Z_sage-r2.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152551Z_sage-r2_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152551Z_sage-r2_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152551Z_sage_r2_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152602Z_sage-r3-unit.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152602Z_sage-r3-unit_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152602Z_sage-r3-unit_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152602Z_sage_r3_unit_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152619Z_post_sage_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152619Z_post_sage_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152619Z_post_sage_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152643Z_sage-r3-full.log",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152643Z_sage-r3-full_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_analysis_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_analysis_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152643Z_sage-r3-full_witness.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_witness_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152643Z_sage_r3_full_witness_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152735Z_post_sage_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152735Z_post_sage_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152735Z_post_sage_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152815Z_theorem_candidates.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152815Z_theorem_candidates_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152815Z_theorem_candidates_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152815Z_theorem_candidates.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152815Z_theorem_candidates_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152815Z_theorem_candidates_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152905Z_r3_next_cycle_final.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152905Z_r3_next_cycle_final_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152905Z_r3_next_cycle_final_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T152905Z_r3_next_cycle_final.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152905Z_r3_next_cycle_final_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161625Z_20260513T152905Z_r3_next_cycle_final_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T153035Z_final_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T153035Z_final_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T153035Z_final_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T153146Z_final_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T153146Z_final_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T153146Z_final_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T160231Z_r3_factorization_audit_claim_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160231Z_r3_factorization_audit_claim_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160231Z_r3_factorization_audit_claim_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T160231Z_r3_factorization_canonical_patch_proposal.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160231Z_r3_factorization_canonical_patch_proposal_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160231Z_r3_factorization_canonical_patch_proposal_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T160324Z_r3_factorization_audit_orchestration.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160324Z_r3_factorization_audit_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160324Z_r3_factorization_audit_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T160324Z_r3_factorization_audit_orchestration.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160324Z_r3_factorization_audit_orchestration_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T160324Z_r3_factorization_audit_orchestration_audit.json"
+      }
+    },
+    {
+      "file": "reports/20260513T161617Z_pre_push_claim_ladder_validation.json",
+      "returncode": 0,
+      "payload": {
+        "ok": false,
+        "disposition": "PASS_WITH_PATCHES",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T161617Z_pre_push_claim_ladder_validation_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_20260513T161617Z_pre_push_claim_ladder_validation_audit.json"
+      }
+    },
+    {
+      "file": "reports/cross_level_invariance_plan.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_cross_level_invariance_plan_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_cross_level_invariance_plan_audit.json"
+      }
+    },
+    {
+      "file": "reports/py_sanity_checks.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_py_sanity_checks_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_py_sanity_checks_audit.json"
+      }
+    },
+    {
+      "file": "reports/r3_full_factor_search_plan.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_full_factor_search_plan_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_full_factor_search_plan_audit.json"
+      }
+    },
+    {
+      "file": "reports/r3_full_modular_det_probe.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_full_modular_det_probe_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_full_modular_det_probe_audit.json"
+      }
+    },
+    {
+      "file": "reports/r3_unit_factor_search_plan.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_unit_factor_search_plan_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_unit_factor_search_plan_audit.json"
+      }
+    },
+    {
+      "file": "reports/r3_unit_modular_det_probe.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_unit_modular_det_probe_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_r3_unit_modular_det_probe_audit.json"
+      }
+    },
+    {
+      "file": "reports/witness_manifest.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "markdown": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_witness_manifest_audit.md",
+        "json": "/home/leah/Collatz/lean-scratch2/reports/20260513T161626Z_witness_manifest_audit.json"
+      }
+    }
+  ],
+  "claim_boundary": "This validates report language only; it does not prove mathematical claims."
+}

@@ -1,0 +1,25 @@
+{
+  "disposition": "PASS_WITH_PATCHES",
+  "audited_file": "reports/20260513T064040Z_modular-unit-fast.log",
+  "audited_sha256": "91ea646b999c5faa2cf7f1342d9926f30648fa77db8a72c2aa885f708c2934dd",
+  "created_utc": "20260513T161623Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 0,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "line": null,
+      "pattern": "missing allowed status label",
+      "text": "No approved claim label found."
+    }
+  ],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}
