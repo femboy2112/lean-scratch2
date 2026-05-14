@@ -3,19 +3,19 @@
 Active mission packet:
 
 ```text
+plans/codex/2026-05-13_r3_canonical_proposal_patch_packet.md
+```
+
+Prior factorization audit packet:
+
+```text
 plans/codex/2026-05-13_r3_factorization_audit_packet.md
 ```
 
-Prior cycle packet:
+Prior reconnaissance packet:
 
 ```text
 plans/codex/2026-05-13_r3_next_research_cycle.md
-```
-
-Machine-readable companion for prior cycle:
-
-```text
-plans/codex/2026-05-13_r3_next_research_cycle.json
 ```
 
 Mandatory publication addendum:
