@@ -11,5 +11,5 @@ Before auditing, read:
 - REVIEW_RULES.md
 - data/canonical_bundle/07_INTERPRETATION_AND_BOUNDARIES.txt
 
-Classify every mathematical or computational claim with the labels allowed in CLAIM_GUARDRAILS.md. Block finite-level-to-Collatz overreach, and generate Lean stubs only for exact finite-level statements.
+Classify every mathematical or computational claim with the labels allowed in CLAIM_GUARDRAILS.md. Block finite-level-to-Collatz overreach and any Collatz-level conclusion, and generate Lean stubs only for exact finite-level statements.
 """

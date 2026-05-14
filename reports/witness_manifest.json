@@ -1,6 +1,6 @@
 {
   "status": "Advisory Only",
-  "created_utc": "2026-05-14T06:46:58.431222+00:00",
+  "created_utc": "2026-05-14T07:13:48.177453+00:00",
   "scope": "finite-level Collatz harness report artifacts",
   "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
   "entries": [
@@ -10045,6 +10045,71 @@
       "sha256": "7e80fee32bfefb1d6b85f93d4255a9b8d454410400c755b913f867c2c24f17e2"
     },
     {
+      "path": "reports/20260514T070401Z_codex_specialized_capability_validation_orchestration.json",
+      "bytes": 9874,
+      "sha256": "853a57f01c02353d3bba5a153ea9c731c4b71f06f6ef4f48d472a0413d317772"
+    },
+    {
+      "path": "reports/20260514T070401Z_codex_specialized_capability_validation_orchestration.md",
+      "bytes": 6926,
+      "sha256": "863e27f264c574070147349ca862e6e0fa35f885891c40ed9cf27f467edbf4fe"
+    },
+    {
+      "path": "reports/20260514T070727Z_codex_capability_matrix.json",
+      "bytes": 7416,
+      "sha256": "77836ad255f360853dc43bfcb5b26efe71302d3e9047e5aa0d0efff3d61d4011"
+    },
+    {
+      "path": "reports/20260514T070727Z_codex_capability_matrix.md",
+      "bytes": 4728,
+      "sha256": "01f61e7c194525373cd9ba3047da31453fe1de01e1b8139d717178b46461020a"
+    },
+    {
+      "path": "reports/20260514T070727Z_specialized_skills_validation.md",
+      "bytes": 3733,
+      "sha256": "3e796109b63b8673cb489cef35fdcde394a24d2a85104c8490ebe708a17b5dc7"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070401Z_codex_specialized_capability_validation_orchestration_audit.json",
+      "bytes": 605,
+      "sha256": "4bdda55257ccec69852fd1bdfaf1115ea34d9d3567abe3ed99af3e4bd25adbe2"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070401Z_codex_specialized_capability_validation_orchestration_audit.md",
+      "bytes": 839,
+      "sha256": "b9fe9a3a916fd602324b8facbb7e70ec69e106a013393475dcb869e0575b55af"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070727Z_codex_capability_matrix_audit.json",
+      "bytes": 575,
+      "sha256": "e1266bc3ffd08b0082c0586d08932cfedd72f13227cb2060b1b4326e0860ad9d"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070727Z_codex_capability_matrix_audit.md",
+      "bytes": 779,
+      "sha256": "90635617c6b49793d13b3e372bd3c53d0a6ab3565c04a824a865f4923460a956"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070727Z_specialized_skills_validation_audit.json",
+      "bytes": 581,
+      "sha256": "c4c17009fce6a244f0c0cbe74d4cc904aa1a2258994c00c8bba0fa2895629cce"
+    },
+    {
+      "path": "reports/20260514T070754Z_20260514T070727Z_specialized_skills_validation_audit.md",
+      "bytes": 791,
+      "sha256": "17f158a8bc454a83bb6cb6e416feba4ae34a99f43d26950f1f9e3964e10c7b05"
+    },
+    {
+      "path": "reports/20260514T071019Z_20260514T070401Z_codex_specialized_capability_validation_orchestration_audit.json",
+      "bytes": 605,
+      "sha256": "370804a9b828f6284e17b1be22f64c9abac985c975686c4dca8e675b0ed5c4d7"
+    },
+    {
+      "path": "reports/20260514T071019Z_20260514T070401Z_codex_specialized_capability_validation_orchestration_audit.md",
+      "bytes": 839,
+      "sha256": "ae4f8c36f84cce208109b664868cf5375a4144b26312fdc6181c2eed188647a7"
+    },
+    {
       "path": "reports/cross_level_invariance_plan.md",
       "bytes": 351,
       "sha256": "3ab0b699d990e5f85dbd06ebaf6db566c0e04b6b80be04592e44ee40c9450728"
@@ -10052,7 +10117,7 @@
     {
       "path": "reports/py_sanity_checks.json",
       "bytes": 1763,
-      "sha256": "417241266aa89e43e7e425dd9128034e8da2c95f031ca894f0807c1aca34a50e"
+      "sha256": "6cd0a97fc62bdaeb0dde9f4ed6e9a294cfe0ca35ee1ec50df31191bcc59fffd1"
     },
     {
       "path": "reports/r3_full_factor_search_plan.md",

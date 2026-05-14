@@ -1,0 +1,179 @@
+{
+  "status": "Verified Fact",
+  "scope": "Codex specialized skill and agent capability validation only; no canonical bundle edits and no mathematical claims changed",
+  "method": "Python validation scripts, project config inspection, and report-only capability mapping",
+  "claim_boundary": "This is a finite-level workflow capability validation. It does not prove or imply any Collatz-level theorem.",
+  "reproduction_command": "python3 scripts/check_codex_skills.py && python3 scripts/run_py_checks.py && python3 scripts/build_specialized_codex_capabilities.py && python3 scripts/check_codex_skills.py",
+  "created_utc": "20260514T070727Z",
+  "target": "specialized Codex capability validation",
+  "input_hashes": [
+    {
+      "path": "CODEX_SKILLS.md",
+      "sha256": "13ebb7fed37911182bc1c3d9962cc7a0479a04691de13a28748486c93f8f24ee",
+      "bytes": 3716
+    },
+    {
+      "path": "CODEX_TASKS.md",
+      "sha256": "3e529e57c8604e8e7b6836ba25a8d7243e092afe5efc8b37841c07ee4f21b12e",
+      "bytes": 3021
+    },
+    {
+      "path": ".codex/config.toml",
+      "sha256": "29d895ec5039c95c6783e66749aeb1575f0238c78061b2e1ebb782707a1efa5b",
+      "bytes": 4052
+    },
+    {
+      "path": "scripts/check_codex_skills.py",
+      "sha256": "4b1940db069e557333410d9deaa70034cd53ce9976f20da7869010fac136ad89",
+      "bytes": 8268
+    },
+    {
+      "path": "plans/ACTIVE_CODEX_PLAN.md",
+      "sha256": "4172cbd65530e4794d6e45458282517fb604a22b833d4ff45f349b4f07bf7856",
+      "bytes": 1520
+    },
+    {
+      "path": "plans/codex/2026-05-14_codex_specialized_capability_validation_packet.md",
+      "sha256": "732689f6e953abebdc875049ab54d4678cabbdb73f26df974ba5eeeaa623dda4",
+      "bytes": 2134
+    },
+    {
+      "path": "plans/codex/2026-05-13_r3_next_research_cycle_publish_addendum.md",
+      "sha256": "611bbebc4755e88f9758d20dc3d512ae3e871ff923782920f1b2c461271c1fdb",
+      "bytes": 2999
+    },
+    {
+      "path": "CLAIM_GUARDRAILS.md",
+      "sha256": "8db84da52d9004b22814a0ab730d20a2165b8c1f98f5d21df0d78b04bfcc73fc",
+      "bytes": 1644
+    }
+  ],
+  "commands": [
+    {
+      "command": "bash .agents/skills/collatz-research-orchestrator/scripts/preflight.sh",
+      "status": "passed",
+      "notes": "bootstrap and skill validation completed; final checker findings are empty after capability refresh"
+    },
+    {
+      "command": "python3 .agents/skills/collatz-research-orchestrator/scripts/summarize_state.py",
+      "status": "passed",
+      "notes": "canonical bundle and installed skills summarized"
+    },
+    {
+      "command": "python3 scripts/check_codex_skills.py",
+      "status": "passed",
+      "notes": "initial run passed with warnings before capability refresh"
+    },
+    {
+      "command": "python3 scripts/run_py_checks.py",
+      "status": "passed",
+      "notes": "wrote reports/py_sanity_checks.json"
+    },
+    {
+      "command": "python3 scripts/build_specialized_codex_capabilities.py",
+      "status": "passed_after_escalation",
+      "notes": "created optional support directories for specialized skills after sandbox read-only error"
+    },
+    {
+      "command": "python3 scripts/check_codex_skills.py",
+      "status": "passed",
+      "notes": "final run returned ok true with no findings"
+    },
+    {
+      "command": "python3 .agents/skills/collatz-research-orchestrator/scripts/orchestrate.py --target \"specialized capability validation\" --run-preflight --out-prefix codex_specialized_capability_validation",
+      "status": "passed",
+      "notes": "wrote orchestration report pair"
+    }
+  ],
+  "capability_matrix": [
+    {
+      "project_need": "active plan execution",
+      "skill": "collatz-campaign-manager",
+      "agent_role": "campaign_operator",
+      "backend": "Python/report orchestration",
+      "expected_artifacts": "phase manifests, checkpointing, resume/retry, final manifests"
+    },
+    {
+      "project_need": "exact Sage factor work",
+      "skill": "collatz-factor-structure-lab",
+      "agent_role": "sage_factor_algebraist",
+      "backend": "Sage exact algebra",
+      "expected_artifacts": "QQ[t][y] and QQ(t)[y] exact factorization work"
+    },
+    {
+      "project_need": "residual/gcd/resultant work",
+      "skill": "collatz-factor-structure-lab",
+      "agent_role": "factor_cartographer",
+      "backend": "Sage exact algebra plus report indexes",
+      "expected_artifacts": "factor registries, pairwise gcds, resultants, discriminants"
+    },
+    {
+      "project_need": "canonical insert previews",
+      "skill": "collatz-canonical-curator",
+      "agent_role": "canonical_curator",
+      "backend": "report-only curation",
+      "expected_artifacts": "canonical insertion previews and rollback notes"
+    },
+    {
+      "project_need": "artifact hashes/indexes",
+      "skill": "collatz-provenance-reproducibility-lab",
+      "agent_role": "provenance_librarian",
+      "backend": "Python/report provenance",
+      "expected_artifacts": "hash verification, artifact indexes, witness manifest hygiene"
+    },
+    {
+      "project_need": "commutants/projectors/symmetry",
+      "skill": "collatz-symmetry-mechanism-lab",
+      "agent_role": "mechanism_hunter",
+      "backend": "Python/Sage structural search",
+      "expected_artifacts": "commutants, automorphisms, projectors, equitable partitions"
+    },
+    {
+      "project_need": "determinant root isolation",
+      "skill": "collatz-spectrum-determinant-lab",
+      "agent_role": "determinant_root_analyst",
+      "backend": "Sage exact algebra",
+      "expected_artifacts": "Sturm/sign-chart attempts without positivity overclaim"
+    },
+    {
+      "project_need": "spectral tracking",
+      "skill": "collatz-spectrum-determinant-lab",
+      "agent_role": "spectral_tracker",
+      "backend": "Python/SymPy plus exact artifact links",
+      "expected_artifacts": "factor-root ownership and subdominant spectral behavior tracking"
+    },
+    {
+      "project_need": "Lean bridge",
+      "skill": "collatz-lean-formalization-bridge",
+      "agent_role": "formalization_engineer",
+      "backend": "Lean stubs/report-only proof obligations",
+      "expected_artifacts": "finite-level theorem stubs after exact witness audit"
+    },
+    {
+      "project_need": "adversarial review",
+      "skill": "collatz-red-team-reviewer",
+      "agent_role": "red_team_skeptic",
+      "backend": "report-only recomputation and consistency checks",
+      "expected_artifacts": "source-artifact contradiction and overclaim detection"
+    }
+  ],
+  "blocked_items": [],
+  "files_touched": [
+    "reports/20260514T070727Z_codex_capability_matrix.md",
+    "reports/20260514T070727Z_codex_capability_matrix.json",
+    "reports/20260514T070727Z_specialized_skills_validation.md",
+    "reports/py_sanity_checks.json",
+    "reports/*_codex_specialized_capability_validation_orchestration.md",
+    "reports/*_codex_specialized_capability_validation_orchestration.json",
+    ".agents/skills/*/{references,scripts,assets}/.gitkeep for specialized skills",
+    ".agents/skills/collatz-research-orchestrator/assets/.gitkeep",
+    ".codex/agents/proof_auditor.toml"
+  ],
+  "artifacts_produced": [
+    "reports/20260514T070727Z_codex_capability_matrix.md",
+    "reports/20260514T070727Z_codex_capability_matrix.json",
+    "reports/20260514T070727Z_specialized_skills_validation.md",
+    "reports/py_sanity_checks.json",
+    "reports/*_codex_specialized_capability_validation_orchestration.md"
+  ]
+}

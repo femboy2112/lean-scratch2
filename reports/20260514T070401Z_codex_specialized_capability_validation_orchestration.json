@@ -1,0 +1,123 @@
+{
+  "status": "Advisory Only",
+  "target": "specialized capability validation",
+  "created_utc": "20260514T070401Z",
+  "scope": "finite-level lifted-operator Collatz research only",
+  "out_of_scope": "global Collatz conjecture proof or any claim that finite spectral closure implies global orbit behavior",
+  "recommended_backends": [
+    "Python orchestration",
+    "proof-boundary audit"
+  ],
+  "canonical_inputs": [
+    {
+      "file": "data/canonical_bundle/00_HISTORICAL_convolution_to_operator_framework.txt",
+      "sha256": "31a963b7738ecf362a928f53cd5e31d3aaf79836ccfb503a3ff8f120f65d4e9d",
+      "bytes": 22441
+    },
+    {
+      "file": "data/canonical_bundle/01_FRAMEWORK_AND_CONVENTIONS.txt",
+      "sha256": "5acd3284cfb2e942e9a472dcf659c9c54762869c5d97153c8891d19b9e48c2af",
+      "bytes": 2732
+    },
+    {
+      "file": "data/canonical_bundle/02_LOCKED_BASELINE_THEOREMS.txt",
+      "sha256": "03e055fc5c6a709b493adcaf61ef878fa6d41be36ba10d7ff9c41159751911f5",
+      "bytes": 7929
+    },
+    {
+      "file": "data/canonical_bundle/03_CONSTRUCTION_DATA.txt",
+      "sha256": "6a03f328b9c3c4a16422329d6887682d69317ae7d918fca7a0866066b4ad4b01",
+      "bytes": 16107
+    },
+    {
+      "file": "data/canonical_bundle/04_R2_CLOSURES.txt",
+      "sha256": "80ebdfd6eef0a0176cd120197d1de827f60248f867114393b015153b044b0ba4",
+      "bytes": 18516
+    },
+    {
+      "file": "data/canonical_bundle/05_R3_CLOSURES.txt",
+      "sha256": "1cbfa9f08c4161283d93f7da0556262838a2b6b3cb687bf9b18575ab2e17e81d",
+      "bytes": 28247
+    },
+    {
+      "file": "data/canonical_bundle/06_MATHEMATICAL_CONSTRAINTS.txt",
+      "sha256": "2030df7a16d21e9f3f34abd37e343662c42eacdbb198f2d60205f7a8c03bfdc2",
+      "bytes": 15045
+    },
+    {
+      "file": "data/canonical_bundle/07_INTERPRETATION_AND_BOUNDARIES.txt",
+      "sha256": "f0844db697592a426ad72129f4a58124e872e85335e4c3808b3fd3cefdce6ed8",
+      "bytes": 8541
+    },
+    {
+      "file": "data/canonical_bundle/08_RECONNAISSANCE_OBSERVATIONS.txt",
+      "sha256": "6030ec5faed7e7b022c6c4ef40ec349235bd8a57e4a5eb1b81dafbdc58036edf",
+      "bytes": 19234
+    },
+    {
+      "file": "data/canonical_bundle/PROMPT.md",
+      "sha256": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4",
+      "bytes": 10990
+    }
+  ],
+  "subtasks": [
+    {
+      "id": "A",
+      "owner_role": "algebra_explorer",
+      "task": "Identify exact symbolic structures, factorization hypotheses, and invariant decompositions relevant to the target.",
+      "backend": "Sage exact algebra if determinant/charpoly/rank/kernel is involved; otherwise Python exact prototypes."
+    },
+    {
+      "id": "B",
+      "owner_role": "experiment_runner",
+      "task": "Run bounded Python/Sage experiments and produce witness JSON/CSV/log artifacts.",
+      "backend": "Python orchestration with Sage when exact algebra is required."
+    },
+    {
+      "id": "C",
+      "owner_role": "proof_auditor",
+      "task": "Classify all outputs using the claim ladder and block Collatz-level escalation.",
+      "backend": "report-only plus optional Lean stub generation."
+    },
+    {
+      "id": "D",
+      "owner_role": "implementation_engineer",
+      "task": "Patch scripts/tests if the target exposes missing harness functionality.",
+      "backend": "Python/shell/pytest."
+    }
+  ],
+  "suggested_commands": [
+    "bash scripts/bootstrap_codex.sh",
+    "python3 scripts/check_codex_skills.py",
+    "python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py spectral-fast",
+    "python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
+    "python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py"
+  ],
+  "subagent_spawn_prompt": "Spawn four subagents: algebra_explorer, experiment_runner, proof_auditor, and implementation_engineer. Have each return commands run, files touched, artifacts, claim labels, and blockers. Consolidate only after all results return.",
+  "preflight": {
+    "cmd": [
+      "bash",
+      ".agents/skills/collatz-research-orchestrator/scripts/preflight.sh"
+    ],
+    "returncode": 0,
+    "stdout": "[orchestrator-preflight] root=/home/leah/Collatz/lean-scratch2\n[codex-bootstrap] root=/home/leah/Collatz/lean-scratch2\n{\n  \"ok\": true,\n  \"report\": \"/home/leah/Collatz/lean-scratch2/reports/py_sanity_checks.json\",\n  \"payload_sha256\": \"923614c3cce18c352706f3e881e70b2155df37d29e7223fe2136e28502d3dca6\"\n}\n{\n  \"ok\": true,\n  \"core_skills_expected\": [\n    \"collatz-exact-algebra-lab\",\n    \"collatz-proof-boundary-auditor\",\n    \"collatz-research-orchestrator\"\n  ],\n  \"specialized_skills_expected\": [\n    \"collatz-campaign-manager\",\n    \"collatz-canonical-curator\",\n    \"collatz-factor-structure-lab\",\n    \"collatz-lean-formalization-bridge\",\n    \"collatz-provenance-reproducibility-lab\",\n    \"collatz-red-team-reviewer\",\n    \"collatz-spectrum-determinant-lab\",\n    \"collatz-symmetry-mechanism-lab\"\n  ],\n  \"skills_found\": [\n    \"collatz-campaign-manager\",\n    \"collatz-canonical-curator\",\n    \"collatz-exact-algebra-lab\",\n    \"collatz-factor-structure-lab\",\n    \"collatz-lean-formalization-bridge\",\n    \"collatz-proof-boundary-auditor\",\n    \"collatz-provenance-reproducibility-lab\",\n    \"collatz-red-team-reviewer\",\n    \"collatz-research-orchestrator\",\n    \"collatz-spectrum-determinant-lab\",\n    \"collatz-symmetry-mechanism-lab\"\n  ],\n  \"configured_agents\": [\n    \"algebra_explorer\",\n    \"campaign_operator\",\n    \"canonical_curator\",\n    \"determinant_root_analyst\",\n    \"experiment_runner\",\n    \"factor_cartographer\",\n    \"formalization_engineer\",\n    \"implementation_engineer\",\n    \"mechanism_hunter\",\n    \"proof_auditor\",\n    \"provenance_librarian\",\n    \"red_team_skeptic\",\n    \"sage_factor_algebraist\",\n    \"spectral_tracker\"\n  ],\n  \"expected_agent_files\": [\n    \"algebra_explorer.toml\",\n    \"campaign_operator.toml\",\n    \"canonical_curator.toml\",\n    \"determinant_root_analyst.toml\",\n    \"experiment_runner.toml\",\n    \"factor_cartographer.toml\",\n    \"formalization_engineer.toml\",\n    \"implementation_engineer.toml\",\n    \"mechanism_hunter.toml\",\n    \"proof_auditor.toml\",\n    \"provenance_librarian.toml\",\n    \"red_team_skeptic.toml\",\n    \"sage_factor_algebraist.toml\",\n    \"spectral_tracker.toml\"\n  ],\n  \"findings\": []\n}\n[codex-bootstrap] ready\n{\n  \"ok\": true,\n  \"core_skills_expected\": [\n    \"collatz-exact-algebra-lab\",\n    \"collatz-proof-boundary-auditor\",\n    \"collatz-research-orchestrator\"\n  ],\n  \"specialized_skills_expected\": [\n    \"collatz-campaign-manager\",\n    \"collatz-canonical-curator\",\n    \"collatz-factor-structure-lab\",\n    \"collatz-lean-formalization-bridge\",\n    \"collatz-provenance-reproducibility-lab\",\n    \"collatz-red-team-reviewer\",\n    \"collatz-spectrum-determinant-lab\",\n    \"collatz-symmetry-mechanism-lab\"\n  ],\n  \"skills_found\": [\n    \"collatz-campaign-manager\",\n    \"collatz-canonical-curator\",\n    \"collatz-exact-algebra-lab\",\n    \"collatz-factor-structure-lab\",\n    \"collatz-lean-formalization-bridge\",\n    \"collatz-proof-boundary-auditor\",\n    \"collatz-provenance-reproducibility-lab\",\n    \"collatz-red-team-reviewer\",\n    \"collatz-research-orchestrator\",\n    \"collatz-spectrum-determinant-lab\",\n    \"collatz-symmetry-mechanism-lab\"\n  ],\n  \"configured_agents\": [\n    \"algebra_explorer\",\n    \"campaign_operator\",\n    \"canonical_curator\",\n    \"determinant_root_analyst\",\n    \"experiment_runner\",\n    \"factor_cartographer\",\n    \"formalization_engineer\",\n    \"implementation_engineer\",\n    \"mechanism_hunter\",\n    \"proof_auditor\",\n    \"provenance_librarian\",\n    \"red_team_skeptic\",\n    \"sage_factor_algebraist\",\n    \"spectral_tracker\"\n  ],\n  \"expected_agent_files\": [\n    \"algebra_explorer.toml\",\n    \"campaign_operator.toml\",\n    \"canonical_curator.toml\",\n    \"determinant_root_analyst.toml\",\n    \"experiment_runner.toml\",\n    \"factor_cartographer.toml\",\n    \"formalization_engineer.toml\",\n    \"implementation_engineer.toml\",\n    \"mechanism_hunter.toml\",\n    \"proof_auditor.toml\",\n    \"provenance_librarian.toml\",\n    \"red_team_skeptic.toml\",\n    \"sage_factor_algebraist.toml\",\n    \"spectral_tracker.toml\"\n  ],\n  \"findings\": []\n}\n[orchestrator-preflight] ok\n",
+    "stderr": "/home/leah/.config/matplotlib is not a writable directory\nMatplotlib created a temporary cache directory at /tmp/matplotlib-a8axwzct because there was an issue with the default path (/home/leah/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.\n"
+  },
+  "claim_boundary": "No Collatz-level theorem is claimed or implied.",
+  "commands": [
+    "bash scripts/bootstrap_codex.sh",
+    "python3 scripts/check_codex_skills.py",
+    "python3 .agents/skills/collatz-exact-algebra-lab/scripts/run_exact_target.py spectral-fast",
+    "python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
+    "python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py"
+  ],
+  "expected_artifacts": [
+    "reports/<timestamp>_codex_specialized_capability_validation_orchestration.md",
+    "reports/<timestamp>_codex_specialized_capability_validation_orchestration.json",
+    "reports/<timestamp>_codex_capability_matrix.md",
+    "reports/<timestamp>_codex_capability_matrix.json",
+    "reports/<timestamp>_specialized_skills_validation.md"
+  ],
+  "blocked_items": [],
+  "next_step": "Run proof-boundary validation, then commit and push the safe capability-validation result set."
+}

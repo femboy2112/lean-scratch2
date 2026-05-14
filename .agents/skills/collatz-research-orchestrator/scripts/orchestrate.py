@@ -121,16 +121,29 @@ def main() -> int:
         "python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py",
         "python3 .agents/skills/collatz-proof-boundary-auditor/scripts/validate_claim_ladder.py",
     ]
+    expected_artifacts = [
+        "reports/<timestamp>_<target>_orchestration.md",
+        "reports/<timestamp>_<target>_orchestration.json",
+        "reports/<timestamp>_<target>_final.md when the active packet requires a final report",
+        "reports/witness_manifest.json when experiments produce witness artifacts",
+    ]
+    claim_boundary = "No Collatz-level theorem is claimed or implied."
 
     data = {
+        "status": "Advisory Only",
         "target": target,
         "created_utc": stamp,
         "scope": "finite-level lifted-operator Collatz research only",
         "out_of_scope": "global Collatz conjecture proof or any claim that finite spectral closure implies global orbit behavior",
+        "claim_boundary": claim_boundary,
         "recommended_backends": backends,
         "canonical_inputs": canonical,
         "subtasks": subtasks,
+        "commands": suggested_commands,
         "suggested_commands": suggested_commands,
+        "expected_artifacts": expected_artifacts,
+        "blocked_items": [],
+        "next_step": "Execute the active packet, then run proof-boundary validation before commit/push.",
         "subagent_spawn_prompt": (
             "Spawn four subagents: algebra_explorer, experiment_runner, proof_auditor, "
             "and implementation_engineer. Have each return commands run, files touched, artifacts, "
@@ -149,7 +162,8 @@ def main() -> int:
         f"- created_utc: `{stamp}`",
         "- status: `Advisory Only`",
         "- scope: finite-level lifted-operator Collatz research only",
-        "- claim_boundary: no Collatz-level theorem is claimed or implied",
+        "- out_of_scope: global Collatz conjecture proof or any claim that finite spectral closure implies global orbit behavior",
+        f"- claim_boundary: {claim_boundary}",
         "",
         "## Recommended backends",
         "",
@@ -173,6 +187,18 @@ def main() -> int:
         "```bash",
         *suggested_commands,
         "```",
+        "",
+        "## Expected artifacts",
+        "",
+        *[f"- `{artifact}`" for artifact in expected_artifacts],
+        "",
+        "## Blocked items",
+        "",
+        "None at orchestration time.",
+        "",
+        "## Next step",
+        "",
+        data["next_step"],
         "",
         "## Subagent spawn prompt",
         "",
