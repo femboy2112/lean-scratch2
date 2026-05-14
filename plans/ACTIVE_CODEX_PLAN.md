@@ -3,10 +3,16 @@
 Active mission packet:
 
 ```text
-plans/codex/2026-05-14_codex_specialized_capability_validation_packet.md
+plans/codex/2026-05-14_r3_structural_mechanism_grand_campaign_packet.md
 ```
 
 Recent prior packet:
+
+```text
+plans/codex/2026-05-14_codex_specialized_capability_validation_packet.md
+```
+
+Prior deep-structure packet:
 
 ```text
 plans/codex/2026-05-14_r3_deep_structure_spectrum_determinant_packet.md
