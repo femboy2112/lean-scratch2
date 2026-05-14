@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/r3_full_factor_search_plan.md",
+  "audited_sha256": "0a3f002e79f5a85d9f2c0fd4f63ad808bc227f152f372dce0460e430db56a36f",
+  "created_utc": "20260514T023759Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 0,
+    "Not Established": 1,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

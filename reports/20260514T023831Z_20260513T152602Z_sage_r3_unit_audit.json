@@ -1,0 +1,25 @@
+{
+  "disposition": "PASS_WITH_PATCHES",
+  "audited_file": "reports/20260513T152602Z_sage-r3-unit.log",
+  "audited_sha256": "8f10a063b09f1eab7051a982a87833d727d9eeae308550c68699b969381e9b3d",
+  "created_utc": "20260514T023831Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 0,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "line": null,
+      "pattern": "missing allowed status label",
+      "text": "No approved claim label found."
+    }
+  ],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

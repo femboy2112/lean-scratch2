@@ -1,0 +1,25 @@
+{
+  "disposition": "PASS_WITH_PATCHES",
+  "audited_file": "reports/20260513T064103Z_cross-level.log",
+  "audited_sha256": "b0aea0f2a17716d750aa0d7fb1494875f9f4849dcff9014e9475249f8b8e28dc",
+  "created_utc": "20260514T023756Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 0,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [
+    {
+      "severity": "WARNING",
+      "line": null,
+      "pattern": "missing allowed status label",
+      "text": "No approved claim label found."
+    }
+  ],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

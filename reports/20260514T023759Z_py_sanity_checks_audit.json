@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/py_sanity_checks.json",
+  "audited_sha256": "1f4e431b8efb80386467bc54b58694ba26f1ec1df4a1a727b61b8bdda84e49ea",
+  "created_utc": "20260514T023759Z",
+  "label_hits": {
+    "Verified Fact": 1,
+    "Computational Observation": 0,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

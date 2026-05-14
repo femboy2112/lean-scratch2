@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/20260513T152214Z_factor-python_witness.json",
+  "audited_sha256": "1d4fb244c45507b95da19dca8f9f0b8848369f04da07122dc97435c4ee938f23",
+  "created_utc": "20260514T023830Z",
+  "label_hits": {
+    "Verified Fact": 0,
+    "Computational Observation": 1,
+    "Not Established": 0,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 0
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}
