@@ -1,0 +1,28 @@
+digraph r3_factor_graph {
+  "unit_factor_00" [label="unit_factor_00"];
+  "unit_factor_01" [label="unit_factor_01"];
+  "unit_factor_02" [label="unit_factor_02"];
+  "unit_factor_03" [label="unit_factor_03"];
+  "full_factor_00" [label="full_factor_00"];
+  "full_factor_01" [label="full_factor_01"];
+  "full_factor_02" [label="full_factor_02"];
+  "full_factor_03" [label="full_factor_03"];
+  "shared_factor_C" [label="shared factor C"];
+  "unit_residual" [label="unit residual"];
+  "full_residual" [label="full residual"];
+  "unit_multiplicity_2" [label="unit multiplicity 2"];
+  "full_multiplicity_2" [label="full multiplicity 2"];
+  "unit_factor_00" -> "unit_row_sum" [label="row_sum_factor"];
+  "unit_factor_01" -> "shared_factor_C" [label="same_hash"];
+  "unit_factor_02" -> "unit_residual" [label="residual_component"];
+  "unit_factor_02" -> "unit_multiplicity_2" [label="multiplicity_relation"];
+  "unit_factor_03" -> "unit_residual" [label="residual_component"];
+  "unit_factor_03" -> "unit_multiplicity_2" [label="multiplicity_relation"];
+  "full_factor_00" -> "full_row_sum" [label="row_sum_factor"];
+  "full_factor_01" -> "shared_factor_C" [label="same_hash"];
+  "full_factor_01" -> "full_multiplicity_2" [label="multiplicity_relation"];
+  "full_factor_02" -> "full_residual" [label="residual_component"];
+  "full_factor_02" -> "full_multiplicity_2" [label="multiplicity_relation"];
+  "full_factor_03" -> "full_residual" [label="residual_component"];
+  "full_factor_03" -> "full_multiplicity_2" [label="multiplicity_relation"];
+}

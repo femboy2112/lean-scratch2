@@ -1,0 +1,18 @@
+{
+  "disposition": "PASS",
+  "audited_file": "reports/20260514T063536Z_r3_deep_program_final.md",
+  "audited_sha256": "e3d36feabe8a3d9e91969c2836d4abe1f7ebbdfaf72376777b87faa5b2d69387",
+  "created_utc": "20260514T063813Z",
+  "label_hits": {
+    "Verified Fact": 1,
+    "Computational Observation": 1,
+    "Not Established": 1,
+    "Withdrawn": 0,
+    "Patched": 0,
+    "Contradiction Detected": 0,
+    "Over-Upgraded": 0,
+    "Advisory Only": 1
+  },
+  "findings": [],
+  "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+}

@@ -1,0 +1,9 @@
+model,factor_index,factor_hash,degree_y,degree_t_max,multiplicity,is_row_sum_factor,is_shared_unit_full_factor,shared_with,source_json,status_label
+unit,0,fb4cc15db6c76dea45ece185f3a2808bc519f4183864a7124646a32588376aec,1,108,1,True,False,,data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_00.json,Verified Fact
+unit,1,02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69,1,108,1,False,True,full:factor_01,data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_01.json,Verified Fact
+unit,2,3860a125d1de0df7c0cf81fb47a2164c29760a73f7c70eef58ce54b5099fb3e7,2,216,2,False,False,,data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_02.json,Verified Fact
+unit,3,a6d3d2b27ed7a8d34fc651677ffa1a58b8e70744c0bf1fc576c0118d1555fc1d,6,648,2,False,False,,data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_03.json,Verified Fact
+full,0,a44fcd571bbd816ac64489d88a87cd35f967e14d04e2ee88a1b0af98454c1b14,1,108,1,True,False,,data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_00.json,Verified Fact
+full,1,02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69,1,108,2,False,True,unit:factor_01,data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_01.json,Verified Fact
+full,2,d201683ad25dacc610b24120a0f1ddd4e051442771b803bdeda1ab7d532fd42a,3,324,2,False,False,,data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_02.json,Verified Fact
+full,3,498455175f2d2defadc095649900160284cec3b6c69f63bc639d187b0271c9a5,9,972,2,False,False,,data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_03.json,Verified Fact

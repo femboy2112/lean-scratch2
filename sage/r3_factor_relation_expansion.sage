@@ -276,7 +276,7 @@ def main():
     relation_report_md = REPORTS / "{}_r3_factor_relation_expansion.md".format(stamp)
     write_json(residual_report_json, residual_payload)
     write_json(relation_report_json, {
-        "status": "Verified Fact",
+        "status": "Advisory Only",
         "created_utc": stamp,
         "scope": "finite-level r=3 S-level factor relation expansion",
         "method": "Sage exact low-cost relation extraction with explicit Not Established classifications for deferred high-degree targets",
@@ -325,7 +325,7 @@ Not Established: resultants and determinant positivity over all real `s > 0` are
     ))
     write_text(relation_report_md, """# r=3 Factor Relation Expansion
 
-status: Verified Fact
+status: Advisory Only
 scope: finite-level r=3 S-level audited factor relation expansion
 method: Sage exact gcd/support extraction; bounded discriminants; explicit classification for deferred resultants
 claim_boundary: {boundary}
@@ -335,11 +335,15 @@ artifacts_produced: `{gcd}`, `{resultants}`, `{discriminants}`, `{support}`, `{s
 
 ## Exact Relations
 
-Verified Fact: the exact prior pairwise gcd table over `QQ(t)[y]` is carried into this phase, and the residual cross-gcd degree is derived as zero from the exact pairwise residual-factor gcds.
+Verified Fact: exact pairwise gcd table over `QQ(t)[y]` and residual cross-gcd degree zero.
+
+Computational Observation: bounded/low-cost discriminant extraction results, where applicable.
 
 ## Deferred Targets
 
-Not Established: generic high-degree resultants and high-degree discriminant expansions are deferred to a selected target pass because expression swell is expected.
+Not Established: generic high-degree resultants and high-degree discriminant expansions.
+
+Advisory Only: defer these expansions to a selected target pass because expression swell is expected.
 """.format(
         boundary=BOUNDARY,
         stamp=stamp,

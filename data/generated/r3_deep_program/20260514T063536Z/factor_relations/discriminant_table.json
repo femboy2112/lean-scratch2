@@ -1,0 +1,57 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "entries": [
+    {
+      "degree_y": 1,
+      "discriminant_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "id": "unit_00",
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 1,
+      "discriminant_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "id": "unit_01",
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 2,
+      "discriminant_sha256": "4691c239d4f681166703562c2a7cb89ac7dfe35b68c82907318ea92aa0e876fe",
+      "id": "unit_02",
+      "status_label": "Verified Fact"
+    },
+    {
+      "blocked_reason": "generic high-degree discriminant expansion not attempted in bounded pass",
+      "degree_y": 6,
+      "id": "unit_03",
+      "status_label": "Not Established"
+    },
+    {
+      "degree_y": 1,
+      "discriminant_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "id": "full_00",
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 1,
+      "discriminant_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "id": "full_01",
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 3,
+      "discriminant_sha256": "d0e209b960f9ca6a10ca7374ee3d28e800ad7b852fe29ea669aa295a1cc27b05",
+      "id": "full_02",
+      "status_label": "Verified Fact"
+    },
+    {
+      "blocked_reason": "generic high-degree discriminant expansion not attempted in bounded pass",
+      "degree_y": 9,
+      "id": "full_03",
+      "status_label": "Not Established"
+    }
+  ],
+  "method": "Sage exact discriminants for low-degree factors; high-degree factors classified as not expanded",
+  "ring": "QQ(t)",
+  "status": "Computational Observation"
+}

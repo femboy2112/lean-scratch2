@@ -1,0 +1,44 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "cross_model": {
+    "full_residual_degree_y": 24,
+    "residual_gcd_degree_y": 0,
+    "residual_gcd_method": "derived from exact pairwise gcd manifest over QQ(t)[y]",
+    "status_label": "Verified Fact",
+    "unit_residual_degree_y": 16
+  },
+  "method": "Sage exact products over QQ(t)[y] from audited factor JSON plus exact gcd manifest",
+  "models": {
+    "full": {
+      "charpoly_degree_y": 27,
+      "charpoly_equals_row_shared_power_residual": true,
+      "charpoly_equals_row_times_no_row": true,
+      "no_row_degree_y": 26,
+      "no_row_path": "data/generated/r3_deep_program/20260514T063536Z/residuals/full_no_row.txt",
+      "residual_degree_y": 24,
+      "residual_path": "data/generated/r3_deep_program/20260514T063536Z/residuals/full_residual.txt",
+      "row_sum_factor_index": 0,
+      "shared_factor_index": 1,
+      "shared_factor_multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    "unit": {
+      "charpoly_degree_y": 18,
+      "charpoly_equals_row_shared_power_residual": true,
+      "charpoly_equals_row_times_no_row": true,
+      "no_row_degree_y": 17,
+      "no_row_path": "data/generated/r3_deep_program/20260514T063536Z/residuals/unit_no_row.txt",
+      "residual_degree_y": 16,
+      "residual_path": "data/generated/r3_deep_program/20260514T063536Z/residuals/unit_residual.txt",
+      "row_sum_factor_index": 0,
+      "shared_factor_index": 1,
+      "shared_factor_multiplicity": 1,
+      "status_label": "Verified Fact"
+    }
+  },
+  "reproduction_command": "env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_relation_expansion.sage --timestamp 20260514T063536Z",
+  "ring": "QQ(t)[y]",
+  "scope": "finite-level r=3 S-level audited factor residual algebra",
+  "status": "Verified Fact"
+}

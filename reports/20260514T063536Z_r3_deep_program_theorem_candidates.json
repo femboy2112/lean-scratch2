@@ -1,0 +1,70 @@
+[
+  {
+    "evidence_artifacts": [
+      "data/generated/r3_factorization_audit/20260513T160231Z/manifest.json"
+    ],
+    "exact_checks": [
+      "Sage reconstruction",
+      "total y-degree",
+      "row-sum factor match"
+    ],
+    "level": "S-level",
+    "missing_proof_steps": [],
+    "model": "unit/full/both",
+    "name": "finite-level r=3 S-level characteristic-polynomial factorization",
+    "r": 3,
+    "ring": "QQ[t][y]",
+    "statement": "The audited finite-level r=3 S-level unit/full characteristic-polynomial factorization over QQ[t][y] has the recorded degree and multiplicity patterns in data/generated/r3_factorization_audit/20260513T160231Z/manifest.json.",
+    "status_label": "Verified Fact",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [
+      "data/generated/r3_deep_program/20260514T063536Z/factor_relations/gcd_table.json"
+    ],
+    "exact_checks": [
+      "pairwise gcd manifest"
+    ],
+    "level": "S-level",
+    "missing_proof_steps": [],
+    "model": "both",
+    "name": "finite-level r=3 S-level residual cross-gcd degree zero",
+    "r": 3,
+    "ring": "QQ(t)[y]",
+    "statement": "Over QQ(t)[y], the finite-level r=3 S-level unit residual product of degree 16 and full residual product of degree 24 have residual cross-gcd degree zero, derived from the exact pairwise residual-factor gcd manifest.",
+    "status_label": "Verified Fact",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [],
+    "exact_checks": [],
+    "level": "S-level",
+    "missing_proof_steps": [
+      "commutant/projector/equitable-partition witness"
+    ],
+    "model": "unit/full/both",
+    "name": "structural mechanism",
+    "r": 3,
+    "ring": "QQ(t)[y]",
+    "statement": "A mechanism explaining squared residual factors has not been established.",
+    "status_label": "Not Established",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [],
+    "exact_checks": [],
+    "level": "S-level",
+    "missing_proof_steps": [
+      "target determinant selection",
+      "root isolation",
+      "sign chart"
+    ],
+    "model": "unit/full/both",
+    "name": "determinant nonvanishing",
+    "r": 3,
+    "ring": "not fixed",
+    "statement": "All-real-s determinant nonvanishing is not established.",
+    "status_label": "Not Established",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  }
+]

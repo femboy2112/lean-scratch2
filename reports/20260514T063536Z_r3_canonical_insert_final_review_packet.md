@@ -1,0 +1,39 @@
+# r=3 Canonical Insert Final Review Packet
+
+status: Advisory Only
+scope: human-review packet for a finite-level r=3 S-level canonical insertion preview
+method: report-only synthesis from audited Sage factorization and exact gcd artifacts
+claim_boundary: This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.
+reproduction_command: `python3 scripts/r3_deep_program_generate.py --timestamp 20260514T063536Z`
+files_touched: `reports/`
+artifacts_produced: final review packet, sidecar JSON, diff preview, and checklist
+
+## Insert Preview
+
+```text
+==SECTION:: 05.charpoly.r3.generic_s_level_factorization ==
+status_label: Verified Fact, finite-level only
+r: 3
+level: S-level
+models: unit and full
+recorded_ring: QQ[t][y]
+y-separability ring: QQ(t)[y]
+irreducibility_status: Verified Fact for the recorded Sage factorization entries over `QQ[t][y]`, subject to human rerun/hash verification before canonical insertion
+row-sum/Perron factor index: 0 for both models
+shared non-row-sum factor hash: 02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69
+manifest file hash: fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254
+manifest payload hash: e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f
+claim_boundary: This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.
+
+```
+
+## Required Human Checks
+
+- Verify Sage rerun.
+- Verify manifest file hash.
+- Verify manifest payload hash.
+- Verify exact gcd manifest.
+- Verify no determinant positivity claim.
+- Verify no Collatz-level language.
+- Verify canonical section placement before `<<APPEND-POINT::05.charpoly>>`.
+- Verify rollback procedure.

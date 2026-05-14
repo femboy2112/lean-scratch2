@@ -1,0 +1,16 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "method": "target separation before any root-isolation claim",
+  "phase": "H",
+  "reproduction_command": "python3 scripts/r3_deep_program_generate.py --timestamp 20260514T063536Z",
+  "scope": "finite-level r=3 determinant target taxonomy",
+  "status": "Advisory Only",
+  "targets": [
+    "charpoly evaluated at target y",
+    "det(S)",
+    "det(I - S)",
+    "determinant of residual factor",
+    "compact determinant from prior constraints if a later packet defines it"
+  ]
+}

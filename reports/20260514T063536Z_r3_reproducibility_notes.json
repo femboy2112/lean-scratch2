@@ -1,0 +1,6 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "status": "Advisory Only",
+  "summary": "scripts/r3_deep_program_reproduce.sh reruns Python checks, exact gcd, exact residual/relation expansion, deep-program report generation, and witness collection with local Sage."
+}

@@ -257,7 +257,7 @@ level: S-level
 models: unit and full
 recorded_ring: QQ[t][y]
 y-separability ring: QQ(t)[y]
-Sage-displayed irreducibility over QQ[t][y]
+irreducibility_status: Verified Fact for the recorded Sage factorization entries over `QQ[t][y]`, subject to human rerun/hash verification before canonical insertion
 row-sum/Perron factor index: 0 for both models
 shared non-row-sum factor hash: {SHARED_HASH}
 manifest file hash: {sha256_file(AUDIT_MANIFEST)}
@@ -403,15 +403,27 @@ def graph_and_planning_reports(stamp: str, data_dir: Path, registry: list[dict[s
     edges = []
     for row in registry:
         node_id = f"{row['model']}_factor_{row['factor_index']:02d}"
-        nodes.append({"id": node_id, "label": node_id, "status_label": "Verified Fact", "degree_y": row["degree_y"]})
+        nodes.append({
+            "id": node_id,
+            "label": node_id,
+            "status_label": "Verified Fact",
+            "degree_y": row["degree_y"],
+            "multiplicity": row["multiplicity"],
+        })
         if row["is_row_sum_factor"]:
             edges.append({"source": node_id, "target": f"{row['model']}_row_sum", "kind": "row_sum_factor", "status_label": "Verified Fact"})
-        if row["factor_hash"] == SHARED_HASH:
+        elif row["factor_hash"] == SHARED_HASH:
             edges.append({"source": node_id, "target": "shared_factor_C", "kind": "same_hash", "status_label": "Verified Fact"})
+        else:
+            edges.append({"source": node_id, "target": f"{row['model']}_residual", "kind": "residual_component", "status_label": "Verified Fact"})
+        if row["multiplicity"] > 1:
+            edges.append({"source": node_id, "target": f"{row['model']}_multiplicity_{row['multiplicity']}", "kind": "multiplicity_relation", "status_label": "Verified Fact"})
     nodes.extend([
         {"id": "shared_factor_C", "label": "shared factor C", "status_label": "Verified Fact"},
         {"id": "unit_residual", "label": "unit residual", "status_label": "Verified Fact"},
         {"id": "full_residual", "label": "full residual", "status_label": "Verified Fact"},
+        {"id": "unit_multiplicity_2", "label": "unit multiplicity 2", "status_label": "Verified Fact"},
+        {"id": "full_multiplicity_2", "label": "full multiplicity 2", "status_label": "Verified Fact"},
     ])
     graph = {"status": "Verified Fact", "nodes": nodes, "edges": edges, "claim_boundary": BOUNDARY}
     write_json(graph_dir / "factor_graph.json", graph, outputs)
@@ -432,11 +444,64 @@ reproduction_command: `python3 scripts/r3_deep_program_generate.py --timestamp {
 files_touched: `reports/`, `data/generated/r3_deep_program/{stamp}/factor_graph/`
 artifacts_produced: `{(graph_dir / "factor_graph.json").relative_to(ROOT)}`, `{(graph_dir / "factor_graph.dot").relative_to(ROOT)}`
 """, outputs)
+    blocked_phase_artifacts = {
+        "commutant/unit_t_1_2.json": {
+            "status": "Not Established",
+            "phase": "F1",
+            "scope": "finite-level r=3 unit S-level specialization at t=1/2",
+            "method": "explicit blocker record; exact commutant solve deferred to focused Sage linear-algebra pass",
+        },
+        "commutant/full_t_1_2.json": {
+            "status": "Not Established",
+            "phase": "F1",
+            "scope": "finite-level r=3 full S-level specialization at t=1/2",
+            "method": "explicit blocker record; exact commutant solve deferred to focused Sage linear-algebra pass",
+        },
+        "partitions/equitable_partition_search.json": {
+            "status": "Not Established",
+            "phase": "F3",
+            "scope": "finite-level r=3 S-level unit/full quotient search",
+            "method": "explicit blocker record; no exact equitable partition witness generated in this bounded pass",
+        },
+        "automorphisms/automorphism_search.json": {
+            "status": "Not Established",
+            "phase": "F4",
+            "scope": "finite-level r=3 S-level permutation symmetry search",
+            "method": "explicit blocker record; no exact automorphism witness generated in this bounded pass",
+        },
+        "determinant_targets/taxonomy.json": {
+            "status": "Advisory Only",
+            "phase": "H",
+            "scope": "finite-level r=3 determinant target taxonomy",
+            "method": "target separation before any root-isolation claim",
+            "targets": [
+                "charpoly evaluated at target y",
+                "det(S)",
+                "det(I - S)",
+                "determinant of residual factor",
+                "compact determinant from prior constraints if a later packet defines it",
+            ],
+        },
+        "determinant_targets/root_isolation_attempt.json": {
+            "status": "Not Established",
+            "phase": "H",
+            "scope": "finite-level r=3 determinant root-isolation attempt",
+            "method": "explicit blocker record; no all-real-s positivity or nonvanishing proof completed",
+        },
+    }
+    for rel_path, payload in blocked_phase_artifacts.items():
+        payload = {
+            **payload,
+            "created_utc": stamp,
+            "claim_boundary": BOUNDARY,
+            "reproduction_command": f"python3 scripts/r3_deep_program_generate.py --timestamp {stamp}",
+        }
+        write_json(data_dir / rel_path, payload, outputs)
     small_reports = {
         "r3_commutant_specialization_analysis": ("Not Established", "Generic commutant solving over QQ(t) and exact specialization projector search are deferred to a focused Sage/linear-algebra pass."),
         "r3_equitable_partition_search": ("Not Established", "No exact equitable partition witness was generated in this bounded publication pass."),
         "r3_automorphism_search": ("Not Established", "No exact automorphism witness was generated in this bounded publication pass."),
-        "r3_determinant_target_taxonomy": ("Advisory Only", "Determinant targets are charpoly evaluations, det(S), det(I-S), residual-factor determinants, and compact determinant objects from prior constraints; all-real-s nonvanishing remains Not Established."),
+        "r3_determinant_target_taxonomy": ("Advisory Only", "Advisory Only: determinant targets are charpoly evaluations, `det(S)`, `det(I-S)`, residual-factor determinants, and compact determinant objects from prior constraints if later explicitly defined; all-real-s nonvanishing remains Not Established."),
         "r3_determinant_root_isolation_attempt": ("Not Established", "Exact root isolation was not completed for high-degree determinant targets."),
         "r2_r3_factor_structure_comparison": ("Computational Observation", "This comparison does not establish cross-level invariance. r=2 mechanisms do not transfer to r=3 without independent r=3 witness."),
         "audit_tooling_patch": ("Patched", "validate_claim_ladder.py now supports --since, --exclude-audits, and --output to avoid recursively auditing audit artifacts."),
@@ -462,26 +527,26 @@ artifacts_produced: this report pair
 def theorem_and_final(stamp: str, data_dir: Path, outputs: list[Path], state: dict[str, Any]) -> None:
     candidates = [
         {
-            "name": "r=3 generic S-level factorization",
+            "name": "finite-level r=3 S-level characteristic-polynomial factorization",
             "status_label": "Verified Fact",
             "r": 3,
             "level": "S-level",
             "model": "unit/full/both",
             "ring": "QQ[t][y]",
-            "statement": "The audited unit/full characteristic polynomial factorization has the recorded degree and multiplicity patterns.",
+            "statement": "The audited finite-level r=3 S-level unit/full characteristic-polynomial factorization over QQ[t][y] has the recorded degree and multiplicity patterns in data/generated/r3_factorization_audit/20260513T160231Z/manifest.json.",
             "evidence_artifacts": [str(AUDIT_MANIFEST.relative_to(ROOT))],
             "exact_checks": ["Sage reconstruction", "total y-degree", "row-sum factor match"],
             "missing_proof_steps": [],
             "why_this_does_not_imply_Collatz": BOUNDARY,
         },
         {
-            "name": "residual coprimality",
+            "name": "finite-level r=3 S-level residual cross-gcd degree zero",
             "status_label": "Verified Fact",
             "r": 3,
             "level": "S-level",
             "model": "both",
             "ring": "QQ(t)[y]",
-            "statement": "The unit and full residual products have gcd degree zero as derived from exact pairwise residual-factor gcds.",
+            "statement": "Over QQ(t)[y], the finite-level r=3 S-level unit residual product of degree 16 and full residual product of degree 24 have residual cross-gcd degree zero, derived from the exact pairwise residual-factor gcd manifest.",
             "evidence_artifacts": [f"data/generated/r3_deep_program/{stamp}/factor_relations/gcd_table.json"],
             "exact_checks": ["pairwise gcd manifest"],
             "missing_proof_steps": [],
@@ -525,8 +590,8 @@ reproduction_command: `python3 scripts/r3_deep_program_generate.py --timestamp {
 files_touched: `reports/`
 artifacts_produced: theorem-candidate Markdown and JSON
 
-- Verified Fact: r=3 generic S-level factorization.
-- Verified Fact: residual coprimality derived from exact pairwise gcds.
+- Verified Fact: finite-level r=3 S-level unit/full characteristic-polynomial factorization over `QQ[t][y]`, with the recorded degree and multiplicity patterns in `data/generated/r3_factorization_audit/20260513T160231Z/manifest.json`; this does not establish structural mechanism, all-real-s determinant nonvanishing, cross-level invariance, or any Collatz-level conclusion.
+- Verified Fact: over `QQ(t)[y]`, the finite-level r=3 S-level unit residual product of degree 16 and full residual product of degree 24 have residual cross-gcd degree zero, derived from the exact pairwise residual-factor gcd manifest.
 - Not Established: structural mechanism.
 - Not Established: determinant nonvanishing for all real `s > 0`.
 """, outputs)
@@ -569,20 +634,20 @@ artifacts_produced: final Markdown/JSON, program manifest, artifact index, facto
 
 ## Verified Facts
 
-- Factor registry generated from audited r=3 S-level Sage factorization artifacts.
-- Residual products and reconstruction checks were generated by Sage over `QQ(t)[y]`.
-- Residual cross-gcd degree zero is derived from the exact pairwise gcd manifest over `QQ(t)[y]`.
+- Verified Fact: factor registry generated from audited finite-level r=3 S-level Sage factorization artifacts.
+- Verified Fact: residual products and reconstruction checks were generated by Sage over `QQ(t)[y]`.
+- Verified Fact: residual cross-gcd degree zero is derived from the exact pairwise gcd manifest over `QQ(t)[y]`.
 
 ## Computational Observations
 
-- Numerical specialization sweep and modular determinant samples were generated for bounded grids.
+- Computational Observation: numerical specialization sweep and modular determinant samples were generated for bounded grids.
 
 ## Not Established
 
-- Structural mechanism.
-- Determinant nonvanishing for all real `s > 0`.
-- Cross-level invariance.
-- Exact subdominant factor ownership and dominance for all `t > 0`.
+- Not Established: structural mechanism.
+- Not Established: determinant nonvanishing for all real `s > 0`.
+- Not Established: cross-level invariance.
+- Not Established: exact subdominant factor ownership and dominance for all `t > 0`.
 
 ## Canonical Readiness
 

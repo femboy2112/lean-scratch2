@@ -1,0 +1,1103 @@
+{
+  "status": "Advisory Only",
+  "ok": true,
+  "count": 42,
+  "created_utc": "20260514T064556Z",
+  "since": "20260514T063536Z",
+  "exclude_audits": true,
+  "results": [
+    {
+      "file": "reports/20260514T063536Z_audit_tooling_patch.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_audit_tooling_patch.json",
+          "audited_sha256": "0762e9410665d587603059f5535a1c271b749edd01bbff89c7603f040b400617",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 1,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_audit_tooling_patch.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_audit_tooling_patch.md",
+          "audited_sha256": "ee94ab9bfa73d899e41baa4990e33deb911bd10029b270dad57dbdba1cec3ff6",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 1,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_canonical_insert_human_checklist.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_canonical_insert_human_checklist.md",
+          "audited_sha256": "03976896154759f16c282ab4abc4c73a874274a6fbf4a55ef7d4b6ac14711335",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_deep_program_state_lock.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_deep_program_state_lock.json",
+          "audited_sha256": "4dbbea2df2c5908d5f35b5d081a31278e03f691dc819561d6b238555b91582f6",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_deep_program_state_lock.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_deep_program_state_lock.md",
+          "audited_sha256": "d4f57d800cabf2f6eef02177dc78cc244a83f21ff673be5250bf3429bffff65f",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_factor_registry_summary.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_factor_registry_summary.json",
+          "audited_sha256": "cc12d239a8c12ecaa9750fc7a67b7b54438f61ccb4d6b23f49a813acc0fe659b",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 1,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_factor_registry_summary.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_factor_registry_summary.md",
+          "audited_sha256": "df3e7db588e583e76f5ec4b23a399220c3d8a407b2530369c7544329efe3f018",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 1,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r2_r3_factor_structure_comparison.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r2_r3_factor_structure_comparison.json",
+          "audited_sha256": "8da919aad74b6fde9b8bd97f2c6921e74162a5e7d09cecba5251e5eeb44c8530",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 1,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r2_r3_factor_structure_comparison.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r2_r3_factor_structure_comparison.md",
+          "audited_sha256": "be1b865ad316240730d2da8b1faec2d30abb2ae259bdcbb98e84bb2179755211",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 1,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_artifact_index.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_artifact_index.json",
+          "audited_sha256": "9f8d9e9a0e911405c7d4f8520b32f4133af717e15ff7a3dbd1e3f42a2aa95a09",
+          "created_utc": "20260514T064554Z",
+          "label_hits": {
+            "Verified Fact": 13,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 37
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_artifact_index.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_artifact_index.md",
+          "audited_sha256": "45c7c4d8b28727ecb30663bedf7253cd97e57f67125471e27d3e31f5cf08d630",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_automorphism_search.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_automorphism_search.json",
+          "audited_sha256": "1e6c544a1a8c949edec0c21d1f3150ece0f9d5378c4f5b7b8565e56a2abe3e39",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_automorphism_search.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_automorphism_search.md",
+          "audited_sha256": "756b913ea17c05f2013ff1766ebe02c11f216fea3a446cddf1a0aebc50d52923",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_canonical_insert_final_review_packet.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_canonical_insert_final_review_packet.json",
+          "audited_sha256": "ac6a265b22889b0ce670ac42f0885dadda6a345e366ff41f27e6349647d1b6b5",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 2,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_canonical_insert_final_review_packet.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_canonical_insert_final_review_packet.md",
+          "audited_sha256": "e590d9281e19a0225d2fdd0d2183cffe975fa3caba1dca32aba0201869753030",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 2,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_commutant_specialization_analysis.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_commutant_specialization_analysis.json",
+          "audited_sha256": "3cac0026014288d3cb3af5abf4d0420f9069ee912f31688b2a07ddf5ae1b7fd7",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_commutant_specialization_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_commutant_specialization_analysis.md",
+          "audited_sha256": "2d5bcac240d2bd00b4a278b072a67a135c34b33039cdae3df00f4b1b8d9160cc",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_final.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_final.json",
+          "audited_sha256": "9af1f1c855238b13f1a34e75330c84f231d3409400f4d726f24f097d2577ba6d",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_final.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_final.md",
+          "audited_sha256": "2f4def19d7fa8ea2de819ad42f6009de4d0e3d8097b62f8dfd7a4af7e7b7b741",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 4,
+            "Computational Observation": 2,
+            "Not Established": 5,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_orchestration.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_orchestration.json",
+          "audited_sha256": "95dd16cb35588473f40c9fce4a6322d3303c4b9cef14acb6f291927078fa9b47",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_orchestration.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_orchestration.md",
+          "audited_sha256": "0d234a9f0ab9272df2cb8825030224ceeffddf98eecb7f8a00dec37bb0b45672",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_theorem_candidates.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_theorem_candidates.json",
+          "audited_sha256": "2d1455c733686fa470d1c854dc1162257f308721d754da51f064ed8e3f1ca9e8",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 2,
+            "Computational Observation": 0,
+            "Not Established": 2,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_deep_program_theorem_candidates.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_deep_program_theorem_candidates.md",
+          "audited_sha256": "7883fe8ddabcc181b754c4b547dc6938cbf449c209fe5dc8171ba882c85c6a41",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 2,
+            "Computational Observation": 0,
+            "Not Established": 2,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_determinant_root_isolation_attempt.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_determinant_root_isolation_attempt.json",
+          "audited_sha256": "95c08eb0335b31f3d7b9968728564285bf8b37bda4cdfb624cea422da88e0ff0",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_determinant_root_isolation_attempt.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_determinant_root_isolation_attempt.md",
+          "audited_sha256": "fb1bed1e20533f8aae2936651c213d724326c158f1868c440f23ce82c17f78a0",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_determinant_target_taxonomy.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_determinant_target_taxonomy.json",
+          "audited_sha256": "abee3ccf2951160b6bb5db3a4d4850495d727f47fc768f702df54127928e21c4",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 2
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_determinant_target_taxonomy.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_determinant_target_taxonomy.md",
+          "audited_sha256": "7b9313f777e9adde985f53424fa3d20e924b18dddd7a265acb65a9fa4089cb13",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 2
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_equitable_partition_search.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_equitable_partition_search.json",
+          "audited_sha256": "b4a8c2ee837191c577053bdaa962da97537bff77ff2778b89e0185673f31e50f",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_equitable_partition_search.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_equitable_partition_search.md",
+          "audited_sha256": "cd426185216aeffc32c569a4e3b0df6574b4033768784264049a90a3076e5084",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_factor_network_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_factor_network_analysis.md",
+          "audited_sha256": "0adf0929b300953976539b4461f35ed8cf2bf4b0c565c3d062e690722b2b59a5",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 1,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_factor_relation_expansion.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_factor_relation_expansion.json",
+          "audited_sha256": "8311d6f83c72c56d119d0d43473f7671022d312cac2b8090b3d7882ef7a2c6dd",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_factor_relation_expansion.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_factor_relation_expansion.md",
+          "audited_sha256": "bee64fe81b2347a70f8587dc8c6625cf05fb1526539543835a2a6be09746b0e8",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 1,
+            "Computational Observation": 1,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 2
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_factor_structure_gcd.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_factor_structure_gcd.json",
+          "audited_sha256": "029c3de733984a8c16995984741ba4cd3c02431d2b83392df9394a08889afc43",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 18,
+            "Computational Observation": 0,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_factor_structure_gcd.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_factor_structure_gcd.md",
+          "audited_sha256": "a3fd9b1015e6a3aaa7888f54e7cc263d45b35a61f88d9d5d7fc8ebb2bf82f375",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 18,
+            "Computational Observation": 0,
+            "Not Established": 2,
+            "Withdrawn": 0,
+            "Patched": 1,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_next_mission_recommendation.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_next_mission_recommendation.md",
+          "audited_sha256": "44b719337b65072cd9a90d1592333a8416764e6b64e74ea3d0343756020efaa4",
+          "created_utc": "20260514T064555Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_reproducibility_notes.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_reproducibility_notes.json",
+          "audited_sha256": "d1afc64177c6b20bca61d26dd3c8c65925e693a5048f043416ff808e0a899c20",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_reproducibility_notes.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_reproducibility_notes.md",
+          "audited_sha256": "55029655393ced3b163f1393a2fef3cd53a49a26b4a256cf853eaea142f9180e",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 1
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_residual_factor_analysis.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_residual_factor_analysis.json",
+          "audited_sha256": "4b7efe41c87fa847c3a93dd0c62bce99de8d1742032dcbb1ad84db1651d72c6c",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 4,
+            "Computational Observation": 0,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_residual_factor_analysis.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_residual_factor_analysis.md",
+          "audited_sha256": "987c8280e210f1cadf9cfa65d4c03bd92cb43762bb6edd01ae3448f29fa3d36a",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 1,
+            "Computational Observation": 0,
+            "Not Established": 2,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_specialization_sweep.json",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_specialization_sweep.json",
+          "audited_sha256": "cbdc337f42029cfdeaec3dcfb56d890b09fdce9b99fac743058426d046c16b96",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 43,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_specialization_sweep.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_specialization_sweep.md",
+          "audited_sha256": "802c5bd6719d61edff785384013c2e9e7f7f2ea430335c8a4d23be0f8651a81a",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 1,
+            "Not Established": 0,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    },
+    {
+      "file": "reports/20260514T063536Z_r3_subdominant_factor_tracking.md",
+      "returncode": 0,
+      "payload": {
+        "ok": true,
+        "disposition": "PASS",
+        "payload": {
+          "disposition": "PASS",
+          "audited_file": "reports/20260514T063536Z_r3_subdominant_factor_tracking.md",
+          "audited_sha256": "aa4ea03f677486c9b546a3e8a848e1666c7eb47ce37e70372f14971c14e7537e",
+          "created_utc": "20260514T064556Z",
+          "label_hits": {
+            "Verified Fact": 0,
+            "Computational Observation": 2,
+            "Not Established": 1,
+            "Withdrawn": 0,
+            "Patched": 0,
+            "Contradiction Detected": 0,
+            "Over-Upgraded": 0,
+            "Advisory Only": 0
+          },
+          "findings": [],
+          "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims."
+        }
+      }
+    }
+  ],
+  "claim_boundary": "This validates report language only; it does not prove mathematical claims."
+}

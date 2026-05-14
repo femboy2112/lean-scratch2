@@ -1,0 +1,56 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "entries": [
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "unit_00",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "unit_01",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "unit_02",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "unit_03",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "full_00",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "full_01",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "full_02",
+      "status_label": "Computational Observation"
+    },
+    {
+      "candidate_substitution": "z=t^2",
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "id": "full_03",
+      "status_label": "Computational Observation"
+    }
+  ],
+  "method": "Text scan for even t-exponents as a z=t^2 simplification hint",
+  "status": "Computational Observation"
+}

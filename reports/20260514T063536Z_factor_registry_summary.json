@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "degree_contributions": {
+      "full": 27,
+      "unit": 18
+    },
+    "row_sum_factor_indices": {
+      "full": [
+        0
+      ],
+      "unit": [
+        0
+      ]
+    },
+    "shared_factor_present": true
+  },
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T063536Z",
+  "method": "Python normalization of audited factor JSON and exact gcd manifest",
+  "registry_csv": "data/generated/r3_deep_program/20260514T063536Z/factor_registry.csv",
+  "registry_json": "data/generated/r3_deep_program/20260514T063536Z/factor_registry.json",
+  "scope": "finite-level r=3 S-level factor registry from audited Sage factorization and exact gcd artifacts",
+  "status": "Verified Fact"
+}

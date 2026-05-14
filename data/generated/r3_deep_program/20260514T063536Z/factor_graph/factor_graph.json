@@ -1,0 +1,167 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "edges": [
+    {
+      "kind": "row_sum_factor",
+      "source": "unit_factor_00",
+      "status_label": "Verified Fact",
+      "target": "unit_row_sum"
+    },
+    {
+      "kind": "same_hash",
+      "source": "unit_factor_01",
+      "status_label": "Verified Fact",
+      "target": "shared_factor_C"
+    },
+    {
+      "kind": "residual_component",
+      "source": "unit_factor_02",
+      "status_label": "Verified Fact",
+      "target": "unit_residual"
+    },
+    {
+      "kind": "multiplicity_relation",
+      "source": "unit_factor_02",
+      "status_label": "Verified Fact",
+      "target": "unit_multiplicity_2"
+    },
+    {
+      "kind": "residual_component",
+      "source": "unit_factor_03",
+      "status_label": "Verified Fact",
+      "target": "unit_residual"
+    },
+    {
+      "kind": "multiplicity_relation",
+      "source": "unit_factor_03",
+      "status_label": "Verified Fact",
+      "target": "unit_multiplicity_2"
+    },
+    {
+      "kind": "row_sum_factor",
+      "source": "full_factor_00",
+      "status_label": "Verified Fact",
+      "target": "full_row_sum"
+    },
+    {
+      "kind": "same_hash",
+      "source": "full_factor_01",
+      "status_label": "Verified Fact",
+      "target": "shared_factor_C"
+    },
+    {
+      "kind": "multiplicity_relation",
+      "source": "full_factor_01",
+      "status_label": "Verified Fact",
+      "target": "full_multiplicity_2"
+    },
+    {
+      "kind": "residual_component",
+      "source": "full_factor_02",
+      "status_label": "Verified Fact",
+      "target": "full_residual"
+    },
+    {
+      "kind": "multiplicity_relation",
+      "source": "full_factor_02",
+      "status_label": "Verified Fact",
+      "target": "full_multiplicity_2"
+    },
+    {
+      "kind": "residual_component",
+      "source": "full_factor_03",
+      "status_label": "Verified Fact",
+      "target": "full_residual"
+    },
+    {
+      "kind": "multiplicity_relation",
+      "source": "full_factor_03",
+      "status_label": "Verified Fact",
+      "target": "full_multiplicity_2"
+    }
+  ],
+  "nodes": [
+    {
+      "degree_y": 1,
+      "id": "unit_factor_00",
+      "label": "unit_factor_00",
+      "multiplicity": 1,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 1,
+      "id": "unit_factor_01",
+      "label": "unit_factor_01",
+      "multiplicity": 1,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 2,
+      "id": "unit_factor_02",
+      "label": "unit_factor_02",
+      "multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 6,
+      "id": "unit_factor_03",
+      "label": "unit_factor_03",
+      "multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 1,
+      "id": "full_factor_00",
+      "label": "full_factor_00",
+      "multiplicity": 1,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 1,
+      "id": "full_factor_01",
+      "label": "full_factor_01",
+      "multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 3,
+      "id": "full_factor_02",
+      "label": "full_factor_02",
+      "multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    {
+      "degree_y": 9,
+      "id": "full_factor_03",
+      "label": "full_factor_03",
+      "multiplicity": 2,
+      "status_label": "Verified Fact"
+    },
+    {
+      "id": "shared_factor_C",
+      "label": "shared factor C",
+      "status_label": "Verified Fact"
+    },
+    {
+      "id": "unit_residual",
+      "label": "unit residual",
+      "status_label": "Verified Fact"
+    },
+    {
+      "id": "full_residual",
+      "label": "full residual",
+      "status_label": "Verified Fact"
+    },
+    {
+      "id": "unit_multiplicity_2",
+      "label": "unit multiplicity 2",
+      "status_label": "Verified Fact"
+    },
+    {
+      "id": "full_multiplicity_2",
+      "label": "full multiplicity 2",
+      "status_label": "Verified Fact"
+    }
+  ],
+  "status": "Verified Fact"
+}

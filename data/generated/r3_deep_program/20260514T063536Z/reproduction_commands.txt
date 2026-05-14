@@ -1,0 +1,7 @@
+bash scripts/bootstrap_codex.sh
+python3 scripts/check_codex_skills.py
+python3 scripts/run_py_checks.py
+env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_structure_gcd.sage --timestamp 20260514T063536Z
+env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_relation_expansion.sage --timestamp 20260514T063536Z
+python3 scripts/r3_deep_program_generate.py --timestamp 20260514T063536Z
+python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py
