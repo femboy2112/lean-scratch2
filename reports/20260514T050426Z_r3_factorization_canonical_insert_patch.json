@@ -1,0 +1,68 @@
+{
+  "artifacts_produced": {
+    "canonical_insert_patch_json": "reports/20260514T050426Z_r3_factorization_canonical_insert_patch.json",
+    "canonical_insert_patch_md": "reports/20260514T050426Z_r3_factorization_canonical_insert_patch.md",
+    "canonical_insert_review_checklist": "reports/20260514T050426Z_r3_factorization_canonical_insert_review_checklist.md"
+  },
+  "candidate_target_file": "data/canonical_bundle/05_R3_CLOSURES.txt",
+  "candidate_target_section": "Insert before <<APPEND-POINT::05.charpoly>> as a new 05.charpoly.r3.generic_s_level_factorization section after human review.",
+  "canonical_files_touched": false,
+  "created_utc": "20260514T050426Z",
+  "exact_insert_text": "==SECTION:: 05.charpoly.r3.generic_s_level_factorization_proposed ==\n\nstatus_label: Verified Fact, finite-level only\nr: 3\nlevel: S-level\nmodels: unit and full\nrecorded_ring: QQ[t][y]\ny-separability ring: QQ(t)[y]\nsource_manifest: data/generated/r3_factorization_audit/20260513T160231Z/manifest.json\nmanifest file hash: fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254\nmanifest payload hash: e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f\n\nThe finite-level r=3 S-level characteristic-polynomial factorization audit records exact Sage reconstruction for both audited models.\n\nunit dimension: 18\nunit factor_degree_pattern: [1,1,2,6]\nunit multiplicity_pattern: [1,1,2,2]\nunit row-sum factor index: 0\n\nfull dimension: 27\nfull factor_degree_pattern: [1,1,3,9]\nfull multiplicity_pattern: [1,2,2,2]\nfull row-sum factor index: 0\n\nSage-displayed irreducibility over QQ[t][y] is recorded for every displayed factor in the source audit bundle. y-separability checked over QQ(t)[y] is recorded for every displayed factor in the source audit bundle.\n\nThis is a finite-level S-level characteristic-polynomial factorization fact only. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.\n\n[STATUS: Verified Fact]\n[GUARD: S-level characteristic-polynomial factorization only; do not upgrade to B-level descent, compact-factorization closure, structural mechanism, subdominant spectral structure, cross-level invariance, all-real-s determinant nonvanishing, or Collatz-level claims.]",
+  "placement_rationale": "05_R3_CLOSURES.txt is the canonical file for r=3 Verified Fact closures. 08_RECONNAISSANCE_OBSERVATIONS.txt is reserved for Computational Observation reconnaissance, so the audited finite-level exact factorization belongs in 05 if a human accepts insertion.",
+  "preserved_facts": {
+    "full_dimension": 27,
+    "full_factor_degree_pattern": [
+      1,
+      1,
+      3,
+      9
+    ],
+    "full_multiplicity_pattern": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "level": "S-level",
+    "manifest_file_hash": "fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254",
+    "manifest_payload_hash": "e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f",
+    "models": [
+      "unit",
+      "full"
+    ],
+    "r": 3,
+    "recorded_ring": "QQ[t][y]",
+    "status_label": "Verified Fact, finite-level only",
+    "unit_dimension": 18,
+    "unit_factor_degree_pattern": [
+      1,
+      1,
+      2,
+      6
+    ],
+    "unit_multiplicity_pattern": [
+      1,
+      1,
+      2,
+      2
+    ],
+    "y_separability_ring": "QQ(t)[y]"
+  },
+  "proof_boundary": "This is a finite-level S-level characteristic-polynomial factorization fact only. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "reproduction_command": "python3 scripts/r3_factor_structure_analysis.py",
+  "required_pre_insert_checks": [
+    "Confirm canonical bundle files are still untouched before review.",
+    "Rerun env DOT_SAGE=$PWD/.codex/sage sage sage/r3_factorization_audit.sage in an environment with Sage.",
+    "Verify manifest file sha256 equals fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254.",
+    "Verify manifest payload sha256 equals e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f.",
+    "Confirm source proposal v2 wording still passes proof-boundary audit.",
+    "Confirm the insert text says Sage-displayed irreducibility over QQ[t][y] and y-separability checked over QQ(t)[y]."
+  ],
+  "rollback_note": "This artifact is a proposed insert only. If rejected, delete or supersede this report pair; no canonical bundle rollback is needed because no canonical file is modified.",
+  "source_manifest": "data/generated/r3_factorization_audit/20260513T160231Z/manifest.json",
+  "source_proposal_v2": "reports/20260514T023536Z_r3_factorization_canonical_patch_proposal_v2.md",
+  "source_proposal_v2_json": "reports/20260514T023536Z_r3_factorization_canonical_patch_proposal_v2.json",
+  "status": "Advisory Only",
+  "target": "human-reviewable canonical insertion patch for audited finite-level r=3 S-level factorization"
+}

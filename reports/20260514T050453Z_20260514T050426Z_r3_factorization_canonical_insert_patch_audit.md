@@ -1,0 +1,28 @@
+# Proof-Boundary Audit — 20260514T050426Z_r3_factorization_canonical_insert_patch.md
+
+- disposition: `PASS`
+- audited_file: `reports/20260514T050426Z_r3_factorization_canonical_insert_patch.md`
+- audited_sha256: `a5eecd681d45c11d4d66f2883e95bdf70d19e6e600b54d04b5abdde5b83f5d85`
+- created_utc: `20260514T050453Z`
+- claim_boundary: audit only; no mathematical claim is upgraded
+
+## Label hits
+
+| Label | Count |
+|---|---:|
+| Verified Fact | 3 |
+| Computational Observation | 1 |
+| Not Established | 0 |
+| Withdrawn | 0 |
+| Patched | 0 |
+| Contradiction Detected | 0 |
+| Over-Upgraded | 0 |
+| Advisory Only | 2 |
+
+## Findings
+
+No proof-boundary violations detected by the pattern audit.
+
+## Required next action
+
+If disposition is `PASS_WITH_PATCHES` or `REJECT`, patch the cited language and rerun this audit.

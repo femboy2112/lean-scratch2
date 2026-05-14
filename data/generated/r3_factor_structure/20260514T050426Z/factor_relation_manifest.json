@@ -1,0 +1,416 @@
+{
+  "artifacts_produced": {
+    "factor_relation_manifest": "data/generated/r3_factor_structure/20260514T050426Z/factor_relation_manifest.json",
+    "next_recommendation": "reports/20260514T050426Z_r3_next_structural_mechanism_packet_recommendation.md",
+    "structure_analysis_json": "reports/20260514T050426Z_r3_factor_structure_analysis.json",
+    "structure_analysis_md": "reports/20260514T050426Z_r3_factor_structure_analysis.md",
+    "structure_next_targets": "reports/20260514T050426Z_r3_factor_structure_next_targets.md"
+  },
+  "claim_boundary": "This is a finite-level S-level characteristic-polynomial factorization fact only. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T050426Z",
+  "exact_gcd_status": "Not Established",
+  "method": "Python static JSON/hash analysis; Sage exact gcd unavailable on PATH",
+  "minimum_expected_observations": {
+    "full_degree_pattern": [
+      1,
+      1,
+      3,
+      9
+    ],
+    "full_row_sum_factor_index": 0,
+    "shared_hash_expected": true,
+    "unit_degree_pattern": [
+      1,
+      1,
+      2,
+      6
+    ],
+    "unit_factor_01_equals_full_factor_01": true,
+    "unit_row_sum_factor_index": 0
+  },
+  "models": {
+    "full": {
+      "dimension": 27,
+      "factor_degree_contribution": 27,
+      "factor_degree_pattern": [
+        1,
+        1,
+        3,
+        9
+      ],
+      "factors": [
+        {
+          "degree_t_max": 108,
+          "degree_y": 1,
+          "factor_index": 0,
+          "factor_sha256": "a44fcd571bbd816ac64489d88a87cd35f967e14d04e2ee88a1b0af98454c1b14",
+          "is_linear_in_y": true,
+          "is_row_sum_factor": true,
+          "multiplicity": 1,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_00.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 108,
+          "degree_y": 1,
+          "factor_index": 1,
+          "factor_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+          "is_linear_in_y": true,
+          "is_row_sum_factor": false,
+          "multiplicity": 2,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_01.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 324,
+          "degree_y": 3,
+          "factor_index": 2,
+          "factor_sha256": "d201683ad25dacc610b24120a0f1ddd4e051442771b803bdeda1ab7d532fd42a",
+          "is_linear_in_y": false,
+          "is_row_sum_factor": false,
+          "multiplicity": 2,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_02.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 972,
+          "degree_y": 9,
+          "factor_index": 3,
+          "factor_sha256": "498455175f2d2defadc095649900160284cec3b6c69f63bc639d187b0271c9a5",
+          "is_linear_in_y": false,
+          "is_row_sum_factor": false,
+          "multiplicity": 2,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/full/factors/factor_03.json",
+          "status_label": "Verified Fact"
+        }
+      ],
+      "multiplicity_pattern": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "row_sum_factor_index": 0
+    },
+    "unit": {
+      "dimension": 18,
+      "factor_degree_contribution": 18,
+      "factor_degree_pattern": [
+        1,
+        1,
+        2,
+        6
+      ],
+      "factors": [
+        {
+          "degree_t_max": 108,
+          "degree_y": 1,
+          "factor_index": 0,
+          "factor_sha256": "fb4cc15db6c76dea45ece185f3a2808bc519f4183864a7124646a32588376aec",
+          "is_linear_in_y": true,
+          "is_row_sum_factor": true,
+          "multiplicity": 1,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_00.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 108,
+          "degree_y": 1,
+          "factor_index": 1,
+          "factor_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+          "is_linear_in_y": true,
+          "is_row_sum_factor": false,
+          "multiplicity": 1,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_01.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 216,
+          "degree_y": 2,
+          "factor_index": 2,
+          "factor_sha256": "3860a125d1de0df7c0cf81fb47a2164c29760a73f7c70eef58ce54b5099fb3e7",
+          "is_linear_in_y": false,
+          "is_row_sum_factor": false,
+          "multiplicity": 2,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_02.json",
+          "status_label": "Verified Fact"
+        },
+        {
+          "degree_t_max": 648,
+          "degree_y": 6,
+          "factor_index": 3,
+          "factor_sha256": "a6d3d2b27ed7a8d34fc651677ffa1a58b8e70744c0bf1fc576c0118d1555fc1d",
+          "is_linear_in_y": false,
+          "is_row_sum_factor": false,
+          "multiplicity": 2,
+          "source_path": "data/generated/r3_factorization_audit/20260513T160231Z/unit/factors/factor_03.json",
+          "status_label": "Verified Fact"
+        }
+      ],
+      "multiplicity_pattern": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "row_sum_factor_index": 0
+    }
+  },
+  "not_established_items": [
+    "r=3 structural mechanism explaining the factorization pattern",
+    "exact pairwise gcd table for non-identical factor pairs over QQ(t)[y]",
+    "simple integer degree-multiple relation from unit higher-degree factors to full higher-degree factors",
+    "determinant nonvanishing for all real s > 0",
+    "cross-level invariance",
+    "subdominant spectral structure",
+    "any Collatz-level conclusion"
+  ],
+  "pairwise_gcds": [
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 0,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 0
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 1,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 0
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 2,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 0
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 3,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 0
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 0,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 1
+    },
+    {
+      "claim_label": "Verified Fact",
+      "full_factor_j": 1,
+      "gcd_degree_y": 1,
+      "gcd_hash_or_expression": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "method": "static bundle equality",
+      "static_same_hash_and_text": true,
+      "unit_factor_i": 1
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 2,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 1
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 3,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 1
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 0,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 2
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 1,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 2
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 2,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 2
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 3,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 2
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 0,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 3
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 1,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 3
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 2,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 3
+    },
+    {
+      "claim_label": "Not Established",
+      "full_factor_j": 3,
+      "gcd_degree_y": null,
+      "gcd_hash_or_expression": null,
+      "method": "Sage gcd not run",
+      "static_same_hash_and_text": false,
+      "unit_factor_i": 3
+    }
+  ],
+  "quotient_residual_patterns": {
+    "after_removing_row_sum_and_shared_non_row_factor": {
+      "full_degree_contribution": 24,
+      "full_degrees_with_multiplicity": [
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "unit_degree_contribution": 16,
+      "unit_degrees_with_multiplicity": [
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    "after_removing_row_sum_only": {
+      "full_degree_contribution": 26,
+      "full_degrees_with_multiplicity": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "unit_degree_contribution": 17,
+      "unit_degrees_with_multiplicity": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    }
+  },
+  "reproduction_command": "python3 scripts/r3_factor_structure_analysis.py",
+  "sage_available": false,
+  "sage_follow_up_tests": [
+    "Compute pairwise gcds for every unit/full factor over QQ(t)[y] and record exact gcd expressions.",
+    "Test divisibility of full residual factors by substitutions or quotients suggested by the shared linear factor.",
+    "Compare residual characteristic polynomials after removing row-sum and shared non-row-sum factors.",
+    "Search for commutant, symmetry, or equitable-partition mechanisms for the squared residual factors."
+  ],
+  "sage_path": null,
+  "scope": "finite-level r=3 S-level characteristic-polynomial factor bundle from the 20260513T160231Z Sage audit",
+  "shared_factors": [
+    {
+      "claim_label": "Verified Fact",
+      "factor_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "full_degree_y": 1,
+      "full_factor_index": 1,
+      "full_multiplicity": 2,
+      "is_row_sum_factor": false,
+      "same_factor_text": true,
+      "scope_note": "finite-level audited factor bundle hash/string comparison only",
+      "unit_degree_y": 1,
+      "unit_factor_index": 1,
+      "unit_multiplicity": 1
+    }
+  ],
+  "shared_non_row_sum_factor_multiplicity_same": false,
+  "simple_degree_multiples": {
+    "claim_label": "Computational Observation",
+    "full_higher_degrees": [
+      3,
+      9
+    ],
+    "observation": "The residual higher-degree pairs are 2,6 for unit and 3,9 for full. They have a 3/2 degree ratio by ordered pair, not an integer degree-multiple relation.",
+    "unit_higher_degrees": [
+      2,
+      6
+    ]
+  },
+  "source_command": "env DOT_SAGE=$PWD/.codex/sage sage sage/r3_factorization_audit.sage",
+  "source_manifest": "data/generated/r3_factorization_audit/20260513T160231Z/manifest.json",
+  "source_manifest_file_sha256": "fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254",
+  "source_manifest_payload_sha256": "e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f",
+  "status": "Computational Observation",
+  "target": "finite-level r=3 audited factor-bundle structure analysis"
+}
