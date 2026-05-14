@@ -13,28 +13,78 @@ model_verbosity = "medium"
 review_model = "gpt-5.5"
 
 [agents]
-max_threads = 4
+max_threads = 6
 max_depth = 1
 
 [agents.algebra_explorer]
-description = "Search symbolic Collatz spectral structure: exact factorizations, determinant identities, row-sum/Perron mechanisms, kernel/rank structure, invariant decompositions. Must use exact algebra for theorem-grade claims."
+description = "General symbolic Collatz spectral structure search."
 config_file = "agents/algebra_explorer.toml"
 nickname_candidates = ["Algebra", "Noether", "Spectral"]
 
 [agents.experiment_runner]
-description = "Run Python/Sage experiments, generate CSV/JSON witnesses, record command lines, collect hashes, and preserve failed probes as data."
+description = "Run Python/Sage experiments and preserve logs/witnesses."
 config_file = "agents/experiment_runner.toml"
 nickname_candidates = ["Runner", "Lab", "Gauss"]
 
 [agents.proof_auditor]
-description = "Classify claims, block finite-to-Collatz overreach, inspect theorem candidates, and generate Lean stubs only for exact finite-level statements."
+description = "Classify claims and block finite-to-Collatz overreach."
 config_file = "agents/proof_auditor.toml"
 nickname_candidates = ["Auditor", "Boundary", "Hilbert"]
 
 [agents.implementation_engineer]
-description = "Maintain setup scripts, tests, Makefile targets, CLI ergonomics, and Linux Mint dependency handling without weakening mathematical guardrails."
+description = "Maintain setup scripts, tests, Makefile targets, and Linux Mint dependency handling."
 config_file = "agents/implementation_engineer.toml"
 nickname_candidates = ["Engineer", "Patch", "Turing"]
+
+[agents.sage_factor_algebraist]
+description = "Exact Sage specialist for QQ[t][y], QQ(t)[y], residuals, gcds, resultants, discriminants, and root-isolation prerequisites."
+config_file = "agents/sage_factor_algebraist.toml"
+nickname_candidates = ["Sage", "Dedekind", "Factor"]
+
+[agents.factor_cartographer]
+description = "Build factor registries, factor graphs, residual maps, degree/multiplicity maps, and artifact query indexes."
+config_file = "agents/factor_cartographer.toml"
+nickname_candidates = ["Cartographer", "Graph", "Atlas"]
+
+[agents.mechanism_hunter]
+description = "Search commutants, automorphisms, projectors, equitable partitions, quotient matrices, and exact structural mechanism candidates."
+config_file = "agents/mechanism_hunter.toml"
+nickname_candidates = ["Mechanism", "Emmy", "Block"]
+
+[agents.determinant_root_analyst]
+description = "Extract determinant targets and run exact root-isolation/Sturm/sign-chart analysis without overclaiming positivity."
+config_file = "agents/determinant_root_analyst.toml"
+nickname_candidates = ["Sturm", "Root", "Sign"]
+
+[agents.spectral_tracker]
+description = "Track numerical and exact spectral candidates, factor-root ownership, and subdominant spectral behavior with strict claim labels."
+config_file = "agents/spectral_tracker.toml"
+nickname_candidates = ["Spectrum", "Eigen", "Tracker"]
+
+[agents.canonical_curator]
+description = "Prepare canonical insertion previews, diff previews, human checklists, rollback notes, and proof-boundary-safe canonical wording."
+config_file = "agents/canonical_curator.toml"
+nickname_candidates = ["Curator", "Canon", "Archivist"]
+
+[agents.provenance_librarian]
+description = "Verify hashes, manifests, artifact indexes, phase receipts, and reproducibility scripts."
+config_file = "agents/provenance_librarian.toml"
+nickname_candidates = ["Librarian", "Hash", "Ledger"]
+
+[agents.campaign_operator]
+description = "Manage long multi-phase research missions, timeouts, resume/retry, partial completion, and final program manifests."
+config_file = "agents/campaign_operator.toml"
+nickname_candidates = ["Operator", "Campaign", "Scheduler"]
+
+[agents.formalization_engineer]
+description = "Convert audited finite-level theorem candidates into Lean stubs and proof-obligation tables."
+config_file = "agents/formalization_engineer.toml"
+nickname_candidates = ["Lean", "Formal", "Euclid"]
+
+[agents.red_team_skeptic]
+description = "Adversarially verify reports against source artifacts, recompute hashes, find contradictions, and downgrade unsupported claims."
+config_file = "agents/red_team_skeptic.toml"
+nickname_candidates = ["Skeptic", "RedTeam", "Falsifier"]
 
 [sandbox_workspace_write]
 network_access = false
