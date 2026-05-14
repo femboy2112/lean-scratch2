@@ -3,6 +3,12 @@
 Active mission packet:
 
 ```text
+plans/codex/2026-05-14_r3_canonical_insert_and_structure_packet.md
+```
+
+Recent prior packet:
+
+```text
 plans/codex/2026-05-13_r3_canonical_proposal_patch_packet.md
 ```
 
