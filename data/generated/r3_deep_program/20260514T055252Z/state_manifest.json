@@ -1,0 +1,75 @@
+{
+  "canonical_bundle_hashes": {
+    "data/canonical_bundle/00_HISTORICAL_convolution_to_operator_framework.txt": {
+      "bytes": 22441,
+      "sha256": "31a963b7738ecf362a928f53cd5e31d3aaf79836ccfb503a3ff8f120f65d4e9d"
+    },
+    "data/canonical_bundle/01_FRAMEWORK_AND_CONVENTIONS.txt": {
+      "bytes": 2732,
+      "sha256": "5acd3284cfb2e942e9a472dcf659c9c54762869c5d97153c8891d19b9e48c2af"
+    },
+    "data/canonical_bundle/02_LOCKED_BASELINE_THEOREMS.txt": {
+      "bytes": 7929,
+      "sha256": "03e055fc5c6a709b493adcaf61ef878fa6d41be36ba10d7ff9c41159751911f5"
+    },
+    "data/canonical_bundle/03_CONSTRUCTION_DATA.txt": {
+      "bytes": 16107,
+      "sha256": "6a03f328b9c3c4a16422329d6887682d69317ae7d918fca7a0866066b4ad4b01"
+    },
+    "data/canonical_bundle/04_R2_CLOSURES.txt": {
+      "bytes": 18516,
+      "sha256": "80ebdfd6eef0a0176cd120197d1de827f60248f867114393b015153b044b0ba4"
+    },
+    "data/canonical_bundle/05_R3_CLOSURES.txt": {
+      "bytes": 28247,
+      "sha256": "1cbfa9f08c4161283d93f7da0556262838a2b6b3cb687bf9b18575ab2e17e81d"
+    },
+    "data/canonical_bundle/06_MATHEMATICAL_CONSTRAINTS.txt": {
+      "bytes": 15045,
+      "sha256": "2030df7a16d21e9f3f34abd37e343662c42eacdbb198f2d60205f7a8c03bfdc2"
+    },
+    "data/canonical_bundle/07_INTERPRETATION_AND_BOUNDARIES.txt": {
+      "bytes": 8541,
+      "sha256": "f0844db697592a426ad72129f4a58124e872e85335e4c3808b3fd3cefdce6ed8"
+    },
+    "data/canonical_bundle/08_RECONNAISSANCE_OBSERVATIONS.txt": {
+      "bytes": 19234,
+      "sha256": "6030ec5faed7e7b022c6c4ef40ec349235bd8a57e4a5eb1b81dafbdc58036edf"
+    },
+    "data/canonical_bundle/PROMPT.md": {
+      "bytes": 10990,
+      "sha256": "1db186828bd2ecb687cf52be22adb586943ec1fba86087f9b9f2cf0d598afff4"
+    }
+  },
+  "claim_boundary": "finite-level only; no Collatz-level conclusion",
+  "commands": [
+    "git pull --ff-only",
+    "python3 scripts/check_codex_skills.py",
+    "python3 scripts/run_py_checks.py",
+    "env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage --version"
+  ],
+  "created_utc": "20260514T055252Z",
+  "prior_artifacts": {
+    "data/generated/r3_factor_structure/20260514T052552Z/factor_gcd_manifest.json": {
+      "bytes": 12427,
+      "sha256": "d96249b79aa522cc78c240665ea59e449c9a1c5f390e89edfa7b2386b511f000"
+    },
+    "data/generated/r3_factorization_audit/20260513T160231Z/manifest.json": {
+      "bytes": 7289,
+      "sha256": "fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254"
+    },
+    "reports/20260514T050426Z_r3_factor_structure_analysis.md": {
+      "bytes": 3531,
+      "sha256": "c70d532184f7b68476cedde3befb47cd1d3fcbcc8bd57230d38986e99562b18e"
+    },
+    "reports/20260514T052552Z_r3_factor_structure_gcd.md": {
+      "bytes": 3299,
+      "sha256": "ca394b8f63b6cfddb3be52c406bf9c05a0b3277ec8131edb993c2a5a6ddfb9b7"
+    }
+  },
+  "python_version": "3.11.15",
+  "repo_commit": "92dab4fa4ce66c32a8f790ea165b97c6e5164cf7",
+  "sage_path": "./.sage-conda/bin/sage",
+  "sage_version": "SageMath version 10.7, Release Date: 2025-08-09",
+  "status": "Advisory Only"
+}

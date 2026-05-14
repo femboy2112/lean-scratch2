@@ -63,6 +63,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("path", help="Report/source file to audit.")
     parser.add_argument("--out-prefix", default=None)
+    parser.add_argument("--no-write", action="store_true", help="Print JSON only; do not write audit artifacts.")
     args = parser.parse_args()
 
     root = repo_root()
@@ -97,11 +98,6 @@ def main() -> int:
 
     stamp = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     slug = args.out_prefix or re.sub(r"[^a-zA-Z0-9]+", "_", target.stem).strip("_")[:80]
-    reports = root / "reports"
-    reports.mkdir(exist_ok=True)
-    json_path = reports / f"{stamp}_{slug}_audit.json"
-    md_path = reports / f"{stamp}_{slug}_audit.md"
-
     payload = {
         "disposition": disposition,
         "audited_file": str(target.relative_to(root) if target.is_relative_to(root) else target),
@@ -111,43 +107,51 @@ def main() -> int:
         "findings": findings,
         "claim_boundary": "Audit checks proof-boundary language only; it does not prove mathematical claims.",
     }
-    json_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    out = {"ok": disposition == "PASS", "disposition": disposition, "payload": payload}
+    if not args.no_write:
+        reports = root / "reports"
+        reports.mkdir(exist_ok=True)
+        json_path = reports / f"{stamp}_{slug}_audit.json"
+        md_path = reports / f"{stamp}_{slug}_audit.md"
+        json_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
-    md = [
-        f"# Proof-Boundary Audit — {target.name}",
-        "",
-        f"- disposition: `{disposition}`",
-        f"- audited_file: `{payload['audited_file']}`",
-        f"- audited_sha256: `{payload['audited_sha256']}`",
-        f"- created_utc: `{stamp}`",
-        "- claim_boundary: audit only; no mathematical claim is upgraded",
-        "",
-        "## Label hits",
-        "",
-        "| Label | Count |",
-        "|---|---:|",
-    ]
-    for label, count in label_hits.items():
-        md.append(f"| {label} | {count} |")
-    md += ["", "## Findings", ""]
-    if findings:
-        md += ["| Severity | Line | Finding |", "|---|---:|---|"]
-        for f in findings:
-            line = "" if f["line"] is None else str(f["line"])
-            text_cell = f["text"].replace("|", "\\|")
-            md.append(f"| {f['severity']} | {line} | `{f['pattern']}` — {text_cell} |")
-    else:
-        md.append("No proof-boundary violations detected by the pattern audit.")
-    md += [
-        "",
-        "## Required next action",
-        "",
-        "If disposition is `PASS_WITH_PATCHES` or `REJECT`, patch the cited language and rerun this audit.",
-        "",
-    ]
-    md_path.write_text("\n".join(md), encoding="utf-8")
+        md = [
+            f"# Proof-Boundary Audit — {target.name}",
+            "",
+            f"- disposition: `{disposition}`",
+            f"- audited_file: `{payload['audited_file']}`",
+            f"- audited_sha256: `{payload['audited_sha256']}`",
+            f"- created_utc: `{stamp}`",
+            "- claim_boundary: audit only; no mathematical claim is upgraded",
+            "",
+            "## Label hits",
+            "",
+            "| Label | Count |",
+            "|---|---:|",
+        ]
+        for label, count in label_hits.items():
+            md.append(f"| {label} | {count} |")
+        md += ["", "## Findings", ""]
+        if findings:
+            md += ["| Severity | Line | Finding |", "|---|---:|---|"]
+            for f in findings:
+                line = "" if f["line"] is None else str(f["line"])
+                text_cell = f["text"].replace("|", "\\|")
+                md.append(f"| {f['severity']} | {line} | `{f['pattern']}` — {text_cell} |")
+        else:
+            md.append("No proof-boundary violations detected by the pattern audit.")
+        md += [
+            "",
+            "## Required next action",
+            "",
+            "If disposition is `PASS_WITH_PATCHES` or `REJECT`, patch the cited language and rerun this audit.",
+            "",
+        ]
+        md_path.write_text("\n".join(md), encoding="utf-8")
+        out["markdown"] = str(md_path)
+        out["json"] = str(json_path)
 
-    print(json.dumps({"ok": disposition == "PASS", "disposition": disposition, "markdown": str(md_path), "json": str(json_path)}, indent=2))
+    print(json.dumps(out, indent=2))
     return 0 if disposition in {"PASS", "PASS_WITH_PATCHES"} else 1
 
 

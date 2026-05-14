@@ -1,0 +1,394 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T055252Z",
+  "entries": [
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "dot",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/factor_graph/factor_graph.dot",
+      "producer_phase": "r3_deep_program",
+      "sha256": "bbafdd9a6a654a673acc14f169d786817813eed7693c781d13f5a2c9f43c531d",
+      "status_label": "Verified Fact",
+      "summary": "factor_graph.dot"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/factor_graph/factor_graph.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "7b6004bd6fdca046c4210019c1d7c376c59b11fffc6a8c1354cdcf574df1a621",
+      "status_label": "Verified Fact",
+      "summary": "factor_graph.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "csv",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/factor_registry.csv",
+      "producer_phase": "r3_deep_program",
+      "sha256": "9f36b8778efca5204eec7a761973c99ba63ed7b605b46cfb12ccc1906f8207b8",
+      "status_label": "Verified Fact",
+      "summary": "factor_registry.csv"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/factor_registry.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "faaee2375f1c4e7bd5bab00546b25da7e3a691fa5f3a8e99668a2cdc279357fc",
+      "status_label": "Verified Fact",
+      "summary": "factor_registry.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "txt",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/reproduction_commands.txt",
+      "producer_phase": "r3_deep_program",
+      "sha256": "de2f1e3521eb55db09ae807aecc58f9ddd23f7312ddac37ad93ed653db0c0fc3",
+      "status_label": "Verified Fact",
+      "summary": "reproduction_commands.txt"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/spectral_tracking/slice_tracking.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "6fdf100b15194b6ad8aa1722b30edd2b53b657d6de83cd180f8305c5ac21db99",
+      "status_label": "Verified Fact",
+      "summary": "slice_tracking.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "data/generated/r3_deep_program/20260514T055252Z/state_manifest.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "f435395762886ea2d896f5f78c8a016db84b87be4c7d965d9c5b6324344eac78",
+      "status_label": "Verified Fact",
+      "summary": "state_manifest.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_audit_tooling_patch.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "b3c7c07e3a1740a6d706b4d514e027f757da8c5a373d27b4ac767710c372f367",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_audit_tooling_patch.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_audit_tooling_patch.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "887bd3cca8491aac6abdb03f3f7b855234c44010001e65e8fffc4b570c9697df",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_audit_tooling_patch.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_canonical_insert_human_checklist.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "ef3455db93571d9040fd9a117f1f71bf0eed5e47fe6011d2ea3797bdd962a22f",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_canonical_insert_human_checklist.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_deep_program_state_lock.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "f435395762886ea2d896f5f78c8a016db84b87be4c7d965d9c5b6324344eac78",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_deep_program_state_lock.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_deep_program_state_lock.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "44fcb5083789f7177dcc9ea14ec7053d585ecd4cda46321a8b5b6162e86c9f07",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_deep_program_state_lock.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_factor_registry_summary.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "8447d0db55daae6c4df03f5e0ddd2f944cd2e9a9f7c7cfa2fe72a6998c3d5794",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_factor_registry_summary.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_factor_registry_summary.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "db6046ca1b546713cceff01fd0ace7deba1c0bca036376354ec52a20fcb87a76",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_factor_registry_summary.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r2_r3_factor_structure_comparison.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "906ec2284547e77b07be1f6f5b35f5c585e391309b459f11e163c2adc8e8ccd9",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r2_r3_factor_structure_comparison.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r2_r3_factor_structure_comparison.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "e9789040eb43d89d29847db0270f4e951d92d3af0a591b095c856c94e0415968",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r2_r3_factor_structure_comparison.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_automorphism_search.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "84b6f1f63ab4b5111d0e9e4642e1994535064cc2659534cb0d920747df5aa6d5",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_automorphism_search.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_automorphism_search.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "a14a7b059a43a8b34e79e4c7ba0673b267158e0483c0d7fc0755586136359d4e",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_automorphism_search.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "patch",
+      "path": "reports/20260514T055252Z_r3_canonical_insert_diff_preview.patch",
+      "producer_phase": "r3_deep_program",
+      "sha256": "376d55badfa5e030159d89047d9c601a38f12524763c57268ef3120edba2f31a",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_canonical_insert_diff_preview.patch"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_canonical_insert_final_review_packet.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "f189b48c248976de9a6a744c461f6d2147e385d9562ef6a75d9f5f4f40339d6a",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_canonical_insert_final_review_packet.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_canonical_insert_final_review_packet.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "106347544af5e693d76d3d939b1da265b2fdf0984e0671677f01835c7f1d885e",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_canonical_insert_final_review_packet.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_commutant_specialization_analysis.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "ba60dcf9f6145e82a151c84f104b88ace4f1713ab0c79fb80233dc05c36557b3",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_commutant_specialization_analysis.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_commutant_specialization_analysis.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "c612e50e71ee1daeca3de2526046822249a56f281882385d72f5941af0dccc2f",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_commutant_specialization_analysis.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_deep_program_final.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "1f2fd3ccb0e497d2b040072ae7d039c3aa1467d42317aca60188adf64f9fb354",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_final.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_deep_program_final.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "1408b8ffc99a9a35d61ffe44a8a6ebc0f819c7796fbaac077a9c99cac9246344",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_final.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_deep_program_orchestration.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "95dd16cb35588473f40c9fce4a6322d3303c4b9cef14acb6f291927078fa9b47",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_orchestration.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_deep_program_orchestration.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "7dfa24d9cfdd458bb2fe1d0aa0b7eb6b31364f643edb1dcada544ffbdfa421f6",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_orchestration.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_deep_program_theorem_candidates.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "5a3bb305d9d0812d1617c6a551911482f3e9ef39591d439c06d45056a8eda513",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_theorem_candidates.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_deep_program_theorem_candidates.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "e97b1e58afac1dc29f3d54732219cc415fa28ec80a4197951cc79a7cc0eb355a",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_deep_program_theorem_candidates.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_determinant_root_isolation_attempt.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "f0df6f9fa2808349eeaf2f012ba0b16a602b118695505f23d4a412d2cc19e462",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_determinant_root_isolation_attempt.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_determinant_root_isolation_attempt.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "4559cfeab572fecb3bdb6d32201b3af0d46483076cc3c960c2a0f592d94275a6",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_determinant_root_isolation_attempt.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_determinant_target_taxonomy.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "f05138e750617316cfcb3dddd35e334d40c43a15640e7ea0907e88d765f764ed",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_determinant_target_taxonomy.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_determinant_target_taxonomy.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "ef148b1d8e1c89e7ca3119c2fb25161f03fabf055a0bdf0decf10876710009cc",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_determinant_target_taxonomy.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_equitable_partition_search.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "a9f78eae9da9cadd2f525a717ffcf5b4a9675833159110417e2e4afb7b1b1012",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_equitable_partition_search.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_equitable_partition_search.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "2dbc1a3e217ebc3e5394d7ee17146a6429e72e26c5aada658f25cc07e77dde84",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_equitable_partition_search.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_factor_network_analysis.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "bf3807794313d369461d01544752e93b43b22caf6019f904422beb3263d975dc",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_factor_network_analysis.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_next_mission_recommendation.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "a3d2ac5200f396e29fa23292bc5a3a9a5dc5030854e80bb7164bd5ef826f4acf",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_next_mission_recommendation.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_reproducibility_notes.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "ac8626c01dd7dd7b3308ee690ede5672aa062cda17d826b620cd856ebb52cd05",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_reproducibility_notes.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_reproducibility_notes.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "40184cb50eb4b02c8f6ee75892b521fd363bd24052a2ef246ddc0403fd5b7325",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_reproducibility_notes.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "csv",
+      "path": "reports/20260514T055252Z_r3_specialization_sweep.csv",
+      "producer_phase": "r3_deep_program",
+      "sha256": "48f7772ea902161d8f9c98c95b50afdda27386c8d5d5be55a087762ab8f6b38d",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_specialization_sweep.csv"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "json",
+      "path": "reports/20260514T055252Z_r3_specialization_sweep.json",
+      "producer_phase": "r3_deep_program",
+      "sha256": "6fdf100b15194b6ad8aa1722b30edd2b53b657d6de83cd180f8305c5ac21db99",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_specialization_sweep.json"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_specialization_sweep.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "52f28b3b4cc9bb33c5c22de0996f38811de13a349b9f414165b56681e986f6bf",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_specialization_sweep.md"
+    },
+    {
+      "claim_boundary": "Hashes authenticate artifacts only; they do not upgrade mathematical claims.",
+      "kind": "md",
+      "path": "reports/20260514T055252Z_r3_subdominant_factor_tracking.md",
+      "producer_phase": "r3_deep_program",
+      "sha256": "4baa43148a5e25608a04802a5727f64d62555f35bd1522275f81b94a4888bc6f",
+      "status_label": "Advisory Only",
+      "summary": "20260514T055252Z_r3_subdominant_factor_tracking.md"
+    }
+  ],
+  "status": "Advisory Only"
+}

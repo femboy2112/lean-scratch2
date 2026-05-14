@@ -1,0 +1,41 @@
+{
+  "artifacts_created_count": 38,
+  "blocked_items": [
+    "generic resultants/discriminants and commutants require focused follow-up"
+  ],
+  "canonical_readiness": "needs human review",
+  "commands_run": [
+    "bash scripts/bootstrap_codex.sh",
+    "python3 scripts/check_codex_skills.py",
+    "python3 scripts/run_py_checks.py",
+    "env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_structure_gcd.sage --timestamp 20260514T055252Z",
+    "env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_relation_expansion.sage --timestamp 20260514T055252Z",
+    "python3 scripts/r3_deep_program_generate.py --timestamp 20260514T055252Z",
+    "python3 .agents/skills/collatz-exact-algebra-lab/scripts/collect_witnesses.py"
+  ],
+  "computational_observations": [
+    "numerical specialization sweep",
+    "modular determinant samples"
+  ],
+  "created_utc": "20260514T055252Z",
+  "new_exact_targets": [
+    "commutant/projector search",
+    "selected resultant/root-isolation target"
+  ],
+  "not_established_items": [
+    "structural mechanism",
+    "all-real-s determinant nonvanishing",
+    "cross-level invariance",
+    "exact subdominant factor ownership"
+  ],
+  "proof_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "recommended_next_mission": "focused exact mechanism search from factor graph and residual gcd facts",
+  "repo_commit": "92dab4fa4ce66c32a8f790ea165b97c6e5164cf7",
+  "scope": "finite-level r=3 S-level deep-structure program",
+  "status": "Advisory Only",
+  "verified_facts": [
+    "factor registry",
+    "exact gcd table reuse",
+    "residual product checks"
+  ]
+}

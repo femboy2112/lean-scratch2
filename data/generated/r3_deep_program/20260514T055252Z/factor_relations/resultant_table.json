@@ -1,0 +1,49 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T055252Z",
+  "entries": [
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "unit_00",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "unit_01",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "unit_02",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "unit_03",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "full_00",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "full_01",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "full_02",
+      "status_label": "Not Established"
+    },
+    {
+      "blocked_reason": "generic resultant expansion deferred unless a specific target pair is selected",
+      "id": "full_03",
+      "status_label": "Not Established"
+    }
+  ],
+  "method": "Resultants were classified rather than fully expanded for high-degree generic residuals",
+  "ring": "QQ(t)[y]",
+  "status": "Not Established"
+}

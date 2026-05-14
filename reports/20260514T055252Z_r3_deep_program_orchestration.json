@@ -1,0 +1,42 @@
+{
+  "blocked_items": [
+    "generic high-degree resultants and commutants deferred"
+  ],
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "commands": [
+    "bash scripts/bootstrap_codex.sh",
+    "env DOT_SAGE=$PWD/.codex/sage ./.sage-conda/bin/sage sage/r3_factor_relation_expansion.sage",
+    "python3 scripts/r3_deep_program_generate.py"
+  ],
+  "expected_artifacts": [
+    "reports/",
+    "data/generated/r3_deep_program/"
+  ],
+  "next_step": "focused exact mechanism search",
+  "out_of_scope": "Collatz proof, global orbit behavior, determinant nonvanishing for all real s > 0 without proof, canonical edits",
+  "scope": "finite-level r=3 S-level unit/full matrices and audited factor artifacts",
+  "status": "Advisory Only",
+  "subtasks": [
+    {
+      "backend": "Sage",
+      "owner_role": "algebra_explorer",
+      "task": "residual and factor relation expansion"
+    },
+    {
+      "backend": "Python",
+      "owner_role": "experiment_runner",
+      "task": "specialization sweep and artifact generation"
+    },
+    {
+      "backend": "report-only",
+      "owner_role": "proof_auditor",
+      "task": "claim-boundary validation"
+    },
+    {
+      "backend": "Python/shell",
+      "owner_role": "implementation_engineer",
+      "task": "validation and reproduction tooling"
+    }
+  ],
+  "target": "r=3 deep structure, spectrum, determinant, and canonical-insertion-prep program"
+}

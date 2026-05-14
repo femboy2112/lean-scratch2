@@ -1,0 +1,70 @@
+[
+  {
+    "evidence_artifacts": [
+      "data/generated/r3_factorization_audit/20260513T160231Z/manifest.json"
+    ],
+    "exact_checks": [
+      "Sage reconstruction",
+      "total y-degree",
+      "row-sum factor match"
+    ],
+    "level": "S-level",
+    "missing_proof_steps": [],
+    "model": "unit/full/both",
+    "name": "r=3 generic S-level factorization",
+    "r": 3,
+    "ring": "QQ[t][y]",
+    "statement": "The audited unit/full characteristic polynomial factorization has the recorded degree and multiplicity patterns.",
+    "status_label": "Verified Fact",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [
+      "data/generated/r3_deep_program/20260514T055252Z/factor_relations/gcd_table.json"
+    ],
+    "exact_checks": [
+      "pairwise gcd manifest"
+    ],
+    "level": "S-level",
+    "missing_proof_steps": [],
+    "model": "both",
+    "name": "residual coprimality",
+    "r": 3,
+    "ring": "QQ(t)[y]",
+    "statement": "The unit and full residual products have gcd degree zero as derived from exact pairwise residual-factor gcds.",
+    "status_label": "Verified Fact",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [],
+    "exact_checks": [],
+    "level": "S-level",
+    "missing_proof_steps": [
+      "commutant/projector/equitable-partition witness"
+    ],
+    "model": "unit/full/both",
+    "name": "structural mechanism",
+    "r": 3,
+    "ring": "QQ(t)[y]",
+    "statement": "A mechanism explaining squared residual factors has not been established.",
+    "status_label": "Not Established",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  },
+  {
+    "evidence_artifacts": [],
+    "exact_checks": [],
+    "level": "S-level",
+    "missing_proof_steps": [
+      "target determinant selection",
+      "root isolation",
+      "sign chart"
+    ],
+    "model": "unit/full/both",
+    "name": "determinant nonvanishing",
+    "r": 3,
+    "ring": "not fixed",
+    "statement": "All-real-s determinant nonvanishing is not established.",
+    "status_label": "Not Established",
+    "why_this_does_not_imply_Collatz": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism."
+  }
+]

@@ -1,0 +1,393 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T055252Z",
+  "modular_rows": [
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 553927,
+      "model": "unit",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 565330,
+      "model": "unit",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 898150,
+      "model": "unit",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 119474,
+      "model": "unit",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 635487,
+      "model": "unit",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 815134,
+      "model": "unit",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 544015,
+      "model": "unit",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 200212,
+      "model": "unit",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 513583,
+      "model": "unit",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 905410,
+      "model": "unit",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 348793,
+      "model": "unit",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 4738,
+      "model": "unit",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 549832,
+      "model": "unit",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 323746,
+      "model": "unit",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 718409,
+      "model": "unit",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 837804,
+      "model": "full",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 347806,
+      "model": "full",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 240103,
+      "model": "full",
+      "prime": 1000003,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 569977,
+      "model": "full",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 897966,
+      "model": "full",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 426124,
+      "model": "full",
+      "prime": 1000033,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 656728,
+      "model": "full",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 768820,
+      "model": "full",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 315464,
+      "model": "full",
+      "prime": 1000037,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 427563,
+      "model": "full",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 824655,
+      "model": "full",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 16299,
+      "model": "full",
+      "prime": 1000039,
+      "status": "Computational Observation",
+      "t_value": 5
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 777402,
+      "model": "full",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 2
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 408371,
+      "model": "full",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 3
+    },
+    {
+      "claim_boundary": "Modular determinant samples do not establish all-real-s determinant nonvanishing.",
+      "det_mod_prime": 237776,
+      "model": "full",
+      "prime": 1000081,
+      "status": "Computational Observation",
+      "t_value": 5
+    }
+  ],
+  "numerical_rows": [
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 2.6978659155126725,
+      "model": "unit",
+      "perron_row_sum_S": 2.6978659155126747,
+      "r": 3,
+      "s": 0.45,
+      "second_abs_eigen_S": 2.4004837342253786,
+      "spectral_gap_S": 0.2973821812872939,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 2.142857110926082,
+      "model": "unit",
+      "perron_row_sum_S": 2.142857110926084,
+      "r": 3,
+      "s": 0.5,
+      "second_abs_eigen_S": 1.9518001604665163,
+      "spectral_gap_S": 0.1910569504595656,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 1.7379936861665264,
+      "model": "unit",
+      "perron_row_sum_S": 1.737993686166529,
+      "r": 3,
+      "s": 0.55,
+      "second_abs_eigen_S": 1.6112044954364269,
+      "spectral_gap_S": 0.12678919073009953,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 1.4341457594031286,
+      "model": "unit",
+      "perron_row_sum_S": 1.434145759403127,
+      "r": 3,
+      "s": 0.6,
+      "second_abs_eigen_S": 1.3477099655368316,
+      "spectral_gap_S": 0.08643579386629696,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 1.2006208977340647,
+      "model": "unit",
+      "perron_row_sum_S": 1.2006208977340644,
+      "r": 3,
+      "s": 0.65,
+      "second_abs_eigen_S": 1.140350641580121,
+      "spectral_gap_S": 0.06027025615394366,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 18,
+      "max_abs_eigen_S": 1.0174778976334324,
+      "model": "unit",
+      "perron_row_sum_S": 1.017477897633433,
+      "r": 3,
+      "s": 0.7,
+      "second_abs_eigen_S": 0.974644422936766,
+      "spectral_gap_S": 0.04283347469666643,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 3.8210628458286005,
+      "model": "full",
+      "perron_row_sum_S": 3.821062845828602,
+      "r": 3,
+      "s": 0.45,
+      "second_abs_eigen_S": 3.3691847614429795,
+      "spectral_gap_S": 0.45187808438562094,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 2.9999999552965213,
+      "model": "full",
+      "perron_row_sum_S": 2.9999999552965178,
+      "r": 3,
+      "s": 0.5,
+      "second_abs_eigen_S": 2.708019852870409,
+      "spectral_gap_S": 0.29198010242611216,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 2.4038754698384817,
+      "model": "full",
+      "perron_row_sum_S": 2.4038754698384865,
+      "r": 3,
+      "s": 0.55,
+      "second_abs_eigen_S": 2.2086967259142427,
+      "spectral_gap_S": 0.19517874392423895,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 1.9589602134574224,
+      "model": "full",
+      "perron_row_sum_S": 1.9589602134574213,
+      "r": 3,
+      "s": 0.6,
+      "second_abs_eigen_S": 1.8246982820438138,
+      "spectral_gap_S": 0.13426193141360865,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 1.6191868609315736,
+      "model": "full",
+      "perron_row_sum_S": 1.6191868609315747,
+      "r": 3,
+      "s": 0.65,
+      "second_abs_eigen_S": 1.5245447814769617,
+      "spectral_gap_S": 0.0946420794546119,
+      "status": "Computational Observation"
+    },
+    {
+      "claim_boundary": "Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.",
+      "dimension": 27,
+      "max_abs_eigen_S": 1.354620526160213,
+      "model": "full",
+      "perron_row_sum_S": 1.3546205261602138,
+      "r": 3,
+      "s": 0.7,
+      "second_abs_eigen_S": 1.2864882432773175,
+      "spectral_gap_S": 0.06813228288289541,
+      "status": "Computational Observation"
+    }
+  ],
+  "status": "Computational Observation"
+}

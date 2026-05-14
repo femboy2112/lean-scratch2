@@ -1,0 +1,10 @@
+{
+  "canonical_files_touched": false,
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T055252Z",
+  "insert_text": "==SECTION:: 05.charpoly.r3.generic_s_level_factorization ==\nstatus_label: Verified Fact, finite-level only\nr: 3\nlevel: S-level\nmodels: unit and full\nrecorded_ring: QQ[t][y]\ny-separability ring: QQ(t)[y]\nSage-displayed irreducibility over QQ[t][y]\nrow-sum/Perron factor index: 0 for both models\nshared non-row-sum factor hash: 02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69\nmanifest file hash: fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254\nmanifest payload hash: e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f\nclaim_boundary: This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.\n",
+  "manifest_file_hash": "fe5d15030c998d9c9ac2ea9b0acf6675edfb4f48dd6636c02c0c4e770aa83254",
+  "manifest_payload_hash": "e13ce695b92ffa08d382f5da14889f1ac8bf59b16a8510c2a305ea4e144dbe7f",
+  "status": "Advisory Only",
+  "target_file": "data/canonical_bundle/05_R3_CLOSURES.txt"
+}

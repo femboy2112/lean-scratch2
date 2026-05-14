@@ -1,0 +1,112 @@
+{
+  "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+  "created_utc": "20260514T055252Z",
+  "entries": [
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 108,
+      "degree_y": 1,
+      "expression_sha256": "fb4cc15db6c76dea45ece185f3a2808bc519f4183864a7124646a32588376aec",
+      "factor_index": 0,
+      "factor_sha256": "fb4cc15db6c76dea45ece185f3a2808bc519f4183864a7124646a32588376aec",
+      "id": "unit_00",
+      "model": "unit",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 54
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 108,
+      "degree_y": 1,
+      "expression_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "factor_index": 1,
+      "factor_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "id": "unit_01",
+      "model": "unit",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 36
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 216,
+      "degree_y": 2,
+      "expression_sha256": "3860a125d1de0df7c0cf81fb47a2164c29760a73f7c70eef58ce54b5099fb3e7",
+      "factor_index": 2,
+      "factor_sha256": "3860a125d1de0df7c0cf81fb47a2164c29760a73f7c70eef58ce54b5099fb3e7",
+      "id": "unit_02",
+      "model": "unit",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 102
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 648,
+      "degree_y": 6,
+      "expression_sha256": "a6d3d2b27ed7a8d34fc651677ffa1a58b8e70744c0bf1fc576c0118d1555fc1d",
+      "factor_index": 3,
+      "factor_sha256": "a6d3d2b27ed7a8d34fc651677ffa1a58b8e70744c0bf1fc576c0118d1555fc1d",
+      "id": "unit_03",
+      "model": "unit",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 294
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 108,
+      "degree_y": 1,
+      "expression_sha256": "a44fcd571bbd816ac64489d88a87cd35f967e14d04e2ee88a1b0af98454c1b14",
+      "factor_index": 0,
+      "factor_sha256": "a44fcd571bbd816ac64489d88a87cd35f967e14d04e2ee88a1b0af98454c1b14",
+      "id": "full_00",
+      "model": "full",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 54
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 108,
+      "degree_y": 1,
+      "expression_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "factor_index": 1,
+      "factor_sha256": "02b476933e8ab0a428cc3fe0c0c6fb67cabf49b7396b109aae5e95fb89388c69",
+      "id": "full_01",
+      "model": "full",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 36
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 324,
+      "degree_y": 3,
+      "expression_sha256": "d201683ad25dacc610b24120a0f1ddd4e051442771b803bdeda1ab7d532fd42a",
+      "factor_index": 2,
+      "factor_sha256": "d201683ad25dacc610b24120a0f1ddd4e051442771b803bdeda1ab7d532fd42a",
+      "id": "full_02",
+      "model": "full",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 138
+    },
+    {
+      "claim_boundary": "This is a finite-level structural/spectral/determinant fact inside the lifted-operator framework. It does not prove or imply the Collatz conjecture, global orbit behavior, determinant nonvanishing for all real s > 0, cross-level invariance, or a structural mechanism.",
+      "degree_t_max_recorded": 972,
+      "degree_y": 9,
+      "expression_sha256": "498455175f2d2defadc095649900160284cec3b6c69f63bc639d187b0271c9a5",
+      "factor_index": 3,
+      "factor_sha256": "498455175f2d2defadc095649900160284cec3b6c69f63bc639d187b0271c9a5",
+      "id": "full_03",
+      "model": "full",
+      "only_even_t_powers_by_text_scan": true,
+      "status_label": "Verified Fact",
+      "t_exponent_count_by_text_scan": 412
+    }
+  ],
+  "method": "Sage degree data plus text scan of audited factor expressions",
+  "status": "Verified Fact"
+}

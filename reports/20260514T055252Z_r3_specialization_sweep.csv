@@ -1,0 +1,13 @@
+status,r,model,s,dimension,perron_row_sum_S,max_abs_eigen_S,second_abs_eigen_S,spectral_gap_S,claim_boundary
+Computational Observation,3,unit,0.45,18,2.6978659155126747,2.6978659155126725,2.4004837342253786,0.2973821812872939,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,unit,0.5,18,2.142857110926084,2.142857110926082,1.9518001604665163,0.1910569504595656,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,unit,0.55,18,1.737993686166529,1.7379936861665264,1.6112044954364269,0.12678919073009953,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,unit,0.6,18,1.434145759403127,1.4341457594031286,1.3477099655368316,0.08643579386629696,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,unit,0.65,18,1.2006208977340644,1.2006208977340647,1.140350641580121,0.06027025615394366,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,unit,0.7,18,1.017477897633433,1.0174778976334324,0.974644422936766,0.04283347469666643,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.45,27,3.821062845828602,3.8210628458286005,3.3691847614429795,0.45187808438562094,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.5,27,2.9999999552965178,2.9999999552965213,2.708019852870409,0.29198010242611216,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.55,27,2.4038754698384865,2.4038754698384817,2.2086967259142427,0.19517874392423895,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.6,27,1.9589602134574213,1.9589602134574224,1.8246982820438138,0.13426193141360865,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.65,27,1.6191868609315747,1.6191868609315736,1.5245447814769617,0.0946420794546119,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
+Computational Observation,3,full,0.7,27,1.3546205261602138,1.354620526160213,1.2864882432773175,0.06813228288289541,Numerical S-level probe only; no exact dominance theorem and no Collatz-level conclusion.
